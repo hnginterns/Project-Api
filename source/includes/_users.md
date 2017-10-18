@@ -1,7 +1,9 @@
 # Users
-## auth/hms/users
-The end Point helps authenticate users 
-Example request
+The end Point shows list of  users</br>
+``` 
+>Example request
+
+```
 ```php 
 <?php
 $ch = curl_init();
@@ -19,11 +21,13 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 var_dump($response);
+
 ?>
 ```
-   >The response will look like this:
+   >Example Response
+   ```
   
-   ```json
+   
 [
   {
     "status": "success",
@@ -67,17 +71,22 @@ var_dump($response);
   },
  ]
  ```
+ 
+
 ### HTTP Request
 `GET http://staging.api.hng.tech/auth/hms/users?access_token=`
-### QUERY Parameters
+### URL Parameters
 Parameter | Type | Description
 --------- | ------- | -----------
 user_id | Number | Local id assigned to that user 
 access_token | String | Generated access token from Oauth2 developer credentials
 ### Authenticate Users 
-The end point will authenticate users 
-Example Request
-```php
+The end point will authenticate users</br>
+```
+>Example Request:
+```
+
+ ```php
 <?php
 $ch = curl_init();
 
@@ -95,12 +104,14 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 
-var_dump($response);Response
+var_dump($response);
 ?>
 ```
-   >The response will look like this:
+
+
+   >Example Response
   
-   ```json
+   ``` 
    [
   {
     "status": "success",
@@ -116,4 +127,10 @@ var_dump($response);Response
 ]
 ```
 ### HTTP Request
-`POST http://staging.api.hng.tech/auth/users/authenticate?access_token=
+POST http://staging.api.hng.tech/auth/users/authenticate?access_token=
+### URL Parameters
+Parameter | Type | Description
+--------- | ------- | -----------
+user_id | Number | Local id assigned to that user 
+access_token | String | Generated access token from Oauth2 developer credentials
+
