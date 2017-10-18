@@ -8,25 +8,9 @@ rates.update
 
 
 
-##/rates/rate_id/detail
-This Endpoint returns the details about a single rate by ID 
+##Get details about a single rate<br>by Id
 
-
-```ruby
-require 'rubygems' if RUBY_VERSION < '1.9'
-require 'rest_client'
-
-headers = {
-  :content_type => 'application/json',
-  :accept => 'application/json'
-}
-
-response = RestClient.get '
-http://staging.api.hng.tech/rates/{rate_id}/detail?access_token=
-', headers
-puts response
-```
-
+> Example request:
 
 ```php
 <?php
@@ -48,53 +32,9 @@ curl_close($ch);
 
 var_dump($response);?>
 ```
-
-
-
-```javascript
-var request = new XMLHttpRequest();
-
-request.open('GET', '
-http://staging.api.hng.tech/rates/flags/all?access_token=
-');
-
-request.setRequestHeader('Content-Type', 'application/json');
-request.setRequestHeader('Accept', 'application/json');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-```
-
-```python
-from urllib2 import Request, urlopen
-
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-request = Request('
-http://staging.api.hng.tech/rates/{rate_id}/detail?access_token=
-', headers=headers)
-
-response_body = urlopen(request).read()
-print response_body
-```
-> The above command returns a json response structured like this:
+>Example response:
 
 ```json
-successful Generation
-200
-
-    Headers
-    Content-Type:application/json
 [
   {
     "status": "success",
@@ -123,14 +63,14 @@ successful Generation
       "active_sat": 1,
       "active_sun": 1
     }
-
+  }
 ]
 
 ```
-
+This Endpoint returns the details about a single rate by ID 
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/rates/rate_id/detail?access_token=`
+`GET /rates/rate_id/detail `
 
 ### Query Parameters
 
@@ -141,25 +81,9 @@ access_token | Nill | String.
 rate_id | Nill | An integer.
 
 
-##/rates/flags/all
-This Endpoint returns all the available Flags
+##Get all available flags
 
-
-```ruby
-require 'rubygems' if RUBY_VERSION < '1.9'
-require 'rest_client'
-
-headers = {
-  :content_type => 'application/xml',
-  :accept => 'application/json'
-}
-
-response = RestClient.get '
-http://staging.api.hng.tech/rates/flags/all?access_token=
-', headers
-puts response
-```
-
+> Example request:
 
 ```php
 <?php
@@ -181,56 +105,9 @@ curl_close($ch);
 
 var_dump($response);?>
 ```
-
-
-
-```javascript
-var request = new XMLHttpRequest();
-
-request.open('GET', '
-http://staging.api.hng.tech/rates/flags/all?access_token=
-');
-
-request.setRequestHeader('Content-Type', 'application/json');
-request.setRequestHeader('Accept', 'application/json');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-```
-
-```python
-from urllib2 import Request, urlopen
-
-headers = {
-  'Content-Type': 'application/xml',
-  'Accept': 'application/json'
-}
-request = Request('
-http://staging.api.hng.tech/rates/flags/all?access_token=
-', headers=headers)
-
-response_body = urlopen(request).read()
-print response_body
-```
-> The above command returns a json response structured like this:
-
-
+> Example response:
 
 ```json
-successful Generation
-200
-
-    Headers
-    Content-Type:application/json
-
 [
   {
     "status": "success",
@@ -244,9 +121,11 @@ successful Generation
 
 ```
 
+This Endpoint returns all the available Flags
+
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/rates/flags/all?access_token=`
+`GET /rates/flags/all `
 
 ### Query Parameters
 
@@ -257,26 +136,9 @@ access_token | Nill | string
 
 
 
-##/rates/flag/id
+##Get flags by rate Id
 
-This Endpoint returns all the Flags by rate id
-
-
-```ruby
-require 'rubygems' if RUBY_VERSION < '1.9'
-require 'rest_client'
-
-headers = {
-  :content_type => 'application/json',
-  :accept => 'application/json'
-}
-
-response = RestClient.get '
-http://staging.api.hng.tech/rates/flag/{id}?access_token=
-', headers
-puts response
-```
-
+> Example request:
 
 ```php
 <?php
@@ -298,55 +160,9 @@ curl_close($ch);
 
 var_dump($response);?>
 ```
-
-
-
-```javascript
-var request = new XMLHttpRequest();
-
-request.open('GET', '
-http://staging.api.hng.tech/rates/flag/{id}?access_token=
-');
-
-request.setRequestHeader('Content-Type', 'application/json');
-request.setRequestHeader('Accept', 'application/json');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-```
-
-```python
-from urllib2 import Request, urlopen
-
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-request = Request('
-http://staging.api.hng.tech/rates/flag/{id}?access_token=
-', headers=headers)
-
-response_body = urlopen(request).read()
-print response_body
-```
-> The above command returns a json response structured like this:
-
-
+> Example response:
 
 ```json
-successful Generation
-200
-
-    Headers
-    Content-Type:application/json
 
 [
   {
@@ -360,10 +176,10 @@ successful Generation
 ]
 
 ```
-
+This Endpoint returns all the Flags by rate id
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/rates/flag/{id}?access_token=`
+`GET /rates/flag/id `
 
 ### Query Parameters
 
@@ -375,27 +191,9 @@ id | Nill| Number
 
 
 
-##/rates/flags/add
+<!--##/rates/flags/add
 
 This Endpoint adds a Flag name to rates.
-
-
-```ruby
-require 'rubygems' if RUBY_VERSION < '1.9'
-require 'rest_client'
-
-headers = {
-  :content_type => 'application/json',
-  :accept => 'application/json'
-}
-
-response = RestClient.post '
-http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
-', headers
-puts response
-```
-
-
 ```php
 <?php
 $ch = curl_init();
@@ -418,58 +216,9 @@ curl_close($ch);
 
 var_dump($response);?>
 ```
-
-
-
-```javascript
-var request = new XMLHttpRequest();
-
-request.open('POST', '
-http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
-');
-
-request.setRequestHeader('Content-Type', 'application/json');
-request.setRequestHeader('Accept', 'application/json');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-```
-
-```python
-from urllib2 import Request, urlopen
-
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-request = Request('
-http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
-', headers=headers)
-
-response_body = urlopen(request).read()
-print response_body
-```
 > The above command returns a json response structured like this:
 
-
-
 ```json
-
-
-Flag name success response
-200
-
-    Headers
-    Content-Type:application/json
-
 [
   {
     "status": "success",
@@ -491,28 +240,12 @@ Flag name success response
 Parameter | Default | Description
 --------- | ------- | -----------
 access_token | Nill | string
-flag_name | Nill| string
+flag_name | Nill| string-->
 
 
-##/rates/flags/multiple/fetch
+##Fetch multiple flag rates by Id
 
-This Endpoint returns multiple rate flags by their id
-
-```ruby
-require 'rubygems' if RUBY_VERSION < '1.9'
-require 'rest_client'
-
-headers = {
-  :content_type => 'application/json',
-  :accept => 'application/json'
-}
-
-response = RestClient.get '
-http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
-', headers
-puts response
-```
-
+> Example request:
 
 ```php
 <?php
@@ -534,142 +267,12 @@ curl_close($ch);
 
 var_dump($response);?>
 ```
-
-
-
-```javascript
-var request = new XMLHttpRequest();
-
-request.open('GET', '
-http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
-');
-
-request.setRequestHeader('Content-Type', 'application/json');
-request.setRequestHeader('Accept', 'application/json');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-```
-
-```python
-from urllib2 import Request, urlopen
-
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-request = Request('
-http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
-', headers=headers)
-
-response_body = urlopen(request).read()
-print response_body
-```
-> The above command returns a json response structured like this:
+> Example response:
 
 
 
 ```json
-
-Single detail response
-200
-
-    Headers
-    Content-Type:application/json
-
 [
-  {
-    "status": "success",
-    "message": "Rate",
-    "data": {
-      "id": 1,
-      "property_id": 98319,
-      "room_id": 10,
-      "rate_name": null,
-      "rate_tag_id": 1,
-      "rack_price": 55000,
-      "buying_price": 49500,
-      "buying_price_usd\"": null,
-      "selling_price": 55000,
-      "selling_price_usd\"": null,
-      "priority": 1,
-      "start_date": {},
-      "end_date": {},
-      "active_start": {},
-      "active_end": {},
-      "active_mon": 1,
-      "active_tue": 1,
-      "active_wed": 1,
-      "active_thu": 1,
-      "active_fri": 1,
-      "active_sat": 1,
-      "active_sun": 1
-    }
-  },
-  {
-    "status": "success",
-    "message": "Rate",
-    "data": {
-      "id": 1,
-      "property_id": 98319,
-      "room_id": 10,
-      "rate_name": null,
-      "rate_tag_id": 1,
-      "rack_price": 55000,
-      "buying_price": 49500,
-      "buying_price_usd\"": null,
-      "selling_price": 55000,
-      "selling_price_usd\"": null,
-      "priority": 1,
-      "start_date": {},
-      "end_date": {},
-      "active_start": {},
-      "active_end": {},
-      "active_mon": 1,
-      "active_tue": 1,
-      "active_wed": 1,
-      "active_thu": 1,
-      "active_fri": 1,
-      "active_sat": 1,
-      "active_sun": 1
-    }
-  },
-  {
-    "status": "success",
-    "message": "Rate",
-    "data": {
-      "id": 1,
-      "property_id": 98319,
-      "room_id": 10,
-      "rate_name": null,
-      "rate_tag_id": 1,
-      "rack_price": 55000,
-      "buying_price": 49500,
-      "buying_price_usd\"": null,
-      "selling_price": 55000,
-      "selling_price_usd\"": null,
-      "priority": 1,
-      "start_date": {},
-      "end_date": {},
-      "active_start": {},
-      "active_end": {},
-      "active_mon": 1,
-      "active_tue": 1,
-      "active_wed": 1,
-      "active_thu": 1,
-      "active_fri": 1,
-      "active_sat": 1,
-      "active_sun": 1
-    }
-  },
   {
     "status": "success",
     "message": "Rate",
@@ -701,10 +304,11 @@ Single detail response
 ]
 
 ```
+This Endpoint returns multiple rate flags by their id
 
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=`
+`GET /rates/flags/multiple/fetch`
 
 ### Query Parameters
 
@@ -714,25 +318,9 @@ access_token | Nill | string
 rate_ids | Nill| string
 
 
-#/rates2/properties
+##Get company rates
 
-This Endpoint returns company's rates
-
-```ruby
-require 'rubygems' if RUBY_VERSION < '1.9'
-require 'rest_client'
-
-headers = {
-  :content_type => 'application/json',
-  :accept => 'application/json'
-}
-
-response = RestClient.get '
-http://staging.api.hng.tech/rates2/properties?company_rates=
-', headers
-puts response
-```
-
+> Example request:
 
 ```php
 <?php
@@ -754,142 +342,10 @@ curl_close($ch);
 
 var_dump($response);?>
 ```
-
-
-
-```javascript
-var request = new XMLHttpRequest();
-
-request.open('GET', '
-http://staging.api.hng.tech/rates2/properties?company_rates=
-');
-
-request.setRequestHeader('Content-Type', 'application/json');
-request.setRequestHeader('Accept', 'application/json');
-
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();
-
-```
-
-```python
-from urllib2 import Request, urlopen
-
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-request = Request('
-http://staging.api.hng.tech/rates2/properties?company_rates=
-', headers=headers)
-
-response_body = urlopen(request).read()
-print response_body
-```
-> The above command returns a json response structured like this:
-
-
+> Example response:
 
 ```json
-
-Rates properties response
-200
-
-    Headers
-    Content-Type:application/json
-
 [
-  {
-    "status": "success",
-    "message": "Rate",
-    "data": {
-      "id": 1,
-      "property_id": 98319,
-      "room_id": 10,
-      "rate_name": null,
-      "rate_tag_id": 1,
-      "rack_price": 55000,
-      "buying_price": 49500,
-      "buying_price_usd\"": null,
-      "selling_price": 55000,
-      "selling_price_usd\"": null,
-      "priority": 1,
-      "start_date": {},
-      "end_date": {},
-      "active_start": {},
-      "active_end": {},
-      "active_mon": 1,
-      "active_tue": 1,
-      "active_wed": 1,
-      "active_thu": 1,
-      "active_fri": 1,
-      "active_sat": 1,
-      "active_sun": 1
-    }
-  },
-  {
-    "status": "success",
-    "message": "Rate",
-    "data": {
-      "id": 1,
-      "property_id": 98319,
-      "room_id": 10,
-      "rate_name": null,
-      "rate_tag_id": 1,
-      "rack_price": 55000,
-      "buying_price": 49500,
-      "buying_price_usd\"": null,
-      "selling_price": 55000,
-      "selling_price_usd\"": null,
-      "priority": 1,
-      "start_date": {},
-      "end_date": {},
-      "active_start": {},
-      "active_end": {},
-      "active_mon": 1,
-      "active_tue": 1,
-      "active_wed": 1,
-      "active_thu": 1,
-      "active_fri": 1,
-      "active_sat": 1,
-      "active_sun": 1
-    }
-  },
-  {
-    "status": "success",
-    "message": "Rate",
-    "data": {
-      "id": 1,
-      "property_id": 98319,
-      "room_id": 10,
-      "rate_name": null,
-      "rate_tag_id": 1,
-      "rack_price": 55000,
-      "buying_price": 49500,
-      "buying_price_usd\"": null,
-      "selling_price": 55000,
-      "selling_price_usd\"": null,
-      "priority": 1,
-      "start_date": {},
-      "end_date": {},
-      "active_start": {},
-      "active_end": {},
-      "active_mon": 1,
-      "active_tue": 1,
-      "active_wed": 1,
-      "active_thu": 1,
-      "active_fri": 1,
-      "active_sat": 1,
-      "active_sun": 1
-    }
-  },
   {
     "status": "success",
     "message": "Rate",
@@ -921,10 +377,11 @@ Rates properties response
 ]
 
 ```
+This Endpoint returns company's rates
 
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/rates2/properties?company_rates=`
+`GET /rates2/properties `
 
 ### Query Parameters
 

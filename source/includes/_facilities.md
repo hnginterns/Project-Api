@@ -9,7 +9,7 @@ Access to All reviews Related Things - List of Scopes to be used in Authorizatio
 ```ruby
 
 ```
-> Example response
+> Example request:
 
 ```php
 <?php
@@ -38,11 +38,12 @@ var_dump($response);Response
 
 ```
 
-> Example response
+> Example response:
 
 ```json
 [
   {
+
     "status": "success",
     "message": "Object facilities",
     "data": {
@@ -56,67 +57,9 @@ var_dump($response);Response
       "facility_name": "Restaurant",
       "img_url": "restaurant.png"
     }
-  },
-  {
-    "status": "success",
-    "message": "Object facilities",
-    "data": {
-      "id": 1967,
-      "object_id": 25449,
-      "facility_type_id": 100,
-      "facility_type_count": null,
-      "object_type": "hotel",
-      "created_at": {},
-      "updated_at": null,
-      "facility_name": "Restaurant",
-      "img_url": "restaurant.png"
-    }
-  },
-  {
-    "status": "success",
-    "message": "Object facilities",
-    "data": {
-      "id": 1967,
-      "object_id": 25449,
-      "facility_type_id": 100,
-      "facility_type_count": null,
-      "object_type": "hotel",
-      "created_at": {},
-      "updated_at": null,
-      "facility_name": "Restaurant",
-      "img_url": "restaurant.png"
-    }
-  },
-  {
-    "status": "success",
-    "message": "Object facilities",
-    "data": {
-      "id": 1967,
-      "object_id": 25449,
-      "facility_type_id": 100,
-      "facility_type_count": null,
-      "object_type": "hotel",
-      "created_at": {},
-      "updated_at": null,
-      "facility_name": "Restaurant",
-      "img_url": "restaurant.png"
-    }
-  },
-  {
-    "status": "success",
-    "message": "Object facilities",
-    "data": {
-      "id": 1967,
-      "object_id": 25449,
-      "facility_type_id": 100,
-      "facility_type_count": null,
-      "object_type": "hotel",
-      "created_at": {},
-      "updated_at": null,
-      "facility_name": "Restaurant",
-      "img_url": "restaurant.png"
-    }
+
   }
+
 ]
 ```
 
@@ -182,39 +125,7 @@ var_dump($response);
       "bank_name": "FCMB",
       "sort_code": null
     }
-  },
-  {
-    "status": "success",
-    "data": {
-      "id": 406,
-      "property_id": 49583,
-      "account_name": "Avalon Intercontinental nigeria LTD",
-      "account_number": "035274049",
-      "bank_name": "FCMB",
-      "sort_code": null
-    }
-  },
-  {
-    "status": "success",
-    "data": {
-      "id": 406,
-      "property_id": 49583,
-      "account_name": "Avalon Intercontinental nigeria LTD",
-      "account_number": "035274049",
-      "bank_name": "FCMB",
-      "sort_code": null
-    }
-  },
-  {
-    "status": "success",
-    "data": {
-      "id": 406,
-      "property_id": 49583,
-      "account_name": "Avalon Intercontinental nigeria LTD",
-      "account_number": "035274049",
-      "bank_name": "FCMB",
-      "sort_code": null
-    }
+
   }
 ]
 ```

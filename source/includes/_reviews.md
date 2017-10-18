@@ -5,9 +5,9 @@ Reviews.create,<br>
 Reviews.delete,<br>
 Reviews.update,<br>
 
-## /hotels/hotel_id/reviews
+##Show reviews for a specific hotel
 
-This endpoint shows the reviews for a specific hotel.
+> Example request:
 
 ```php
 <?php
@@ -27,15 +27,9 @@ curl_close($ch);
 
 var_dump($response);
 ```
-> The response will look like this:
+> Example response:
 
- ```
-json
-successful Generation
-200
-
-    Headers
-    Content-Type:application/json
+ ```json
     [
   {
     "status": "success",
@@ -385,10 +379,10 @@ successful Generation
 ]
 
 ```
-
+This endpoint shows the reviews for a specific hotel.
 ### HTTP Request
 
-  `GET http://staging.api.hng.tech/hotels/hotel_id/reviews?access_token=`
+  `GET /hotels/hotel_id/reviews`
 
 ### Query Parameters
 

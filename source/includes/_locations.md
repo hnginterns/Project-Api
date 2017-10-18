@@ -5,8 +5,9 @@ locations.create,<br>
 locations.delete,<br>
 locations.update,<br>
 
-##/location/countries
-This endpoint shows the list of countries.
+##Show list of countries
+
+> Example request:
 
 ```php
 <?php
@@ -30,13 +31,7 @@ var_dump($response);
 
  > The response will look like this:
 
-```
-json
-successful Generation
-200
-
-    Headers
-    Content-Type:application/json
+```json
 [
   {
     "data": {
@@ -172,10 +167,11 @@ successful Generation
   }
 ]
 ```
+This endpoint shows the list of countries.
 
 ### HTTP Request
 
-  `GET http://staging.api.hng.tech/hotels/{hotel_id}?access_token=`
+  `GET /location/countries`
 
 ### Query Parameters
 
@@ -186,10 +182,9 @@ access_token | String | Your access token
 
 
 
-##/location/propertylocations/property_id/property
-This endpoint shows a list of properties around a location
+##Show list of properties around <br>a location
 
-
+> Example request:
 
 ```php
 <?php
@@ -213,15 +208,9 @@ var_dump($response);?>
 ```
 
 
- > The response will look like this:
+ > Example response:
 
- ```
-json
-successful Generation
-200
-
-    Headers
-    Content-Type:application/json
+ ```json
  [
   {
     "status": "success",
@@ -342,10 +331,11 @@ successful Generation
   }
 ]
 ```
+This endpoint shows a list of properties around a location
 
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/location/propertylocations/property_id/property?access_token=`
+`GET /location/propertylocations/property_id/property`
 
 ### Query Parameters
 

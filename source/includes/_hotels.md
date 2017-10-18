@@ -9,7 +9,7 @@ properties.update<br>
 ```ruby
 
 ```
-> Example response
+> Example request:
 
 ```php
 <?php
@@ -38,7 +38,7 @@ var_dump($response);
 
 ```
 
-> Example response
+> Example response:
 
 ```json
 [
@@ -98,7 +98,7 @@ access_token | String | Your access token
 ```ruby
 
 ```
-> Example response
+> Example request:
 
 ```php
 <?php
@@ -127,7 +127,7 @@ var_dump($response);
 
 ```
 
-> Example response
+> Example response:
 
 ```json
 [
@@ -180,12 +180,12 @@ Parameter | Type | Description
 hotel_id | Number | id of the Hotel
 access_token | String | Your access token
 
-## Show details for a details with <br>everything associated to it
+## Show details for a hotel with <br>everything associated to it
 
 ```ruby
 
 ```
-> Example response
+> Example request:
 
 ```php
 <?php
@@ -214,7 +214,7 @@ var_dump($response);
 
 ```
 
-> Example response
+> Example response:
 
 ```json
 [

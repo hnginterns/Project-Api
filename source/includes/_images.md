@@ -5,7 +5,7 @@ Images.create,<br>
 Images.delete,<br>
 Images.update<br>
 
-##/hotels/hotel_id/images
+##Show images for a particular hotel
 
 This endpoint fetches images for a specific hotel.<br>
 Image URL is in this format https://media.api.hng.tech/img/size/name_of_image.jpg.<br>
@@ -14,6 +14,8 @@ size =<br>
 1. small - A small sized image is returned.<br>
 2. the medium - A medium sized image is returned.<br>
 3. big - A big sized image is returned.
+
+> Example request:
 
 ```php
 <?php
@@ -33,15 +35,9 @@ curl_close($ch);
 
 var_dump($response);
 ```
- > The response will look like this:
+ > Example response:
 
-```
-json
-successful Generation
-200
-
-    Headers
-    Content-Type:application/json
+```json
     [
   {
     "data": {
@@ -127,7 +123,8 @@ successful Generation
 ```
 
 ### HTTP Request
-'GET http://staging.api.hng.tech/hotels/hotel_id/images?access_token='
+`GET /hotels/hotel_id/images`
+
 
 ### Query Parameters
 
