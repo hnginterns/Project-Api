@@ -2,15 +2,16 @@
 title: Hotels.ng API Docs
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - ruby
-  - python
-  - php
-  - javascript
+  - php: PHP
 
+toc_footers:
+  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://github.com/tripit/slate'></a>
 
 includes:
   - search
   - bookings
+  - hotels
   - images
   - facilities
   - reviews
@@ -19,18 +20,12 @@ includes:
   - ratings
   - reports
   - users
-  
-
 search: true
 ---
 
 # Introduction
 
-Welcome to Hotels.ng API! You can use this API to access all our API endpoints, such as the Booking API to look up hotels that can be booked
-
-This API reference provides information on available endpoints and how to interact with it.
-
-
+Welcome to the Hotels.ng API! You can use our API to integrate within your applications.
 
 # Authentication
 
@@ -62,21 +57,20 @@ let api = kittn.authorize('meowmeowmeow');
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
+Hotels.ng uses Client id and Client Secret to allow access to the api.The client id and secret would provide an access token which would now grant you access to all our Hotels.ng endpoints. 
+For the Hng Internship,
+The default Cient_id is wLV9nF9J8uo0SuaYXl7wCc9RV
+The default Cient_secret is YBiqbzOpma9zSUd3txXSCKQvcdZuPDcrS0AVGp9v 
+The default grantType is client_credentials.
+The List of scopes are available at the deck of all the endpoints you are consuming. 
+You can make use of multiple scopes by using ',' as delimiter.
 `Authorization: meowmeowmeow`
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-
-
-
-
-<!-- # Kittens
+# Kittens
 
 ## Get All Kittens
 
@@ -246,5 +240,5 @@ This endpoint retrieves a specific kitten.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to delete -->
+ID | The ID of the kitten to delete
 
