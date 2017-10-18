@@ -1,5 +1,5 @@
 # Users
-# Get  list of Users
+# auth/hms/users
 The end Point helps authenticate users 
 ```php 
 <?php
