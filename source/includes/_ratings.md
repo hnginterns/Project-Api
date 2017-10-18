@@ -374,6 +374,563 @@ id | Nill| Number
 
 
 
+##/rates/flags/add
+
+This Endpoint adds a Flag name to rates.
+
+
+```ruby
+require 'rubygems' if RUBY_VERSION < '1.9'
+require 'rest_client'
+
+headers = {
+  :content_type => 'application/json',
+  :accept => 'application/json'
+}
+
+response = RestClient.post '
+http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
+', headers
+puts response
+```
+
+
+```php
+<?php
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "
+http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
+");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+curl_setopt($ch, CURLOPT_POST, TRUE);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  "Content-Type: application/json",
+  "Accept: application/json"
+));
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+var_dump($response);?>
+```
+
+
+
+```javascript
+var request = new XMLHttpRequest();
+
+request.open('POST', '
+http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
+');
+
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Accept', 'application/json');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+request.send();
+
+```
+
+```python
+from urllib2 import Request, urlopen
+
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+request = Request('
+http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
+', headers=headers)
+
+response_body = urlopen(request).read()
+print response_body
+```
+> The above command returns a json response structured like this:
+
+
+
+```json
+
+
+Flag name success response
+200
+
+    Headers
+    Content-Type:application/json
+
+[
+  {
+    "status": "success",
+    "message": "All flags with rate add",
+    "data": [
+      []
+    ]
+  }
+]
+
+```
+
+### HTTP Request
+
+`POST http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+access_token | Nill | string
+flag_name | Nill| string
+
+
+##/rates/flags/multiple/fetch
+
+This Endpoint returns multiple rate flags by their id
+
+```ruby
+require 'rubygems' if RUBY_VERSION < '1.9'
+require 'rest_client'
+
+headers = {
+  :content_type => 'application/json',
+  :accept => 'application/json'
+}
+
+response = RestClient.get '
+http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
+', headers
+puts response
+```
+
+
+```php
+<?php
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "
+http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
+");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  "Content-Type: application/json",
+  "Accept: application/json"
+));
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+var_dump($response);?>
+```
+
+
+
+```javascript
+var request = new XMLHttpRequest();
+
+request.open('GET', '
+http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
+');
+
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Accept', 'application/json');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+request.send();
+
+```
+
+```python
+from urllib2 import Request, urlopen
+
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+request = Request('
+http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
+', headers=headers)
+
+response_body = urlopen(request).read()
+print response_body
+```
+> The above command returns a json response structured like this:
+
+
+
+```json
+
+Single detail response
+200
+
+    Headers
+    Content-Type:application/json
+
+[
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  },
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  },
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  },
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  }
+]
+
+```
+
+### HTTP Request
+
+`GET http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+access_token | Nill | string
+rate_ids | Nill| string
+
+
+#/rates2/properties
+
+This Endpoint returns company's rates
+
+```ruby
+require 'rubygems' if RUBY_VERSION < '1.9'
+require 'rest_client'
+
+headers = {
+  :content_type => 'application/json',
+  :accept => 'application/json'
+}
+
+response = RestClient.get '
+http://staging.api.hng.tech/rates2/properties?company_rates=
+', headers
+puts response
+```
+
+
+```php
+<?php
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "
+http://staging.api.hng.tech/rates2/properties?company_rates=
+");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  "Content-Type: application/json",
+  "Accept: application/json"
+));
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+var_dump($response);?>
+```
+
+
+
+```javascript
+var request = new XMLHttpRequest();
+
+request.open('GET', '
+http://staging.api.hng.tech/rates2/properties?company_rates=
+');
+
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Accept', 'application/json');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+request.send();
+
+```
+
+```python
+from urllib2 import Request, urlopen
+
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+request = Request('
+http://staging.api.hng.tech/rates2/properties?company_rates=
+', headers=headers)
+
+response_body = urlopen(request).read()
+print response_body
+```
+> The above command returns a json response structured like this:
+
+
+
+```json
+
+Rates properties response
+200
+
+    Headers
+    Content-Type:application/json
+
+[
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  },
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  },
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  },
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  }
+]
+
+```
+
+### HTTP Request
+
+`GET http://staging.api.hng.tech/rates2/properties?company_rates=`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+company_rates | Nill | string
+
 
 
 
