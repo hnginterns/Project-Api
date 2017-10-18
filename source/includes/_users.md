@@ -1,7 +1,7 @@
 # Users
 The end Point shows list of  users</br>
 ``` 
-Example request
+Example request:
 ```
 
 
@@ -26,7 +26,7 @@ var_dump($response);
 
 ?>
 ```
-   >Example Response
+   >Example Response:
    ```
   
    
@@ -111,7 +111,7 @@ var_dump($response);
 ```
 
 
-   >Example Response
+   >Example Response:
   
    ``` 
    [
