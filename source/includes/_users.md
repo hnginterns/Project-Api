@@ -1,5 +1,5 @@
 # Users
-# auth/hms/users
+## auth/hms/users
 The end Point helps authenticate users 
 Example request
 ```php 
@@ -23,7 +23,7 @@ var_dump($response);
 ```
    >The response will look like this:
   
-   ``` 
+   ```json
 [
   {
     "status": "success",
@@ -100,7 +100,7 @@ var_dump($response);Response
 ```
    >The response will look like this:
   
-   ``` 
+   ```json
    [
   {
     "status": "success",
