@@ -80,7 +80,7 @@ var_dump($response);
 ```
  > The response will look like this:
 
-```
+```json
 [
   {
     "status": "success",
@@ -204,7 +204,7 @@ var_dump($response);
 ```
  > The response will look like this:
 
-```
+```json
 [
   {
     "status": "success",
@@ -506,7 +506,7 @@ var_dump($response);
 ```
  > The response is structured like this:
 
-```
+```json
 [
   {
     "status": "success",

@@ -1,9 +1,11 @@
 # Rooms
 Access to all Rooms related things - List of Scopes to be used in Authorization 
-Rooms.read,
-Rooms.create,
-Rooms.delete, 
-Rooms.update
+Rooms.read,</br>
+Rooms.delete, </br>
+Rooms.update</br>
+```
+>Example request:
+```
 ```php
 <?php
 $ch = curl_init();
@@ -22,7 +24,7 @@ curl_close($ch);
 
 var_dump($response);
 ```
-   >The response will look like this:
+   >Example Response:
   ```
   [
   {
@@ -77,8 +79,8 @@ var_dump($response);
 ```
 ### HTTP Request
 `GET http://staging.api.hng.tech/rooms/property/hotel_id?access_token=
-### QUERY Parameters
-arameter | Type | Description
+### Url Parameters
+Parameter | Type | Description
 --------- | ------- | -----------
-hotel_id | Number | Local id assigned to that hotel 
+Room_id | Number | Local id assigned to that hotel 
 access_token | String | Generated access token from Oauth2 developer credentials
