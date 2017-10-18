@@ -4,6 +4,7 @@ The end Point shows list of  users</br>
 >Example request
 
 
+
 ```php 
 <?php
 $ch = curl_init();
