@@ -78,7 +78,7 @@ var_dump($response);
 ### HTTP Request
 `GET http://staging.api.hng.tech/rooms/property/hotel_id?access_token=
 ### QUERY Parameters
-arameter | Type | Description
+Parameter | Type | Description
 --------- | ------- | -----------
 hotel_id | Number | Local id assigned to that hotel 
 access_token | String | Generated access token from Oauth2 developer credentials
