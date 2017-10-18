@@ -26,7 +26,9 @@ search: true
 
 # Introduction
 
-Welcome to the Hotels.ng API! You can use our API to integrate within your applications.
+Welcome to Hotels.ng API! You can use this API to access all our API endpoints, such as the Booking API to look up hotels that can be booked
+
+This API reference provides information on available endpoints and how to interact with it.
 
 
 
