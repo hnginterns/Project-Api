@@ -82,5 +82,5 @@ var_dump($response);
 ### Url Parameters
 Parameter | Type | Description
 --------- | ------- | -----------
-hotel_id | Number | Local id assigned to that hotel 
+Room_id | Number | Local id assigned to that hotel 
 access_token | String | Generated access token from Oauth2 developer credentials
