@@ -229,7 +229,7 @@ var_dump($response);
 ### HTTP Request
 `GET http://staging.api.hng.tech/auth/hms/users?access_token=`
 ### QUERY Parameters
-arameter | Type | Description
+Parameter | Type | Description
 --------- | ------- | -----------
 user_id | Number | Local id assigned to that user 
 access_token | String | Generated access token from Oauth2 developer credentials
