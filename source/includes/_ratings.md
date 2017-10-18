@@ -50,6 +50,7 @@ var_dump($response);?>
 ```
 
 
+
 ```javascript
 var request = new XMLHttpRequest();
 

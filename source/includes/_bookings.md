@@ -20,7 +20,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
- > The response will look like this:
+ > The response is structured like this:
 
 ```
 [
@@ -504,7 +504,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
- > The response will look like this:
+ > The response is structured like this:
 
 ```
 [
