@@ -135,10 +135,10 @@ successful Generation
 ### Query Parameters
 
 
-Parameter | Default | Description
---------- | ------- | -----------
-access_token | Nill | String.
-rate_id | Nill | An integer.
+Parameter | Description
+--------- | -----------
+access_token | String.
+rate_id | Integer.
 
 
 ##/rates/flags/all
@@ -250,9 +250,9 @@ successful Generation
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-access_token | Nill | string
+Parameter | Description
+--------- | -----------
+access_token | string
 
 
 
@@ -367,10 +367,10 @@ successful Generation
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-access_token | Nill | string
-id | Nill| Number
+Parameter | Description
+--------- | -----------
+access_token | string
+id | Number
 
 
 
@@ -488,10 +488,10 @@ Flag name success response
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-access_token | Nill | string
-flag_name | Nill| string
+Parameter | Description
+--------- | -----------
+access_token | string
+flag_name | string
 
 
 ##/rates/flags/multiple/fetch
@@ -708,13 +708,13 @@ Single detail response
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-access_token | Nill | string
-rate_ids | Nill| string
+Parameter | Description
+--------- | -----------
+access_token | string
+rate_ids | string
 
 
-#/rates2/properties
+##/rates2/properties
 
 This Endpoint returns company's rates
 
@@ -928,9 +928,9 @@ Rates properties response
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-company_rates | Nill | string
+Parameter | Description
+--------- | -----------
+company_rates | string
 
 
 
