@@ -81,7 +81,7 @@ Parameter | Type | Description
 user_id | Number | Local id assigned to that user 
 access_token | String | Generated access token from Oauth2 developer credentials
 
-### Authenticate Users 
+
 
 ##The end point will authenticate users</br>
 
