@@ -57,7 +57,7 @@ This endpoint shows the facilities available for a specific hotel.
 
 ### HTTP Request
 
-`GET /hotels/hotel_id/facilities`
+`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/facilities?access_token=`
 
 ### URL Parameters
 
@@ -114,7 +114,7 @@ This endpoint shows the banks details of a specific hotel.
 
 ### HTTP Request
 
-`GET hng/bank_details/hotel_id`
+`GET https://private-13543-hotelsng1.apiary-mock.com/hng/bank_details/hotel_id?access_token=`
 
 ### URL Parameters
 Parameter | Type | Description

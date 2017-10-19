@@ -123,7 +123,7 @@ var_dump($response);
 ```
 
 ### HTTP Request
-`GET /hotels/hotel_id/images`
+`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/images?access_token=`
 
 
 ### Query Parameters

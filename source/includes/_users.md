@@ -2,7 +2,7 @@
 
 ##The end Point shows list of  users</br>
  
-Example request:
+> Example request:
 
 ```php 
 <?php
@@ -24,7 +24,7 @@ var_dump($response);
 
 ?>
 ```
-> Example Response:
+> Example response:
 
    ```json 
 [
@@ -70,7 +70,7 @@ var_dump($response);
   },
  ]
  ```
- 
+ This endpoint shows the list of users.
 
 ### HTTP Request
 `GET http://staging.api.hng.tech/auth/hms/users?access_token=`
@@ -83,9 +83,9 @@ access_token | String | Generated access token from Oauth2 developer credentials
 
 
 
-##The end point will authenticate users</br>
+<!--##The end point will authenticate users</br>
 
-> Example Request:
+> Example request:
 
 
  ```php
@@ -111,7 +111,7 @@ var_dump($response);
 ```
 
 
-> Example Response:
+> Example response:
   
    ```json
    [
@@ -128,6 +128,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint helps authenticate the users.
 ### HTTP Request
 
 POST http://staging.api.hng.tech/auth/users/authenticate?access_token=
@@ -135,5 +136,5 @@ POST http://staging.api.hng.tech/auth/users/authenticate?access_token=
 Parameter | Type | Description
 --------- | ------- | -----------
 user_id | Number | Local id assigned to that user 
-access_token | String | Generated access token from Oauth2 developer credentials
+access_token | String | Generated access token from Oauth2 developer credentials-->
 

@@ -1,5 +1,12 @@
 # Reports
+Access to All Reports Related Things - List of Scopes to be used in Authorization
+Facilities.read,
+Reports.create,
+Reports.delete, 
+Reports.update
 ## Get Bookings that have Been Reviewed
+
+> Example request:
 
 ```php
 <?php
@@ -20,7 +27,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
-> The response will look like this:
+> Example response:
 
 ```json
 [
@@ -54,6 +61,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint return bookings that have been reviewed.
 ### HTTP Request
 
 `GET http://staging.api.hng.tech/reports/bookings/reviewed?access_token=`
@@ -65,6 +73,8 @@ Parameter | Type | Description
 access_token | String | Generated access token from Oauth2 developer credentials
 
 ## Count the Number of Bookings
+
+>Example request:
 
 ```php
 <?php
@@ -85,7 +95,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
-> The response will look like this:
+>Example response:
 
 ```json
 [
@@ -97,6 +107,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint counts number of bookings.
 ### HTTP Request
 
 `GET http://staging.api.hng.tech/reports/bookings/count?access_token=`
@@ -108,6 +119,8 @@ Parameter | Type | Description
 access_token | String | Generated access token from Oauth2 developer credentials
 
 ## Get Bookings by Id and the Total Counts
+
+>Example request:
 
 ```php
 <?php
@@ -128,7 +141,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
-> The response will look like this:
+>Example response:
 
 ```json
 [
@@ -169,6 +182,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint fetches bookings by ID and the total count.
 ### HTTP Request
 `GET http://staging.api.hng.tech/reports/bookings?access_token=`
 
@@ -178,7 +192,9 @@ Parameter | Type | Description
 --------- | ------- | -----------
 access_token | String | Generated access token from Oauth2 developer credentials
 
-## Get the Range of Days in a Month in which Bookings Can be Made
+## Get the Range of Days in a Month<br>in which Bookings Can be Made
+
+>Example response:
 
 ```php
 <?php
@@ -199,37 +215,31 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
-> The response will look like this:
+>Example response:
 
 ```json
 [
   {
-    "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
-    "token_type": "Bearer",
-    "expires_in": 3600
-  },
-  {
-    "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
-    "token_type": "Bearer",
-    "expires_in": 3600
-  },
-  {
-    "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
-    "token_type": "Bearer",
-    "expires_in": 3600
-  },
-  {
-    "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
-    "token_type": "Bearer",
-    "expires_in": 3600
-  },
-  {
-    "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
-    "token_type": "Bearer",
-    "expires_in": 3600
+    "status": "success",
+    "data": {
+      "range": {
+      "start": "2017-10-01 00:00:00",
+      "end": "2017-10-31 23:59:59"
+        },
+        "results": [],
+        "overview": {
+        "pagination": "",
+        "page": null,
+        "value": null,
+         "number": "0",
+         "ideal_commissions_value": null
+        }
+    },
+ 
   }
 ]
 ```
+This endpoint returns the range of days in a calendar month in which bookings can be made.
 ### HTTP Request
 `GEThttp://staging.api.hng.tech/reports/bookings/utms/gclid?access_token=`
 

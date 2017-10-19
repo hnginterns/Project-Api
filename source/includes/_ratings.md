@@ -70,7 +70,7 @@ var_dump($response);?>
 This Endpoint returns the details about a single rate by ID 
 ### HTTP Request
 
-`GET /rates/rate_id/detail `
+`GET https://private-13543-hotelsng1.apiary-mock.com/rates/rate_id/detail?access_token= `
 
 ### Query Parameters
 
@@ -125,7 +125,7 @@ This Endpoint returns all the available Flags
 
 ### HTTP Request
 
-`GET /rates/flags/all `
+`GET https://private-13543-hotelsng1.apiary-mock.com/rates/flags/all?access_token= `
 
 ### Query Parameters
 
@@ -179,7 +179,7 @@ var_dump($response);?>
 This Endpoint returns all the Flags by rate id
 ### HTTP Request
 
-`GET /rates/flag/id `
+`GET https://private-13543-hotelsng1.apiary-mock.com/rates/flag/id?access_token= `
 
 ### Query Parameters
 
@@ -255,7 +255,7 @@ This Endpoint returns multiple rate flags by their id
 
 ### HTTP Request
 
-`GET /rates/flags/multiple/fetch`
+`GET https://private-13543-hotelsng1.apiary-mock.com/rates/flags/multiple/fetch?rate_ids=&access_token=`
 
 ### Query Parameters
 
@@ -328,7 +328,7 @@ This Endpoint returns company's rates
 
 ### HTTP Request
 
-`GET /rates2/properties `
+`GET https://private-13543-hotelsng1.apiary-mock.com/rates2/properties?company_rates= `
 
 ### Query Parameters
 

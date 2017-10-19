@@ -13,9 +13,9 @@ Property_type :
 *	`'Luxury Hotel'`, 
 *	`'Guest House'`
 
-##/search
+##Search for hotels
 	
-	This enpoint allows you to search For Hotels
+	This endpoint allows you to search For Hotels
 
 > Example request:
 
@@ -62,15 +62,14 @@ var_dump($response);
       "bookings": null
     }
   }
-]```
+]
+```
 
 
 
 ### HTTP Request
 
 `GET http://staging.api.hng.tech/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=`
-
-`
 
 ### Query Parameters
 
@@ -85,7 +84,7 @@ property_type | String | Type of property to request | False
 
 
 
-## /search/nearby
+##Search for properties nearby
 
 	Fetches all the properties nearby
 
@@ -118,18 +117,18 @@ var_dump($response);
 }
 ```
 
->###	 HTTP Request
-
->	GET `http://staging.api.hng.tech/search/nearby?access_token=`
+###	HTTP Request
+  
+`GET http://staging.api.hng.tech/search/nearby?access_token= `
 
 ### Query Parameters
 
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
-access_token | String | Token generated with client_id and client_credentials | True
+access_token| String | Token generated with client_id and client_credentials | True
 
 
-## /search/location/count/bulk
+## Get hotel count in a location
 
 	Get the hotel count in a particular location
 
@@ -162,9 +161,9 @@ var_dump($response);
 }
 ```
 
->###	 HTTP Request
+###	 HTTP Request
 
->	GET `http://staging.api.hng.tech/search/location/count/bulk?access_token=&property_type=&location_type=&location=`
+GET `http://staging.api.hng.tech/search/location/count/bulk?access_token=&property_type=&location_type=&location=`
 
 ### Query Parameters
 

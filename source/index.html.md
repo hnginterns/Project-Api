@@ -76,9 +76,13 @@ The List of scopes are available at the deck of all the endpoints you are consum
 You can make use of multiple scopes by using ',' as delimiter.
 `Authorization: meowmeowmeow`
 
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
+
 ### HTTP Request
 
-`GET oauth/authenticate`
+`GET https://private-13543-hotelsng1.apiary-mock.com/oauth/authenticate?grant_type=&client_id=&client_secret=&scope=`
 
 ### Query Parameters
 
@@ -89,7 +93,5 @@ client_id | string |the id of the user requesting the api
 client_secret | string |Your secret key
 client_id | string |Endpoint trying to consume
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+
 

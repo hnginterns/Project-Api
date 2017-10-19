@@ -75,7 +75,7 @@ This endpoint returns an array of Hotels.
 
 ### HTTP Request
 
-`GET /hotels`
+`GET https://private-13543-hotelsng1.apiary-mock.com/hotels?access_token=`
 
 ### URL Parameters
 
@@ -152,7 +152,7 @@ This endpoint shows the details of a particular hotel.
 
 ### HTTP Request
 
-`GET /hotels/hotel_id`
+`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id?access_token=`
 
 ### URL Parameters
 
@@ -255,7 +255,7 @@ This endpoint gets details of a hotel and everything associated to it
 
 ### HTTP Request
 
-`GET /hotels/hotel_id/details`
+`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/details?access_token=`
 
 ### URL Parameters
 

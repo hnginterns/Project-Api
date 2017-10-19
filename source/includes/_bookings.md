@@ -1,5 +1,8 @@
 # Bookings
+This endpoint Fetches all Bookings,bookings by email.
 ## Get Booking Details of a Specific Booking
+
+>Example request:
 
 ```php
 <?php
@@ -20,7 +23,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
- > The response is structured like this
+ >Example response:
 
 ```json
 [
@@ -46,6 +49,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint shows the booking details of a specific booking.
 ### HTTP Request
 
   `GET http://staging.api.hng.tech/bookings/booking_id?access_token=`
@@ -58,6 +62,8 @@ booking_id | Number | Local id assigned to that booking
 access_token | String | Generated access token from Oauth2 developer credentials
 
 ## Get Total Bookings Made
+
+>Example request:
 
 ```php
 <?php
@@ -78,7 +84,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
- > The response will look like this:
+ >Example response:
 
 ```json
 [
@@ -169,6 +175,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint shows the total bookings made.
 ### HTTP Request
 
   `GET http://staging.api.hng.tech/hng/bookings?access_token=`
@@ -182,6 +189,7 @@ access_token | String | Generated access token from Oauth2 developer credentials
 
 ## Get List of Contacts for a Property.
 
+>Example request:
 
 ```php
 <?php
@@ -202,7 +210,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
- > The response will look like this:
+ >Example response:
 
 ```json
 [
@@ -473,6 +481,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint shows the list of contacts for a property.
 ### HTTP Request
 
   `GET https://staging.api.hng.tech/finance/property/contacts?access_token=`
@@ -484,6 +493,8 @@ Parameter | Type | Description
 access_token | String | Generated access token from Oauth2 developer credentials
 
 ## Get List of Contacts for a Property by id
+
+>Example request:
 
 ```php
 <?php
@@ -504,7 +515,7 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
- > The response is structured like this:
+ >Example response:
 
 ```json
 [
@@ -563,6 +574,7 @@ var_dump($response);
   }
 ]
 ```
+This endpoint shows the list of contacts for a property by Id.
 ### HTTP Request
 
   `GET http://staging.api.hng.tech/finance/property/id/contacts?access_token=`
