@@ -4,11 +4,10 @@ properties.read,<br>
 properties.create,<br>
 properties.delete ,<br>
 properties.update<br>
+
 ## Get list of hotels
 
-```ruby
 
-```
 > Example request:
 
 ```php
@@ -28,14 +27,6 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 var_dump($response);
-```
-
-```shell
-
-```
-
-```javascript
-
 ```
 
 > Example response:
@@ -95,9 +86,6 @@ access_token | String | Your access token
 ## Show details for a hotel
 
 
-```ruby
-
-```
 > Example request:
 
 ```php
@@ -119,13 +107,6 @@ curl_close($ch);
 var_dump($response);
 ```
 
-```shell
-
-```
-
-```javascript
-
-```
 
 > Example response:
 
@@ -182,9 +163,7 @@ access_token | String | Your access token
 
 ## Show details for a hotel with <br>everything associated to it
 
-```ruby
 
-```
 > Example request:
 
 ```php
@@ -206,13 +185,6 @@ curl_close($ch);
 var_dump($response);
 ```
 
-```shell
-
-```
-
-```javascript
-
-```
 
 > Example response:
 

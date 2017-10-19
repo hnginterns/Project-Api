@@ -22,7 +22,7 @@ var_dump($response);
 ```
 > The response will look like this:
 
-```
+```json
 [
   {
     "status": "success",
@@ -87,7 +87,7 @@ var_dump($response);
 ```
 > The response will look like this:
 
-```
+```json
 [
   {
     "status": "succes",
@@ -130,7 +130,7 @@ var_dump($response);
 ```
 > The response will look like this:
 
-```
+```json
 [
   {
     "status": "succes",
@@ -201,7 +201,7 @@ var_dump($response);
 ```
 > The response will look like this:
 
-```
+```json
 [
   {
     "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",

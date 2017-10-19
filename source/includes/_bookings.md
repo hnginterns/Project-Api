@@ -20,9 +20,9 @@ curl_close($ch);
 var_dump($response);
 ?>
 ```
- > The response is structured like this:
+ > The response is structured like this
 
-```
+```json
 [
   {
     "status": "success",

@@ -6,9 +6,7 @@ Access to All reviews Related Things - List of Scopes to be used in Authorizatio
     Facilities.update<br>
 ## Show facilities for a hotel
 
-```ruby
 
-```
 > Example request:
 
 ```php
@@ -28,14 +26,6 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 var_dump($response);Response
-```
-
-```shell
-
-```
-
-```javascript
-
 ```
 
 > Example response:
@@ -79,9 +69,6 @@ access_token | String | Your access token
 
 ## Show bank details for a hotel
 
-```ruby
-
-```
 > Example request:
 
 ```php
@@ -103,13 +90,6 @@ curl_close($ch);
 var_dump($response);
 ```
 
-```shell
-
-```
-
-```javascript
-
-```
 
 > Example response:
 

@@ -129,9 +129,9 @@ This Endpoint returns all the available Flags
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | type | Description
 --------- | ------- | -----------
-access_token | Nill | string
+access_token | string | your access token
 
 
 
@@ -183,64 +183,11 @@ This Endpoint returns all the Flags by rate id
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | Type | Description
 --------- | ------- | -----------
-access_token | Nill | string
-id | Nill| Number
+access_token | string | Generated access token from Oauth2 developer credentials
+id | Number| id to return all flag ratings
 
-
-
-
-<!--##/rates/flags/add
-
-This Endpoint adds a Flag name to rates.
-```php
-<?php
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, "
-http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=
-");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
-curl_setopt($ch, CURLOPT_POST, TRUE);
-
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
-));
-
-$response = curl_exec($ch);
-curl_close($ch);
-
-var_dump($response);?>
-```
-> The above command returns a json response structured like this:
-
-```json
-[
-  {
-    "status": "success",
-    "message": "All flags with rate add",
-    "data": [
-      []
-    ]
-  }
-]
-
-```
-
-### HTTP Request
-
-`POST http://staging.api.hng.tech/rates/flags/add?flag_names=&access_token=`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-access_token | Nill | string
-flag_name | Nill| string-->
 
 
 ##Fetch multiple flag rates by Id
@@ -385,9 +332,9 @@ This Endpoint returns company's rates
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | type | Description
 --------- | ------- | -----------
-company_rates | Nill | string
+company_rates | string | returns company rates
 
 
 

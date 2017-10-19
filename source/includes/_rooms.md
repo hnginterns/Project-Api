@@ -3,9 +3,10 @@ Access to all Rooms related things - List of Scopes to be used in Authorization
 Rooms.read,</br>
 Rooms.delete, </br>
 Rooms.update</br>
-```
->Example request:
-```
+
+## Get Rooms for a Particular Hotel Based on Hotel id
+> Example request:
+
 ```php
 <?php
 $ch = curl_init();
@@ -23,9 +24,11 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 var_dump($response);
+?>
 ```
-   >Example Response:
-  ```
+ > Example Response:
+
+  ```json
   [
   {
     "0": {
@@ -78,7 +81,9 @@ var_dump($response);
 ]
 ```
 ### HTTP Request
-`GET http://staging.api.hng.tech/rooms/property/hotel_id?access_token=
+
+`GET http://staging.api.hng.tech/rooms/property/hotel_id?access_token=`
+
 ### Url Parameters
 Parameter | Type | Description
 --------- | ------- | -----------
