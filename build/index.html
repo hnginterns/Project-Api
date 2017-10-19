@@ -357,14 +357,6 @@
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#the-end-point-shows-list-of-users-br" class="toc-h2 toc-link" data-title="Users">The end Point shows list of  users</a>
-                  </li>
-              </ul>
-          </li>
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
@@ -411,16 +403,15 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>Hotels.ng uses Client id and Client Secret to allow access to the api.The client id and secret would provide an access token which would now grant you access to all our Hotels.ng endpoints. 
-For the Hng Internship,
-The default Cient_id is wLV9nF9J8uo0SuaYXl7wCc9RV
-The default Cient_secret is YBiqbzOpma9zSUd3txXSCKQvcdZuPDcrS0AVGp9v 
-The default grantType is client_credentials.
-The List of scopes are available at the deck of all the endpoints you are consuming. 
-You can make use of multiple scopes by using &#39;,&#39; as delimiter.
-<code>Authorization: meowmeowmeow</code></p>
+For the Hng Internship,<br>
+The default Cient_id is wLV9nF9J8uo0SuaYXl7wCc9RV<br>
+The default Cient_secret is YBiqbzOpma9zSUd3txXSCKQvcdZuPDcrS0AVGp9v <br>
+The default grantType is client_credentials.<br>
+The List of scopes are available at the deck of all the endpoints you are consuming. <br>
+You can make use of multiple scopes by using &#39;,&#39; as delimiter.<br></p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Make sure you sign up for a developer key
 </aside>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://private-13543-hotelsng1.apiary-mock.com/oauth/authenticate?grant_type=&amp;client_id=&amp;client_secret=&amp;scope=</code></p>
@@ -2879,152 +2870,6 @@ Reports.update</p>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
-<h1 id='users'>Users</h1><h2 id='the-end-point-shows-list-of-users-br'>The end Point shows list of  users</br></h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"http://staging.api.hng.tech/auth/hms/users?access_token="</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"Content-Type: application/json"</span><span class="p">,</span>
-  <span class="s2">"Accept: application/json"</span>
-<span class="p">));</span>
-
-<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-
-<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
-
-<span class="cp">?&gt;</span>
-</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Administrator"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"management@hotels.ng"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/url-to-images</span><span class="se">\\</span><span class="s2">/"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"permission_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"custom_rights"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-        </span><span class="s2">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecf4c217-b203-47c6-aca5-dd92c1851e63"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"app_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"role_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"can_create"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"can_read"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"can_update"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"can_delete"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"use_otp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"permission"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"can_create"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"can_read"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"can_update"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"can_delete"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"app"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HMS"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"use_otp"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecf4c217-b203-47c6-aca5-dd92c1851e63"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"use_otp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
- </span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint shows the list of users.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://staging.api.hng.tech/auth/hms/users?access_token=</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>user_id</td>
-<td>Number</td>
-<td>Local id assigned to that user</td>
-</tr>
-<tr>
-<td>access_token</td>
-<td>String</td>
-<td>Generated access token from Oauth2 developer credentials</td>
-</tr>
-</tbody></table>
-
-<!--##The end point will authenticate users</br>
-
-> Example request:
-
-
- ```php
-<?php
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/auth/users/authenticate?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
-curl_setopt($ch, CURLOPT_POST, TRUE);
-
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
-));
-
-$response = curl_exec($ch);
-curl_close($ch);
-
-var_dump($response);
-?>
-```
-
-
-> Example response:
-  
-   ```json
-   [
-  {
-    "status": "success",
-    "data": {
-      "id": 58574,
-      "name": "Joy Okpe",
-      "email": "test@hotels.ng",
-      "phone": null,
-      "role": "admin",
-      "picture": "http://url-to-images/"
-    }
-  }
-]
-```
-This endpoint helps authenticate the users.
-### HTTP Request
-
-POST http://staging.api.hng.tech/auth/users/authenticate?access_token=
-### URL Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-user_id | Number | Local id assigned to that user 
-access_token | String | Generated access token from Oauth2 developer credentials-->
 
       </div>
       <div class="dark-box">
