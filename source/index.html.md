@@ -68,9 +68,9 @@ var_dump($response);
 
 Hotels.ng uses Client id and Client Secret to allow access to the api.The client id and secret would provide an access token which would now grant you access to all our Hotels.ng endpoints. 
 For the Hng Internship,<br>
-The default Cient_id is wLV9nF9J8uo0SuaYXl7wCc9RV<br>
-The default Cient_secret is YBiqbzOpma9zSUd3txXSCKQvcdZuPDcrS0AVGp9v <br>
-The default grantType is client_credentials.<br>
+The default Cient_id is <strong>wLV9nF9J8uo0SuaYXl7wCc9RV</strong> <br>
+The default Cient_secret is <strong>YBiqbzOpma9zSUd3txXSCKQvcdZuPDcrS0AVGp9v</strong> <br>
+The default grantType is<strong>client_credentials.</strong><br>
 The List of scopes are available at the deck of all the endpoints you are consuming. <br>
 You can make use of multiple scopes by using ',' as delimiter.<br>
 
