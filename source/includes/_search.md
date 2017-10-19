@@ -76,7 +76,7 @@ var_dump($response);
 
 Parameter | Type | Description | Required
 --------- | ------- | ----------- |----------
-access_token | Number | Token generated with client_id and client_credentials | True
+access_token | String | Token generated with client_id and client_credentials | True
 with_images | Boolean | Should the response include property's image url | False
 with_rates | Boolean | Should the response include property's rate | False
 filters | String | Filtering out the data not needed from the response | False
@@ -126,6 +126,53 @@ var_dump($response);
 
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
-access_token | Number | Token generated with client_id and client_credentials | True
+access_token | String | Token generated with client_id and client_credentials | True
+
+
+## /search/location/count/bulk
+
+	Get the hotel count in a particular location
+
+> Example request:
+
+```php
+<?php
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/search/location/count/bulk?access_token=&property_type=&location_type=&location=");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  "Content-Type: application/xml",
+  "Accept: application/json"
+));
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+var_dump($response);
+```
+> Example response:
+
+```json
+{
+    "data": [],
+    "status": "success"
+}
+```
+
+>###	 HTTP Request
+
+>	GET `http://staging.api.hng.tech/search/location/count/bulk?access_token=&property_type=&location_type=&location=`
+
+### Query Parameters
+
+Parameter |  Type | Description | Required |
+--------- | ------- | ----------- | -----------
+access_token | String | Token generated with client_id and client_credentials | True
+property_type | String |  | False
+location_type | String |  | False
+location | Array | Token generated with client_id and client_credentials | True
 
 
