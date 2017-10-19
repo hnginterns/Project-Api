@@ -70,7 +70,7 @@ Hotels.ng uses Client id and Client Secret to allow access to the api.The client
 For the Hng Internship,<br>
 The default Cient_id is <strong>wLV9nF9J8uo0SuaYXl7wCc9RV</strong> <br>
 The default Cient_secret is <strong>YBiqbzOpma9zSUd3txXSCKQvcdZuPDcrS0AVGp9v</strong> <br>
-The default grantType is<strong>client_credentials.</strong><br>
+The default grantType is <strong>client_credentials.</strong><br>
 The List of scopes are available at the deck of all the endpoints you are consuming. <br>
 You can make use of multiple scopes by using ',' as delimiter.<br>
 
