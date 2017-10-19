@@ -19,7 +19,6 @@ includes:
   - rooms
   - ratings
   - reports
-  - users
 search: true
 ---
 
