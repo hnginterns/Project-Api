@@ -321,6 +321,7 @@ html, body {
   // to place content above the dark box
   position: relative;
   z-index: 30;
+;
 
   &:after {
     content: '';
@@ -513,7 +514,6 @@ html, body {
   pre, blockquote {
     background-color: $code-bg;
     color: #fff;
-
     margin: 0;
     width: $examples-width;
 
@@ -545,8 +545,26 @@ html, body {
       background-color: $code-annotation-bg;
       padding: $code-annotation-padding 2em;
       color: #eee;
+    
     }
   }
+}
+.content pre::-webkit-scrollbar {
+  width:12px;
+  padding: 10px;
+
+}
+.content pre::-webkit-scrollbar-thumb {
+  background-color: #1E2224;
+  border-radius: 3px;
+}
+
+.content pre::-webkit-scrollbar-track {
+  background-color: inherit;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
