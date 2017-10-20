@@ -1,10 +1,8 @@
 # Bookings
 Access to all bookings related things - List of Scopes to be used in Authorization<br> 
 Bookings.read
-##Get Bookings by email
-=======
 
-## Get Booking Details of a Specific Booking
+## Get Bookings by email
 
 >Example request:
 
