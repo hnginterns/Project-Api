@@ -263,6 +263,69 @@ access_token | Nill | string
 rate_ids | Nill| string
 
 
+<<<<<<< HEAD
+<!--##Get company rates
+
+> Example request:
+
+```php
+<?php
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "
+https://api.hotels.ng/rates2/properties?company_rates=
+");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  "Content-Type: application/json",
+  "Accept: application/json"
+));
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+var_dump($response);?>
+```
+> Example response:
+
+```json
+[
+  {
+    "status": "success",
+    "message": "Rate",
+    "data": {
+      "id": 1,
+      "property_id": 98319,
+      "room_id": 10,
+      "rate_name": null,
+      "rate_tag_id": 1,
+      "rack_price": 55000,
+      "buying_price": 49500,
+      "buying_price_usd\"": null,
+      "selling_price": 55000,
+      "selling_price_usd\"": null,
+      "priority": 1,
+      "start_date": {},
+      "end_date": {},
+      "active_start": {},
+      "active_end": {},
+      "active_mon": 1,
+      "active_tue": 1,
+      "active_wed": 1,
+      "active_thu": 1,
+      "active_fri": 1,
+      "active_sat": 1,
+      "active_sun": 1
+    }
+  }
+]
+
+```
+This Endpoint returns company's rates
+=======
+>>>>>>> 9da7287d2317f5cf24ccb00f3028865141d2ffc8
 
 ### HTTP Request
 
@@ -272,7 +335,7 @@ rate_ids | Nill| string
 
 Parameter | type | Description
 --------- | ------- | -----------
-company_rates | string | returns company rates
+company_rates | string | returns company rates-->
 
 
 
