@@ -61,7 +61,7 @@ This endpoint shows the facilities available for a specific hotel.
 Parameter | Type | Description
 --------- | ------- | -----------
 hotel_id | Number | id of the Hotel
-access_token | String | Your access token
+access_token | String | Your access token
 
 
 

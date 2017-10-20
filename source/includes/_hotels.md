@@ -79,6 +79,21 @@ Parameter | Type | Description
 --------- | ------- | -----------
 access_token | String | Your access token
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Hotel identifier.
+name | string | Name of hotel
+status | string | Status of a property
+payment_type | string | Type of payment
+property_type_id|integer|Id of  property
+ currency_code| string | Code of currency
+is_bookable | boolean | If an hotel is bookable
+property_type | string | Type of property
+driving_instructions | string | Driving instructions to the hotel
+unique_url | string | A unique url for the hotel
+
 ## Show details for a hotel
 
 
@@ -155,6 +170,22 @@ Parameter | Type | Description
 --------- | ------- | -----------
 hotel_id | Number | id of the Hotel
 access_token | String | Your access token
+
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Hotel identifier.
+name | string | Name of hotel
+status | string | Status of a property
+payment_type | string | Type of payment
+property_type_id|integer|Id of  property
+ currency_code| string | Code of currency
+is_bookable | boolean | If an hotel is bookable
+property_type | string | Type of property
+driving_instructions | string | Driving instructions to the hotel
+unique_url | string | A unique url for the hotel
+
 
 ## Show details for a hotel with <br>everything associated to it
 
@@ -257,3 +288,17 @@ Parameter | Type | Description
 hotel_id | Number | id of the Hotel
 access_token | String | Your access token
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Hotel identifier.
+name | string | Name of hotel
+status | string | Status of a property
+payment_type | string | Type of payment
+property_type_id|integer|Id of  property
+ currency_code| string | Code of currency
+is_bookable | boolean | If an hotel is bookable
+property_type | string | Type of property
+driving_instructions | string | Driving instructions to the hotel
+unique_url | string | A unique url for the hotel

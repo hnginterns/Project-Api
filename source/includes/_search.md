@@ -83,6 +83,13 @@ search_type | String |  | False
 property_type | String | Type of property to request | False
 
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+flag_name| string |Name of flags
+id| integer | Id of the searched hotel
+
 
 ##Search for properties nearby
 
@@ -126,6 +133,15 @@ var_dump($response);?>
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token| String | Token generated with client_id and client_credentials | True
+
+
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+
+Total | integer| Total result searched
+
 
 
 ## Get hotel count in a location
@@ -175,3 +191,8 @@ location_type | String |  | False
 location | Array | Token generated with client_id and client_credentials | True
 
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+Total | integer| Total result searched

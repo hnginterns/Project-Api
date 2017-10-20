@@ -91,3 +91,11 @@ client_id | string |Endpoint trying to consume
 
 
 
+### Response Body
+
+Attributes | Type | Description
+--------- | ------- | -----------
+access_token| string|access token issued to the consumer
+token_type | string |type of token issued
+expires_in | integer |the time the token could last for
+
