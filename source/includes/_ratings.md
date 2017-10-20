@@ -263,7 +263,7 @@ access_token | Nill | string
 rate_ids | Nill| string
 
 
-<<<<<<< HEAD
+
 <!--##Get company rates
 
 > Example request:
@@ -325,7 +325,7 @@ var_dump($response);?>
 ```
 This Endpoint returns company's rates
 =======
->>>>>>> 9da7287d2317f5cf24ccb00f3028865141d2ffc8
+
 
 ### HTTP Request
 
