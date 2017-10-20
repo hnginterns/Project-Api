@@ -1,4 +1,4 @@
-# Search
+# Search
 
 
 Search for Hotels with parameters 
@@ -6,12 +6,12 @@ Scope to be used in Authorization
 Query For a List
 For a List of parameter values, *see below*
 Property_type : 
-*	`'Villa'`, 
-*	`'Apartment'`,
-*	`'Guest House'`,
-*	`'Hotel'`, 
-*	`'Luxury Hotel'`, 
-*	`'Guest House'`
+*	`Villa`, 
+*	`Apartment`,
+*	`Guest House`,
+*	`Hotel`, 
+*	`Luxury Hotel`, 
+*	`Guest House`
 
 ##Search for hotels
 	

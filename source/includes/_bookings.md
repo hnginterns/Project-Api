@@ -1,5 +1,5 @@
 # Bookings
-This endpoint Fetches all Bookings,bookings by email.
+
 ## Get Booking Details of a Specific Booking
 
 >Example request:
