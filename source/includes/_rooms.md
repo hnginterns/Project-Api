@@ -1,8 +1,6 @@
 # Rooms
-Access to all Rooms related things - List of Scopes to be used in Authorization 
-Rooms.read,</br>
-Rooms.delete, </br>
-Rooms.update</br>
+Access to all Rooms related things - List of Scopes to be used in Authorization <br>
+Rooms.read
 
 ## Get Rooms for a Particular Hotel Based on Hotel id
 > Example request:
@@ -11,7 +9,7 @@ Rooms.update</br>
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/rooms/property/{hotel_id}?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/rooms/property/{hotel_id}?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -82,7 +80,7 @@ var_dump($response);
 ```
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/rooms/property/hotel_id?access_token=`
+`GET https://api.hotels.ng/rooms/property/hotel_id?access_token=`
 
 ### Url Parameters
 Parameter | Type | Description

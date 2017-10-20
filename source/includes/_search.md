@@ -1,4 +1,4 @@
-# Search
+# Search
 
 
 Search for Hotels with parameters 
@@ -23,7 +23,7 @@ Property_type :
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -69,7 +69,7 @@ var_dump($response);
 
 ### HTTP Request
 
-`GET http://staging.api.hng.tech/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=`
+`GET https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=`
 
 ### Query Parameters
 
@@ -94,7 +94,7 @@ property_type | String | Type of property to request | False
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/search/nearby?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search/nearby?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -119,7 +119,7 @@ var_dump($response);?>
 
 ###	HTTP Request
   
-`GET http://staging.api.hng.tech/search/nearby?access_token= `
+`GET https://api.hotels.ng/search/nearby?access_token= `
 
 ### Query Parameters
 
@@ -138,7 +138,7 @@ access_token| String | Token generated with client_id and client_credentials | T
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/search/location/count/bulk?access_token=&property_type=&location_type=&location=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search/location/count/bulk?access_token=&property_type=&location_type=&location=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -163,7 +163,7 @@ var_dump($response);?>
 
 ###	 HTTP Request
 
-GET `http://staging.api.hng.tech/search/location/count/bulk?access_token=&property_type=&location_type=&location=`
+GET `https://api.hotels.ng/search/location/count/bulk?access_token=&property_type=&location_type=&location=`
 
 ### Query Parameters
 

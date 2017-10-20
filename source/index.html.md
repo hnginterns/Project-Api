@@ -18,7 +18,7 @@ includes:
   - locations
   - rooms
   - ratings
-  - reports
+  
 search: true
 ---
 
@@ -38,7 +38,7 @@ This Endpoint provides you with access Token
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://private-13543-hotelsng1.apiary-mock.com/oauth/authenticate?grant_type=&client_id=&client_secret=&scope=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/oauth/authenticate?grant_type=&client_id=&client_secret=&scope=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -67,9 +67,7 @@ var_dump($response);
 
 
 Hotels.ng uses Client id and Client Secret to allow access to the api.The client id and secret would provide an access token which would now grant you access to all our Hotels.ng endpoints. 
-For the Hng Internship,<br>
-The default Cient_id is <strong>wLV9nF9J8uo0SuaYXl7wCc9RV</strong> <br>
-The default Cient_secret is <strong>YBiqbzOpma9zSUd3txXSCKQvcdZuPDcrS0AVGp9v</strong> <br>
+
 The default grantType is <strong>client_credentials.</strong><br>
 The List of scopes are available at the deck of all the endpoints you are consuming. <br>
 You can make use of multiple scopes by using ',' as delimiter.<br>
@@ -80,7 +78,7 @@ Make sure you sign up for a developer key
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/oauth/authenticate?grant_type=&client_id=&client_secret=&scope=`
+`GET https://api.hotels.ng/oauth/authenticate?grant_type=&client_id=&client_secret=&scope=`
 
 ### Query Parameters
 

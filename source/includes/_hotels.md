@@ -1,9 +1,7 @@
 # Hotels
 Access to all Hotel related things - List of Scopes to be used in Authorization <br>
-properties.read,<br>
-properties.create,<br>
-properties.delete ,<br>
-properties.update<br>
+properties.read
+
 
 ## Get list of hotels
 
@@ -14,7 +12,7 @@ properties.update<br>
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://private-13543-hotelsng1.apiary-mock.com/hotels?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -75,7 +73,7 @@ This endpoint returns an array of Hotels.
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/hotels?access_token=`
+`GET https://api.hotels.ng/hotels?access_token=`
 
 ### URL Parameters
 
@@ -92,7 +90,7 @@ access_token | String | Your access token
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://private-13543-hotelsng1.apiary-mock.com/hotels/{hotel_id}?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -152,7 +150,7 @@ This endpoint shows the details of a particular hotel.
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id?access_token=`
+`GET https://api.hotels.ng/hotels/hotel_id?access_token=`
 
 ### URL Parameters
 
@@ -170,7 +168,7 @@ access_token | String | Your access token
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://private-13543-hotelsng1.apiary-mock.com/hotels/{hotel_id}/details?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}/details?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -255,7 +253,7 @@ This endpoint gets details of a hotel and everything associated to it
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/details?access_token=`
+`GET https://api.hotels.ng/hotels/hotel_id/details?access_token=`
 
 ### URL Parameters
 

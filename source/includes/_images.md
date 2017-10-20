@@ -1,14 +1,12 @@
 # Images
 Acess to all Reports Related Things - List of Scopes to be used in Authorization<br>
-Images.read,<br>
-Images.create,<br>
-Images.delete,<br>
-Images.update<br>
+Images.read
+
 
 ##Show images for a particular hotel
 
 This endpoint fetches images for a specific hotel.<br>
-Image URL is in this format https://media.api.hng.tech/img/size/name_of_image.jpg.<br>
+Image URL is in this formathttps://api.hotels.ng/img/size/name_of_image.jpg.<br>
 The following sizes of images are returned:<br>
 size =<br>
 1. small - A small sized image is returned.<br>
@@ -21,7 +19,7 @@ size =<br>
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/hotels/{hotel_id}/images?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}/images?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -123,7 +121,7 @@ var_dump($response);
 ```
 
 ### HTTP Request
-`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/images?access_token=`
+`GET https://api.hotels.ng/hotels/hotel_id/images?access_token=`
 
 
 ### Query Parameters

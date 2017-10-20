@@ -1,9 +1,6 @@
 # Reviews
 Acess to all Reviews Related Things - List of Scopes to be used in Authorization <br>
-Reviews.read,<br>
-Reviews.create,<br>
-Reviews.delete,<br>
-Reviews.update,<br>
+Reviews.read
 
 ##Show reviews for a specific hotel
 
@@ -13,7 +10,7 @@ Reviews.update,<br>
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/hotels/{hotel_id}/reviews?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}/reviews?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -107,7 +104,7 @@ var_dump($response);
 This endpoint shows the reviews for a specific hotel.
 ### HTTP Request
 
-  `GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/reviews?access_token=`
+  `GET https://api.hotels.ng/hotels/hotel_id/reviews?access_token=`
 
 ### Query Parameters
 

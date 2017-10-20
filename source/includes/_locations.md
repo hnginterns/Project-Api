@@ -1,9 +1,6 @@
 # Location
 Acess to all Location Related Things - List of Scopes to be used in Authorization <br>
-locations.read,<br>
-locations.create,<br>
-locations.delete,<br>
-locations.update,<br>
+locations.read
 
 ##Show list of countries
 
@@ -13,7 +10,7 @@ locations.update,<br>
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://staging.api.hng.tech/hotels/{hotel_id}?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -73,7 +70,7 @@ This endpoint shows the list of countries.
 
 ### HTTP Request
 
-  `GET https://private-13543-hotelsng1.apiary-mock.com/location/countries?countries=&access_token=`
+  `GET https://api.hotels.ng/location/countries?countries=&access_token=`
 
 ### Query Parameters
 
@@ -93,7 +90,7 @@ access_token | String | Your access token
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "
-http://staging.api.hng.tech/location/propertylocations/property_id/property?access_token=
+https://api.hotels.ng/location/propertylocations/property_id/property?access_token=
 ");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -160,7 +157,7 @@ This endpoint shows a list of properties around a location
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/location/propertylocations/property_id/property?access_token=`
+`GET https://api.hotels.ng/location/propertylocations/property_id/property?access_token=`
 
 ### Query Parameters
 

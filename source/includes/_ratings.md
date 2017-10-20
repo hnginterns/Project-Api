@@ -1,10 +1,8 @@
 # Ratings
 Access to all Rates Flag <br>
 List of Scopes that can be used in Authorization:<br>
-rates.read<br>
-rates.create<br>
-rates.delete<br>
-rates.update
+rates.read
+
 
 
 
@@ -17,7 +15,7 @@ rates.update
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "
-http://staging.api.hng.tech/rates/{rate_id}/detail?access_token=
+https://api.hotels.ng/rates/{rate_id}/detail?access_token=
 ");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -70,7 +68,7 @@ var_dump($response);?>
 This Endpoint returns the details about a single rate by ID 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/rates/rate_id/detail?access_token= `
+`https://api.hotels.ng/rates/rate_id/detail?access_token= `
 
 ### Query Parameters
 
@@ -90,7 +88,7 @@ rate_id | Nill | An integer.
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "
-http://staging.api.hng.tech/rates/flags/all?access_token=
+https://api.hotels.ng/rates/flags/all?access_token=
 ");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -125,7 +123,7 @@ This Endpoint returns all the available Flags
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/rates/flags/all?access_token= `
+`https://api.hotels.ng/rates/flags/all?access_token= `
 
 ### Query Parameters
 
@@ -145,7 +143,7 @@ access_token | string | your access token
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "
-http://staging.api.hng.tech/rates/flag/{id}?access_token=
+https://api.hotels.ng/rates/flag/{id}?access_token=
 ");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -179,7 +177,7 @@ var_dump($response);?>
 This Endpoint returns all the Flags by rate id
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/rates/flag/id?access_token= `
+`https://api.hotels.ng/rates/flag/id?access_token= `
 
 ### Query Parameters
 
@@ -199,7 +197,7 @@ id | Number| id to return all flag ratings
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "
-http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&access_token=
+https://api.hotels.ng/rates/flags/multiple/fetch?rate_ids=&access_token=
 ");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -255,7 +253,7 @@ This Endpoint returns multiple rate flags by their id
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/rates/flags/multiple/fetch?rate_ids=&access_token=`
+`https://api.hotels.ng/rates/flags/multiple/fetch?rate_ids=&access_token=`
 
 ### Query Parameters
 
@@ -274,7 +272,7 @@ rate_ids | Nill| string
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "
-http://staging.api.hng.tech/rates2/properties?company_rates=
+https://api.hotels.ng/rates2/properties?company_rates=
 ");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -328,7 +326,7 @@ This Endpoint returns company's rates
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/rates2/properties?company_rates= `
+`https://api.hotels.ng/rates2/properties?company_rates= `
 
 ### Query Parameters
 

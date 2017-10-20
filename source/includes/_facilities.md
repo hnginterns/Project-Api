@@ -1,9 +1,6 @@
 # Facilities
 Access to All reviews Related Things - List of Scopes to be used in Authorization<br>
-    Facilities.read,<br>
-    Facilities.create,<br>
-    Facilities.delete, <br>
-    Facilities.update<br>
+    Facilities.read
 ## Show facilities for a hotel
 
 
@@ -13,7 +10,7 @@ Access to All reviews Related Things - List of Scopes to be used in Authorizatio
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://private-13543-hotelsng1.apiary-mock.com/hotels/{hotel_id}/facilities?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}/facilities?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -57,7 +54,7 @@ This endpoint shows the facilities available for a specific hotel.
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/facilities?access_token=`
+`GET https://api.hotels.ng/hotels/hotel_id/facilities?access_token=`
 
 ### URL Parameters
 
@@ -75,7 +72,7 @@ access_token | String | Your access token
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://private-13543-hotelsng1.apiary-mock.com/hng/bank_details/{hotel_id}?access_token=");
+curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hng/bank_details/{hotel_id}?access_token=");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -114,7 +111,7 @@ This endpoint shows the banks details of a specific hotel.
 
 ### HTTP Request
 
-`GET https://private-13543-hotelsng1.apiary-mock.com/hng/bank_details/hotel_id?access_token=`
+`GET https://api.hotels.ng/hng/bank_details/hotel_id?access_token=`
 
 ### URL Parameters
 Parameter | Type | Description
