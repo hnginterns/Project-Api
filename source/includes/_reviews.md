@@ -113,3 +113,15 @@ Parameter | Type | Description
 hotel_id | Number | id of the Hotel
 access_token | String | Your Acess Token
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier.
+property_id | integer | Id of the property supplied
+name| string| name of the reviewer
+  title| string |title of the review
+  comment| string | comment of the reviewer
+overall_rating | integer | General rating of the hotel
+review_id | integer | Id of the review
+score | integer | Score of the review

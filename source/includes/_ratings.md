@@ -78,6 +78,18 @@ Parameter | Default | Description
 access_token | Nill | String.
 rate_id | Nill | An integer.
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier.
+property_id | integer | Id of the property supplied
+room_id| integer| Id of a particular room
+  rate_tag_id| integer | Id of the tag rate
+ rack_price| integer | Price of the rack
+buying_price | integer | Buying price
+Selling_price | integer | Selling price
+
 
 ##Get all available flags
 
@@ -131,6 +143,11 @@ Parameter | type | Description
 --------- | ------- | -----------
 access_token | string | your access token
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+  flag_name| string | Name of the flag rate
 
 
 
@@ -186,7 +203,12 @@ Parameter | Type | Description
 access_token | string | Generated access token from Oauth2 developer credentials
 id | Number| id to return all flag ratings
 
+###Response Body
 
+Attribute | Type | Description
+--------- | ------- | -----------
+  flag_name| string | Name of the flag rate
+  
 
 ##Fetch multiple flag rates by Id
 
@@ -263,7 +285,17 @@ access_token | Nill | string
 rate_ids | Nill| string
 
 
+###Response Body
 
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier.
+property_id | integer | Id of the property supplied
+room_id| integer| Id of a particular room
+  rate_tag_id| integer | Id of the tag rate
+ rack_price| integer | Price of the rack
+buying_price | integer | Buying price
+Selling_price | integer | Selling price
 
 
 

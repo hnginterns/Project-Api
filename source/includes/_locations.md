@@ -79,6 +79,17 @@ Parameter | Type | Description
 countries| String | Countries list
 access_token | String | Your access token
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier.
+name | string | Name of Country
+continent_id| integer| Id of the Continent where the country is
+  object_type| string |type of object supplied
+ facility_name| string | name of facility supplied
+img_url | string | link to the image of facility
+
 
 
 ##Show list of properties around <br>a location
@@ -165,3 +176,15 @@ Parameter | Type | Description
 --------- | ------- | -----------
 property_id| String | Properties list
 access_token | String | Your access token
+
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier.
+property_id | integer | Id of the property supplied
+road_id| string| Id of the road to the location
+area_id| string | Id of the area to the location
+ city_id| string | Id of the city to the location
+ state_id| string | Id of the state to the location
+ address| string | address to the location

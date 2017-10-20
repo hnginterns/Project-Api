@@ -87,3 +87,14 @@ Parameter | Type | Description
 --------- | ------- | -----------
 Room_id | Number | Local id assigned to that hotel 
 access_token | String | Generated access token from Oauth2 developer credentials
+
+
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier.
+room_id | integer | Id of the room
+name| string| Name of the room
+  property_id| integer |Id of the property
+ payment_type| string | type of payment given

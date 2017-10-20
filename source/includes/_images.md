@@ -131,3 +131,14 @@ Parameter | Type | Description
 hotel_id | Number | id of the Hotel
 access_token | String | Your Acess Token
 
+###Response Body
+
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier.
+application_id| integer | Id of the applied hotel
+object_id | integer | Id of the object supplied
+facility_type_id| integer| Id of the facility
+  object_type| string |type of object supplied
+ facility_name| string | name of facility supplied
+img_url | string | link to the image of the specific hotel
