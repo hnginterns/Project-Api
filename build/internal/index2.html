@@ -2262,7 +2262,7 @@ Reviews.update,<br></p>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"http://staging.api.hng.tech/hotels/</span><span class="si">{</span><span class="nv">hotel_id</span><span class="si">}</span><span class="s2">/reviews?access_token="</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/internal/hotels/</span><span class="si">{</span><span class="nv">hotel_id</span><span class="si">}</span><span class="s2">/reviews?access_token="</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 
@@ -2355,7 +2355,7 @@ Reviews.update,<br></p>
 </span></code></pre>
 <p>This endpoint shows the reviews for a specific hotel.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://private-13543-hotelsng1.apiary-mock.com/hotels/hotel_id/reviews?access_token=</code></p>
+<p><code>GET https://api.hotels.ng/internal/hotels/hotel_id/reviews?access_token=</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2427,7 +2427,7 @@ Reviews.update,<br></p>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"http://staging.api.hng.tech/hotels/reviews/add?hotel_id=&amp;access_token="</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/internal/hotels/reviews/add?hotel_id=&amp;access_token="</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 
@@ -2454,7 +2454,7 @@ Reviews.update,<br></p>
 </span></code></pre>
 <p>This endpoint adds a review for a specific hotel.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST http://private-aae1c-hotelsng1.apiary-mock.com/hotels/reviews/add?hotel_id=&amp;access_token=</code></p>
+<p><code>POST https://api.hotels.ng/internal/hotels/reviews/add?hotel_id=&amp;access_token=</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2814,7 +2814,7 @@ rates.update</p>
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"
-http://staging.api.hng.tech/rates/</span><span class="si">{</span><span class="nv">rate_id</span><span class="si">}</span><span class="s2">/detail?access_token=
+https://api.hotels.ng/internal/rates/</span><span class="si">{</span><span class="nv">rate_id</span><span class="si">}</span><span class="s2">/detail?access_token=
 "</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
@@ -2866,7 +2866,7 @@ http://staging.api.hng.tech/rates/</span><span class="si">{</span><span class="n
 </span></code></pre>
 <p>This Endpoint returns the details about a single rate by ID </p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://private-13543-hotelsng1.apiary-mock.com/rates/rate_id/detail?access_token=</code></p>
+<p><code>GET https://api.hotels.ng/internal/rates/rate_id/detail?access_token=</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2894,7 +2894,7 @@ http://staging.api.hng.tech/rates/</span><span class="si">{</span><span class="n
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"
-http://staging.api.hng.tech/rates/flags/all?access_token=
+https://api.hotels.ng/internal/rates/flags/all?access_token=
 "</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
@@ -2926,7 +2926,7 @@ http://staging.api.hng.tech/rates/flags/all?access_token=
 </span></code></pre>
 <p>This Endpoint returns all the available Flags</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://private-13543-hotelsng1.apiary-mock.com/rates/flags/all?access_token=</code></p>
+<p><code>GET https://api.hotels.ng/internal/rates/flags/all?access_token=</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2949,7 +2949,7 @@ http://staging.api.hng.tech/rates/flags/all?access_token=
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"
-http://staging.api.hng.tech/rates/flag/</span><span class="si">{</span><span class="nv">id</span><span class="si">}</span><span class="s2">?access_token=
+https://api.hotels.ng/internal/rates/flag/</span><span class="si">{</span><span class="nv">id</span><span class="si">}</span><span class="s2">?access_token=
 "</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
@@ -2982,7 +2982,7 @@ http://staging.api.hng.tech/rates/flag/</span><span class="si">{</span><span cla
 </span></code></pre>
 <p>This Endpoint returns all the Flags by rate id</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://private-13543-hotelsng1.apiary-mock.com/rates/flag/id?access_token=</code></p>
+<p><code>GET https://api.hotels.ng/internal/rates/flag/id?access_token=</code></p>
 <h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3087,7 +3087,7 @@ http://staging.api.hng.tech/rates/flag/</span><span class="si">{</span><span cla
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://private-aae1c-hotelsng1.apiary-mock.com/rates/flags/add?flag_names=&amp;access_token="</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/internal/rates/flags/add?flag_names=&amp;access_token="</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 
@@ -3118,7 +3118,7 @@ http://staging.api.hng.tech/rates/flag/</span><span class="si">{</span><span cla
 </span></code></pre>
 <p>This endpoint adds a flags names to rates.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://private-aae1c-hotelsng1.apiary-mock.com/rates/flags/add?flag_names=&amp;access_token=</code></p>
+<p><code>POST https://api.hotels.ng/internal/rates/flags/add?flag_names=&amp;access_token=</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3146,7 +3146,7 @@ http://staging.api.hng.tech/rates/flag/</span><span class="si">{</span><span cla
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"
-http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&amp;access_token=
+https://api.hotels.ng/internal/rates/flags/multiple/fetch?rate_ids=&amp;access_token=
 "</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
@@ -3198,7 +3198,7 @@ http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&amp;access_toke
 </span></code></pre>
 <p>This Endpoint returns multiple rate flags by their id</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://private-13543-hotelsng1.apiary-mock.com/rates/flags/multiple/fetch?rate_ids=&amp;access_token=</code></p>
+<p><code>GET https://api.hotels.ng/internal/rates/flags/multiple/fetch?rate_ids=&amp;access_token=</code></p>
 <h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3226,7 +3226,7 @@ http://staging.api.hng.tech/rates/flags/multiple/fetch?rate_ids=&amp;access_toke
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"
-http://staging.api.hng.tech/rates2/properties?company_rates=
+https://api.hotels.ng/internal/rates2/properties?company_rates=
 "</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
@@ -3278,7 +3278,7 @@ http://staging.api.hng.tech/rates2/properties?company_rates=
 </span></code></pre>
 <p>This Endpoint returns company&#39;s rates</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET https://private-13543-hotelsng1.apiary-mock.com/rates2/properties?company_rates=</code></p>
+<p><code>GET https://api.hotels.ng/internal/rates2/properties?company_rates=</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
