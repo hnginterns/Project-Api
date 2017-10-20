@@ -227,14 +227,19 @@
                   <li>
                     <a href="#authenticating-with-oauth" class="toc-h2 toc-link" data-title="Authentication">Authenticating with OAUTH</a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#search" class="toc-h1 toc-link" data-title="Search">Search</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#search-for-hotels" class="toc-h2 toc-link" data-title="Authentication">Search for hotels</a>
+                    <a href="#search-for-hotels" class="toc-h2 toc-link" data-title="Search">Search for hotels</a>
                   </li>
                   <li>
-                    <a href="#search-for-properties-nearby" class="toc-h2 toc-link" data-title="Authentication">Search for properties nearby</a>
+                    <a href="#search-for-properties-nearby" class="toc-h2 toc-link" data-title="Search">Search for properties nearby</a>
                   </li>
                   <li>
-                    <a href="#get-hotel-count-in-a-location" class="toc-h2 toc-link" data-title="Authentication">Get hotel count in a location</a>
+                    <a href="#get-hotel-count-in-a-location" class="toc-h2 toc-link" data-title="Search">Get hotel count in a location</a>
                   </li>
               </ul>
           </li>
@@ -242,10 +247,13 @@
             <a href="#bookings" class="toc-h1 toc-link" data-title="Bookings">Bookings</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#get-bookings-by-email" class="toc-h2 toc-link" data-title="Bookings">Get Bookings by email</a>
+                  </li>
+                  <li>
                     <a href="#get-booking-details-of-a-specific-booking" class="toc-h2 toc-link" data-title="Bookings">Get Booking Details of a Specific Booking</a>
                   </li>
                   <li>
-                    <a href="#get-total-bookings-made" class="toc-h2 toc-link" data-title="Bookings">Get Total Bookings Made</a>
+                    <a href="#get-details-of-a-specific-booking" class="toc-h2 toc-link" data-title="Bookings">Get details of a specific booking</a>
                   </li>
               </ul>
           </li>
@@ -276,9 +284,6 @@
               <ul class="toc-list-h2">
                   <li>
                     <a href="#show-facilities-for-a-hotel" class="toc-h2 toc-link" data-title="Facilities">Show facilities for a hotel</a>
-                  </li>
-                  <li>
-                    <a href="#show-bank-details-for-a-hotel" class="toc-h2 toc-link" data-title="Facilities">Show bank details for a hotel</a>
                   </li>
               </ul>
           </li>
@@ -323,9 +328,6 @@
                   </li>
                   <li>
                     <a href="#fetch-multiple-flag-rates-by-id" class="toc-h2 toc-link" data-title="Ratings">Fetch multiple flag rates by Id</a>
-                  </li>
-                  <li>
-                    <a href="#get-company-rates" class="toc-h2 toc-link" data-title="Ratings">Get company rates</a>
                   </li>
               </ul>
           </li>
@@ -414,19 +416,18 @@ Make sure you sign up for a developer key
 <td>Endpoint trying to consume</td>
 </tr>
 </tbody></table>
-<p># Search</p>
-
+<h1 id='search'>Search</h1>
 <p>Search for Hotels with parameters 
 Scope to be used in Authorization 
 Query For a List
 For a List of parameter values, <em>see below</em>
 Property_type : 
-*   <code>&#39;Villa&#39;</code>, 
-*   <code>&#39;Apartment&#39;</code>,
-*   <code>&#39;Guest House&#39;</code>,
-*   <code>&#39;Hotel&#39;</code>, 
-*   <code>&#39;Luxury Hotel&#39;</code>, 
-*   <code>&#39;Guest House&#39;</code></p>
+*   <code>Villa</code>, 
+*   <code>Apartment</code>,
+*   <code>Guest House</code>,
+*   <code>Hotel</code>, 
+*   <code>Luxury Hotel</code>, 
+*   <code>Guest House</code></p>
 <h2 id='search-for-hotels'>Search for hotels</h2>
 <p>This endpoint allows you to search For Hotels</p>
 
@@ -638,20 +639,95 @@ Property_type :
 </tr>
 </tbody></table>
 <h1 id='bookings'>Bookings</h1>
-<p>This endpoint Fetches all Bookings,bookings by email.</p>
+<p>Access to all bookings related things - List of Scopes to be used in Authorization<br> 
+Bookings.read</p>
+<h2 id='get-bookings-by-email'>Get Bookings by email</h2>
+<p>=======</p>
 <h2 id='get-booking-details-of-a-specific-booking'>Get Booking Details of a Specific Booking</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
+
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/internal/bookings?email=&amp;access_token=&amp;booking_ids="</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
+
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+  <span class="s2">"Content-Type: application/json"</span><span class="p">,</span>
+  <span class="s2">"Accept: application/json"</span>
+<span class="p">));</span>
+
+<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+
+</span></code></pre>
+<p>This endpoint Fetches all Bookings,bookings by email.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://api.hotels.ng/internal/bookings?email=&amp;access_token=&amp;booking_ids=</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>booking_id</td>
+<td>Number</td>
+<td>Local id assigned to that booking</td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>String</td>
+<td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+</tbody></table>
+<h2 id='get-details-of-a-specific-booking'>Get details of a specific booking</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/hotels/</span><span class="si">{</span><span class="nv">hotel_id</span><span class="si">}</span><span class="s2">?access_token="</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/bookings/booking_id?access_token"</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 
 <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"Content-Type: application/xml"</span><span class="p">,</span>
+  <span class="s2">"Content-Type: application/json"</span><span class="p">,</span>
   <span class="s2">"Accept: application/json"</span>
 <span class="p">));</span>
 
@@ -687,10 +763,10 @@ Property_type :
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint shows the booking details of a specific booking.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://api.hotels.ng/bookings/booking_id?access_token=</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p>This endpoint Fetches booking details for a specific booking.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://api.hotels.ng/internal/bookings/booking_id?access_token=</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -709,119 +785,7 @@ Property_type :
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
-<h2 id='get-total-bookings-made'>Get Total Bookings Made</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/bookings/booking_id?access_token"</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"Content-Type: application/json"</span><span class="p">,</span>
-  <span class="s2">"Accept: application/json"</span>
-<span class="p">));</span>
-
-<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-
-<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
-<span class="cp">?&gt;</span>
-</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre><h1 id='hotels'>Hotels</h1>
+<h1 id='hotels'>Hotels</h1>
 <p>Access to all Hotel related things - List of Scopes to be used in Authorization <br>
 properties.read</p>
 <h2 id='get-list-of-hotels'>Get list of hotels</h2>
@@ -874,10 +838,8 @@ properties.read</p>
         </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"meal_plan"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"From Wuse Market, Zone 4, Abuja Head west on Wuse Market Rd toward Kashim Ibrahim Way 72 m Turn right at Leilas Mobile Massage onto Kashim Ibrahim Way  Pass by Sterling Bank Abuja Main (on the right in 400 m) 1.3 km Turn right onto Ahmadu Bello Way  Drive along Eden Place Apartments (on the right for 190 m) 800 m Turn left onto Ademola Adetokunbo Cres 140 m Turn right at Hair Studio onto Cairo Cres/Cairo Street  Pass by Ecobank (on the left) 350 m Turn left onto Cairo Cres/Cairo Street/Kampala St/Kampala Cres Destination will be on the right"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000-redeemers-cherith-guest-house-abuja"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
         </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
@@ -939,7 +901,6 @@ properties.read</p>
       </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"From Lagos State University Lagos Badagry Road, Ojo, Head northeast on Lagos State University toward LASU MAIN Rd 97 m Turn right onto LASU MAIN Rd  Pass by Tito Cakes and Events (on the left) 800 m Turn right onto Lagos - Badagry Expy 300 m Turn left toward F100/Lagos - Badagry Exp y12 m Merge onto F100/Lagos - Badagry Expy 850 m Turn right toward Alhaji Adisa Osiefa Street 55 m Turn right onto Alhaji Adisa Osiefa Street</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"minrate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -1034,10 +995,8 @@ properties.read</p>
       </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"meal_plan"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"From Lagos State University Lagos Badagry Road, Ojo, Head northeast on Lagos State University toward LASU MAIN Rd 97 m Turn right onto LASU MAIN Rd  Pass by Tito Cakes and Events (on the left) 800 m Turn right onto Lagos - Badagry Expy 300 m Turn left toward F100/Lagos - Badagry Exp y12 m Merge onto F100/Lagos - Badagry Expy 850 m Turn right toward Alhaji Adisa Osiefa Street 55 m Turn right onto Alhaji Adisa Osiefa Street</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10002-adidas-international-hotel-lagos"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
       </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
       </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -1283,67 +1242,6 @@ size =<br>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.hotels.ng/hotels/hotel_id/facilities?access_token=</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>hotel_id</td>
-<td>Number</td>
-<td>id of the Hotel</td>
-</tr>
-<tr>
-<td>access_token</td>
-<td>String</td>
-<td>Your access token</td>
-</tr>
-</tbody></table>
-<h2 id='show-bank-details-for-a-hotel'>Show bank details for a hotel</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/hng/bank_details/</span><span class="si">{</span><span class="nv">hotel_id</span><span class="si">}</span><span class="s2">?access_token="</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"Content-Type: application/json"</span><span class="p">,</span>
-  <span class="s2">"Accept: application/json"</span>
-<span class="p">));</span>
-
-<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-
-<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">406</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">49583</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Avalon Intercontinental nigeria LTD"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"035274049"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"bank_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FCMB"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sort_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint shows the banks details of a specific hotel.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://api.hotels.ng/hng/bank_details/hotel_id?access_token=</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2040,81 +1938,6 @@ https://api.hotels.ng/rates/flags/multiple/fetch?rate_ids=&amp;access_token=
 <td>rate_ids</td>
 <td>Nill</td>
 <td>string</td>
-</tr>
-</tbody></table>
-<h2 id='get-company-rates'>Get company rates</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"
-https://api.hotels.ng/rates2/properties?company_rates=
-"</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
-
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"Content-Type: application/json"</span><span class="p">,</span>
-  <span class="s2">"Accept: application/json"</span>
-<span class="p">));</span>
-
-<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-
-<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span><span class="cp">?&gt;</span>
-</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">98319</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rate_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rate_tag_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rack_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">55000</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"buying_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">49500</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"buying_price_usd</span><span class="se">\"</span><span class="s2">"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"selling_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">55000</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"selling_price_usd</span><span class="se">\"</span><span class="s2">"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"active_start"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"active_end"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"active_mon"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_tue"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_wed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_thu"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_fri"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_sat"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_sun"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-
-</span></code></pre>
-<p>This Endpoint returns company&#39;s rates</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>https://api.hotels.ng/rates2/properties?company_rates=</code></p>
-<h3 id='query-parameters-5'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>company_rates</td>
-<td>string</td>
-<td>returns company rates</td>
 </tr>
 </tbody></table>
 
