@@ -74,6 +74,9 @@ html, body {
   &>img {
     display: block;
     max-width: 100%;
+    width: 180px;
+    max-height: 150px;
+    margin-left: 24px;
   }
 
   &>.search {
