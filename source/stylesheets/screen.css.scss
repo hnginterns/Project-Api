@@ -73,10 +73,11 @@ html, body {
   // This is the logo at the top of the ToC
   &>img {
     display: block;
-    max-width: 100%;
-    width: 180px;
+    max-width: 60%;
+    width: 100px;
     max-height: 150px;
     margin-left: 24px;
+    padding-top: 15px;
   }
 
   &>.search {
