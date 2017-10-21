@@ -1,5 +1,6 @@
 # Search
 
+With this endpoint, you can search of hotels based on some specific criteria of your choice and these criteria can be based on the type of property, based on your current location, it could even be based on the name of a hotel you know of.
 
 Search for Hotels with parameters 
 Scope to be used in Authorization 
@@ -132,12 +133,17 @@ Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token| String | Token generated with client_id and client_credentials | True
 
-
+### Response Body
+Attribute | Type | Description
+--------- | ------- | -----------
+ Properties| String| Properties around the locale
+ Message | String |Message about property
+ Name | String | Name of owner
 
 
 ## Get hotel count in a location
 
-	Get the hotel count in a particular location
+	This endpoint will return the number of hotels that are around a particular location, you will be required to provide the location and your access token as query parameters in order to get a successful response. The location can be an address in a country or region.
 
 > Example request:
 
@@ -181,3 +187,7 @@ property_type | String |  | False
 location_type | String |  | False
 location | Array | Token generated with client_id and client_credentials | True
 
+Attribute | Type | Description
+--------- | ------- | -----------
+ Count| Integer| Number of hotels around
+ 

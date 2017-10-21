@@ -24,7 +24,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 
-var_dump($response);
+var_dump($response);?>
 ```
 
 > Example response:
@@ -115,7 +115,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 
-var_dump($response);
+var_dump($response);?>
 ```
 
 
@@ -214,7 +214,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 
-var_dump($response);
+var_dump($response);?>
 ```
 
 
@@ -293,6 +293,7 @@ Parameter | Type | Description
 hotel_id | Number | id of the Hotel
 access_token | String | Your access token
 
+### Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
 name | string | name of the hotel
