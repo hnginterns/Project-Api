@@ -386,7 +386,7 @@
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'></a></li>
+            <li><a href='index.php'>log out</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -429,6 +429,7 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>Hotels.ng uses Client id and Client Secret to allow access to the api.The client id and secret would provide an access token which would now grant you access to all our Hotels.ng endpoints. 
+The default grantType is <strong>client_credentials.</strong><br>
 The List of scopes are available at the deck of all the endpoints you are consuming. <br>
 You can make use of multiple scopes by using &#39;,&#39; as delimiter.<br></p>
 
@@ -464,6 +465,30 @@ You are logged in.
 <td>client_id</td>
 <td>string</td>
 <td>Endpoint trying to consume</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td>access token issued to the consumer</td>
+</tr>
+<tr>
+<td>token_type</td>
+<td>string</td>
+<td>type of token issued</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>integer</td>
+<td>the time the token could last for</td>
 </tr>
 </tbody></table>
 <h1 id='search'>Search</h1>
@@ -572,6 +597,20 @@ Property_type :
 <td>String</td>
 <td>Type of property to request</td>
 <td>False</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Total</td>
+<td>integer</td>
+<td>Total result searched</td>
 </tr>
 </tbody></table>
 <h2 id='search-for-properties-nearby'>Search for properties nearby</h2>
@@ -879,74 +918,6 @@ Bookings.delete<br></p>
       </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">251238</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1156874</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="mi">95379</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"desk_person"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"booking_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paystack_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handler"</span><span class="p">:</span><span class="w"> </span><span class="mi">94649</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"review_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"followup_handler"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"handle_starttime"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint shows the total bookings made.</p>
@@ -964,6 +935,45 @@ Bookings.delete<br></p>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>booking_id</td>
+<td>integer</td>
+<td>Id of the object supplied</td>
+</tr>
+<tr>
+<td>booking_status_id</td>
+<td>integer</td>
+<td>Id of the facility</td>
+</tr>
+<tr>
+<td>review_status_id</td>
+<td>integer</td>
+<td>Id of booking</td>
+</tr>
+<tr>
+<td>review_status_id</td>
+<td>integer</td>
+<td>agent peculiar to the booking</td>
+</tr>
+<tr>
+<td>handler</td>
+<td>integer</td>
+<td>handler peculiar to the booking</td>
 </tr>
 </tbody></table>
 <h2 id='create-a-new-booking-for-a-specific-hotel'>Create a new booking for a specific hotel</h2>
@@ -1218,218 +1228,6 @@ Bookings.delete<br></p>
         </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"state_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotel_star"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sub_area"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"addhoteldate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_modified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"airport_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotelagreement"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hotel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_percentage"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_on"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"contacts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"statename"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"state_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotel_star"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sub_area"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"addhoteldate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_modified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"airport_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotelagreement"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hotel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_percentage"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_on"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"contacts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"statename"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"state_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotel_star"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sub_area"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"addhoteldate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_modified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"airport_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotelagreement"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hotel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_percentage"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_on"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"contacts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"statename"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"state_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotel_star"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sub_area"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"addhoteldate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_modified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"airport_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotelagreement"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hotel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_percentage"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_on"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"contacts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"statename"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -1596,6 +1394,8 @@ Bookings.delete<br></p>
 <td>boolean</td>
 </tr>
 </tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<p>405</p>
 <h2 id='get-list-of-contacts-for-a-property-by-id'>Get List of Contacts for a Property by id</h2>
 <blockquote>
 <p>Example request:</p>
@@ -1784,6 +1584,60 @@ properties.update<br></p>
 <td>Your access token</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the hotel</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>code peculiar to the type of currency</td>
+</tr>
+<tr>
+<td>minrate</td>
+<td>integer</td>
+<td>the minimum rate</td>
+</tr>
+<tr>
+<td>maxrate</td>
+<td>integer</td>
+<td>the maximum rate</td>
+</tr>
+<tr>
+<td>is_bookable</td>
+<td>integer</td>
+<td>the number of booking available</td>
+</tr>
+<tr>
+<td>property_type</td>
+<td>string</td>
+<td>the type of property</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>string</td>
+<td>rating of the hotel</td>
+</tr>
+<tr>
+<td>driving_instructions</td>
+<td>string</td>
+<td>directions to the place</td>
+</tr>
+</tbody></table>
 <h2 id='show-details-for-a-hotel'>Show details for a hotel</h2>
 <blockquote>
 <p>Example request:</p>
@@ -1864,6 +1718,90 @@ properties.update<br></p>
 <td>access_token</td>
 <td>String</td>
 <td>Your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the hotel</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>code peculiar to the type of currency</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>status of the hotel</td>
+</tr>
+<tr>
+<td>is_bookable</td>
+<td>integer</td>
+<td>bookings available for a hotel</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment employed</td>
+</tr>
+<tr>
+<td>driving_instructions</td>
+<td>string</td>
+<td>directions to the place</td>
+</tr>
+<tr>
+<td>minrate</td>
+<td>integer</td>
+<td>the minimum rate</td>
+</tr>
+<tr>
+<td>maxrate</td>
+<td>integer</td>
+<td>the maximum rate</td>
+</tr>
+<tr>
+<td>unique_url</td>
+<td>string</td>
+<td>url unique to the hotel</td>
+</tr>
+<tr>
+<td>property_type_id</td>
+<td>integer</td>
+<td>Id of the type of property</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Id peculiar to reference</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of property</td>
+</tr>
+<tr>
+<td>agent_uuid</td>
+<td>string</td>
+<td>Internal Id peculiar to the agent</td>
+</tr>
+<tr>
+<td>property_ref_code</td>
+<td>integer</td>
+<td>code peculiar to the property ref</td>
+</tr>
+<tr>
+<td>agency</td>
+<td>string</td>
+<td>the agency involved</td>
 </tr>
 </tbody></table>
 <h2 id='show-details-for-a-hotel-with-br-everything-associated-to-it'>Show details for a hotel with <br>everything associated to it</h2>
@@ -1974,6 +1912,95 @@ properties.update<br></p>
 <td>Your access token</td>
 </tr>
 </tbody></table>
+<h3 id='response-body-3'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the hotel</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>code peculiar to the type of currency</td>
+</tr>
+<tr>
+<td>is_bookable</td>
+<td>integer</td>
+<td>bookings available for a hotel</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment employed</td>
+</tr>
+<tr>
+<td>driving_instructions</td>
+<td>string</td>
+<td>directions to the place</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>status of the hotel</td>
+</tr>
+<tr>
+<td>minrate</td>
+<td>integer</td>
+<td>the minimum rate</td>
+</tr>
+<tr>
+<td>maxrate</td>
+<td>integer</td>
+<td>the maximum rate</td>
+</tr>
+<tr>
+<td>unique_url</td>
+<td>string</td>
+<td>url unique to the hotel</td>
+</tr>
+<tr>
+<td>property_type_id</td>
+<td>integer</td>
+<td>Id of the type of property</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Id peculiar to user</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of property</td>
+</tr>
+<tr>
+<td>agent_uuid</td>
+<td>string</td>
+<td>Internal Id peculiar to the agent</td>
+</tr>
+<tr>
+<td>property_ref_code</td>
+<td>integer</td>
+<td>ref code peculiar to the property</td>
+</tr>
+<tr>
+<td>agency</td>
+<td>string</td>
+<td>the agency involved</td>
+</tr>
+<tr>
+<td>deal_status</td>
+<td>integer</td>
+<td>status of the deal</td>
+</tr>
+</tbody></table>
 <h1 id='images'>Images</h1>
 <p>Acess to all Reports Related Things - List of Scopes to be used in Authorization<br>
 Images.read,<br>
@@ -2029,70 +2056,6 @@ size =<br>
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.hotels.ng/internal/hotels/hotel_id/images?access_token=</code></p>
@@ -2113,6 +2076,50 @@ size =<br>
 <td>access_token</td>
 <td>String</td>
 <td>Your Acess Token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>application_id</td>
+<td>integer</td>
+<td>Id of the applied hotel</td>
+</tr>
+<tr>
+<td>object_id</td>
+<td>integer</td>
+<td>Id of the object supplied</td>
+</tr>
+<tr>
+<td>facility_type_id</td>
+<td>integer</td>
+<td>Id of the facility</td>
+</tr>
+<tr>
+<td>object_type</td>
+<td>string</td>
+<td>type of object supplied</td>
+</tr>
+<tr>
+<td>facility_name</td>
+<td>string</td>
+<td>name of facility supplied</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>string</td>
+<td>link to the image of the specific hotel</td>
 </tr>
 </tbody></table>
 <h1 id='facilities'>Facilities</h1>
@@ -2188,6 +2195,45 @@ size =<br>
 <td>Your access token</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>object_id</td>
+<td>integer</td>
+<td>Id of the object supplied</td>
+</tr>
+<tr>
+<td>facility_type_id</td>
+<td>integer</td>
+<td>Id of the facility</td>
+</tr>
+<tr>
+<td>object_type</td>
+<td>string</td>
+<td>type of object supplied</td>
+</tr>
+<tr>
+<td>facility_name</td>
+<td>string</td>
+<td>name of facility supplied</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>string</td>
+<td>link to the image of facility</td>
+</tr>
+</tbody></table>
 <h2 id='show-bank-details-for-a-hotel'>Show bank details for a hotel</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2247,6 +2293,40 @@ size =<br>
 <td>access_token</td>
 <td>String</td>
 <td>Your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property</td>
+</tr>
+<tr>
+<td>account_name</td>
+<td>string</td>
+<td>name of account holder</td>
+</tr>
+<tr>
+<td>account_number</td>
+<td>integer</td>
+<td>number peculiar to the account</td>
+</tr>
+<tr>
+<td>bank_name</td>
+<td>string</td>
+<td>name of the bank</td>
 </tr>
 </tbody></table>
 <h1 id='reviews'>Reviews</h1>
@@ -2373,6 +2453,55 @@ Reviews.update,<br></p>
 <td>access_token</td>
 <td>String</td>
 <td>Your Acess Token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the reviewer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>title of the review</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>string</td>
+<td>comment of the reviewer</td>
+</tr>
+<tr>
+<td>overall_rating</td>
+<td>integer</td>
+<td>General rating of the hotel</td>
+</tr>
+<tr>
+<td>review_id</td>
+<td>integer</td>
+<td>Id of the review</td>
+</tr>
+<tr>
+<td>score</td>
+<td>integer</td>
+<td>Score of the review</td>
 </tr>
 </tbody></table>
 <h2 id='adds-a-review-for-a-specific-hotel'>Adds a review for a specific hotel.</h2>
@@ -2510,7 +2639,7 @@ Reviews.update,<br></p>
 <td>string</td>
 </tr>
 <tr>
-<td>locatio_id</td>
+<td>location_id</td>
 <td>number</td>
 </tr>
 <tr>
@@ -2608,6 +2737,45 @@ locations.update,<br></p>
 <td>Your access token</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of Country</td>
+</tr>
+<tr>
+<td>continent_id</td>
+<td>integer</td>
+<td>Id of the Continent where the country is</td>
+</tr>
+<tr>
+<td>object_type</td>
+<td>string</td>
+<td>type of object supplied</td>
+</tr>
+<tr>
+<td>facility_name</td>
+<td>string</td>
+<td>name of facility supplied</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>string</td>
+<td>link to the image of facility</td>
+</tr>
+</tbody></table>
 <h2 id='show-list-of-properties-around-br-a-location'>Show list of properties around <br>a location</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2696,6 +2864,110 @@ locations.update,<br></p>
 <td>access_token</td>
 <td>String</td>
 <td>Your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>road_id</td>
+<td>string</td>
+<td>Id of the road to the location</td>
+</tr>
+<tr>
+<td>area_id</td>
+<td>string</td>
+<td>Id of the area to the location</td>
+</tr>
+<tr>
+<td>city_id</td>
+<td>string</td>
+<td>Id of the city to the location</td>
+</tr>
+<tr>
+<td>state_id</td>
+<td>string</td>
+<td>Id of the state to the location</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>address to the location</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>integer</td>
+<td>latitude of the hotel&#39;s location</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>integer</td>
+<td>longitude of the hotel&#39;s location</td>
+</tr>
+<tr>
+<td>area.id</td>
+<td>integer</td>
+<td>Id of the area</td>
+</tr>
+<tr>
+<td>area.name</td>
+<td>string</td>
+<td>name of the area</td>
+</tr>
+<tr>
+<td>city.id</td>
+<td>integer</td>
+<td>Id of the city</td>
+</tr>
+<tr>
+<td>city.name</td>
+<td>string</td>
+<td>Name of the city</td>
+</tr>
+<tr>
+<td>city.country_code</td>
+<td>string</td>
+<td>country code of the city</td>
+</tr>
+<tr>
+<td>country.id</td>
+<td>integer</td>
+<td>Id of the country</td>
+</tr>
+<tr>
+<td>country.name</td>
+<td>string</td>
+<td>name of the country</td>
+</tr>
+<tr>
+<td>continent.id</td>
+<td>integer</td>
+<td>Id of the continent</td>
+</tr>
+<tr>
+<td>continent.code</td>
+<td>integer</td>
+<td>Id of the continent</td>
+</tr>
+<tr>
+<td>countinent.name</td>
+<td>string</td>
+<td>name of the continent</td>
 </tr>
 </tbody></table>
 <h1 id='rooms'>Rooms</h1>
@@ -2799,6 +3071,40 @@ Rooms.update</br></p>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of the room</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the room</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment given</td>
+</tr>
+</tbody></table>
 <h1 id='ratings'>Ratings</h1>
 <p>Access to all Rates Flag <br>
 List of Scopes that can be used in Authorization:<br>
@@ -2886,6 +3192,50 @@ https://api.hotels.ng/internal/rates/</span><span class="si">{</span><span class
 <td>An integer.</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of a particular room</td>
+</tr>
+<tr>
+<td>rate_tag_id</td>
+<td>integer</td>
+<td>Id of the tag rate</td>
+</tr>
+<tr>
+<td>rack_price</td>
+<td>integer</td>
+<td>Price of the rack</td>
+</tr>
+<tr>
+<td>buying_price</td>
+<td>integer</td>
+<td>Buying price</td>
+</tr>
+<tr>
+<td>Selling_price</td>
+<td>integer</td>
+<td>Selling price</td>
+</tr>
+</tbody></table>
 <h2 id='get-all-available-flags'>Get all available flags</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2939,6 +3289,25 @@ https://api.hotels.ng/internal/rates/flags/all?access_token=
 <td>access_token</td>
 <td>string</td>
 <td>your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>flag_name</td>
+<td>string</td>
+<td>Name of the flag rate</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Id of the flag</td>
 </tr>
 </tbody></table>
 <h2 id='get-flags-by-rate-id'>Get flags by rate Id</h2>
@@ -3000,6 +3369,25 @@ https://api.hotels.ng/internal/rates/flag/</span><span class="si">{</span><span 
 <td>id</td>
 <td>Number</td>
 <td>id to return all flag ratings</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-3'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>flag_name</td>
+<td>string</td>
+<td>Name of the flag rate</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Id of the flag</td>
 </tr>
 </tbody></table>
 <h2 id='adds-a-flags-names-to-rates'>Adds a flags names to rates.</h2>
@@ -3218,6 +3606,55 @@ https://api.hotels.ng/internal/rates/flags/multiple/fetch?rate_ids=&amp;access_t
 <td>string</td>
 </tr>
 </tbody></table>
+<h3 id='response-body-4'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of a particular room</td>
+</tr>
+<tr>
+<td>rate_tag_id</td>
+<td>integer</td>
+<td>Id of the tag rate</td>
+</tr>
+<tr>
+<td>rack_price</td>
+<td>integer</td>
+<td>Price of the rack</td>
+</tr>
+<tr>
+<td>buying_price</td>
+<td>integer</td>
+<td>Buying price</td>
+</tr>
+<tr>
+<td>Selling_price</td>
+<td>integer</td>
+<td>Selling price</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>priority of the rate flag</td>
+</tr>
+</tbody></table>
 <h2 id='get-company-rates'>Get company rates</h2>
 <blockquote>
 <p>Example request:</p>
@@ -3293,6 +3730,55 @@ https://api.hotels.ng/internal/rates2/properties?company_rates=
 <td>returns company rates</td>
 </tr>
 </tbody></table>
+<h3 id='response-body-5'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of a particular room</td>
+</tr>
+<tr>
+<td>rate_tag_id</td>
+<td>integer</td>
+<td>Id of the tag rate</td>
+</tr>
+<tr>
+<td>rack_price</td>
+<td>integer</td>
+<td>Price of the rack</td>
+</tr>
+<tr>
+<td>buying_price</td>
+<td>integer</td>
+<td>Buying price</td>
+</tr>
+<tr>
+<td>Selling_price</td>
+<td>integer</td>
+<td>Selling price</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>priority of the rate flag</td>
+</tr>
+</tbody></table>
 <h1 id='reports'>Reports</h1>
 <p>Access to All Reports Related Things - List of Scopes to be used in Authorization<br>
 Facilities.read,<br>
@@ -3339,20 +3825,6 @@ Reports.update</p>
       </span><span class="s2">"checkin_to"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"ret_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"compound"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total_outstanding"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total_completed"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"checkout_from"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkout_to"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkin_from</span><span class="se">\"</span><span class="s2">"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkin_to"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint return bookings that have been reviewed.</p>
@@ -3370,6 +3842,35 @@ Reports.update</p>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ret_type</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>total</td>
+<td>integer</td>
+<td>total number of reports</td>
+</tr>
+<tr>
+<td>total_outstanding</td>
+<td>integer</td>
+<td>total number of outstanding bookings</td>
+</tr>
+<tr>
+<td>total_completed</td>
+<td>integer</td>
+<td>total number of completed bookings</td>
 </tr>
 </tbody></table>
 <h2 id='count-the-number-of-bookings'>Count the Number of Bookings</h2>
@@ -3423,6 +3924,20 @@ Reports.update</p>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bookings_count</td>
+<td>integer</td>
+<td>number of counted bookings</td>
+</tr>
+</tbody></table>
 <h2 id='get-bookings-by-id-and-the-total-counts'>Get Bookings by Id and the Total Counts</h2>
 <blockquote>
 <p>Example request:</p>
@@ -3456,34 +3971,6 @@ Reports.update</p>
       </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succes"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succes"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succes"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succes"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"bookings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint fetches bookings by ID and the total count.</p>
@@ -3501,6 +3988,20 @@ Reports.update</p>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-3'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>total</td>
+<td>integer</td>
+<td>total number of counted bookings</td>
 </tr>
 </tbody></table>
 <h2 id='get-the-range-of-days-in-a-month-br-in-which-bookings-can-be-made'>Get the Range of Days in a Month<br>in which Bookings Can be Made</h2>
@@ -3564,6 +4065,30 @@ Reports.update</p>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-4'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start</td>
+<td>string date</td>
+<td>date from when bookings can be made</td>
+</tr>
+<tr>
+<td>end</td>
+<td>string date</td>
+<td>date at when bookings end</td>
+</tr>
+<tr>
+<td>number</td>
+<td>integer</td>
+<td>number of bookings returned during the date range</td>
 </tr>
 </tbody></table>
 <h1 id='users'>Users</h1><h2 id='the-end-point-shows-list-of-users-br'>The end Point shows list of  users</br></h2>
@@ -3657,6 +4182,80 @@ Reports.update</p>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>Email of the user</td>
+</tr>
+<tr>
+<td>picture</td>
+<td>string</td>
+<td>picture of user</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>integer</td>
+<td>Id of the user</td>
+</tr>
+<tr>
+<td>permission_id</td>
+<td>integer</td>
+<td>Id for the user to get permission</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>string</td>
+<td>Internal Id</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>integer</td>
+<td>id peculiar to the app</td>
+</tr>
+<tr>
+<td>role_id</td>
+<td>integer</td>
+<td>id peculiar to the role</td>
+</tr>
+<tr>
+<td>can_create</td>
+<td>boolean</td>
+<td>does the admin have permission to create?</td>
+</tr>
+<tr>
+<td>can_read</td>
+<td>boolean</td>
+<td>does the admin have permission to read?</td>
+</tr>
+<tr>
+<td>can_update</td>
+<td>boolean</td>
+<td>does the admin have permission to update?</td>
+</tr>
+<tr>
+<td>can_delete</td>
+<td>boolean</td>
+<td>does the admin have permission to update?</td>
+</tr>
+</tbody></table>
 <h2 id='the-end-point-will-authenticate-users-br'>The end point will authenticate users</br></h2>
 <blockquote>
 <p>Example request:</p>
@@ -3718,6 +4317,40 @@ Reports.update</p>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>Email of the user</td>
+</tr>
+<tr>
+<td>role</td>
+<td>string</td>
+<td>role of the user</td>
+</tr>
+<tr>
+<td>picture</td>
+<td>string</td>
+<td>url to the image of the user</td>
 </tr>
 </tbody></table>
 
