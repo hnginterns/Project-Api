@@ -250,9 +250,6 @@
                     <a href="#get-bookings-by-email" class="toc-h2 toc-link" data-title="Bookings">Get Bookings by email</a>
                   </li>
                   <li>
-                    <a href="#get-booking-details-of-a-specific-booking" class="toc-h2 toc-link" data-title="Bookings">Get Booking Details of a Specific Booking</a>
-                  </li>
-                  <li>
                     <a href="#get-details-of-a-specific-booking" class="toc-h2 toc-link" data-title="Bookings">Get details of a specific booking</a>
                   </li>
               </ul>
@@ -334,7 +331,7 @@
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'></a></li>
+            <li><a href='internal/index.php'>Admin mode</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -414,6 +411,30 @@ Make sure you sign up for a developer key
 <td>client_id</td>
 <td>string</td>
 <td>Endpoint trying to consume</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td>access token issued to the consumer</td>
+</tr>
+<tr>
+<td>token_type</td>
+<td>string</td>
+<td>type of token issued</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>integer</td>
+<td>the time the token could last for</td>
 </tr>
 </tbody></table>
 <h1 id='search'>Search</h1>
@@ -522,6 +543,20 @@ Property_type :
 <td>String</td>
 <td>Type of property to request</td>
 <td>False</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Total</td>
+<td>integer</td>
+<td>Total result searched</td>
 </tr>
 </tbody></table>
 <h2 id='search-for-properties-nearby'>Search for properties nearby</h2>
@@ -642,8 +677,6 @@ Property_type :
 <p>Access to all bookings related things - List of Scopes to be used in Authorization<br> 
 Bookings.read</p>
 <h2 id='get-bookings-by-email'>Get Bookings by email</h2>
-<p>=======</p>
-<h2 id='get-booking-details-of-a-specific-booking'>Get Booking Details of a Specific Booking</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
@@ -865,6 +898,60 @@ properties.read</p>
 <td>Your access token</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the hotel</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>code peculiar to the type of currency</td>
+</tr>
+<tr>
+<td>minrate</td>
+<td>integer</td>
+<td>the minimum rate</td>
+</tr>
+<tr>
+<td>maxrate</td>
+<td>integer</td>
+<td>the maximum rate</td>
+</tr>
+<tr>
+<td>is_bookable</td>
+<td>integer</td>
+<td>the number of booking available</td>
+</tr>
+<tr>
+<td>property_type</td>
+<td>string</td>
+<td>the type of property</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>string</td>
+<td>rating of the hotel</td>
+</tr>
+<tr>
+<td>driving_instructions</td>
+<td>string</td>
+<td>directions to the place</td>
+</tr>
+</tbody></table>
 <h2 id='show-details-for-a-hotel'>Show details for a hotel</h2>
 <blockquote>
 <p>Example request:</p>
@@ -915,7 +1002,6 @@ properties.read</p>
         </span><span class="s2">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1804</span><span class="p">,</span><span class="w">
           </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10002</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"agent_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a965ed6e-c292-4263-b4de-d01057984441"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"property_ref_code"</span><span class="p">:</span><span class="w"> </span><span class="mi">10002</span><span class="p">,</span><span class="w">
           </span><span class="s2">"agency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotelsng"</span><span class="w">
         </span><span class="p">}</span><span class="w">
@@ -944,6 +1030,90 @@ properties.read</p>
 <td>access_token</td>
 <td>String</td>
 <td>Your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the hotel</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>code peculiar to the type of currency</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>status of the hotel</td>
+</tr>
+<tr>
+<td>is_bookable</td>
+<td>integer</td>
+<td>bookings available for a hotel</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment employed</td>
+</tr>
+<tr>
+<td>driving_instructions</td>
+<td>string</td>
+<td>directions to the place</td>
+</tr>
+<tr>
+<td>minrate</td>
+<td>integer</td>
+<td>the minimum rate</td>
+</tr>
+<tr>
+<td>maxrate</td>
+<td>integer</td>
+<td>the maximum rate</td>
+</tr>
+<tr>
+<td>unique_url</td>
+<td>string</td>
+<td>url unique to the hotel</td>
+</tr>
+<tr>
+<td>property_type_id</td>
+<td>integer</td>
+<td>Id of the type of property</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Id peculiar to reference</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of property</td>
+</tr>
+<tr>
+<td>agent_uuid</td>
+<td>string</td>
+<td>Internal Id peculiar to the agent</td>
+</tr>
+<tr>
+<td>propert_ref_code</td>
+<td>integer</td>
+<td>ref code peculiar to the property</td>
+</tr>
+<tr>
+<td>agency</td>
+<td>string</td>
+<td>the agency involved</td>
 </tr>
 </tbody></table>
 <h2 id='show-details-for-a-hotel-with-br-everything-associated-to-it'>Show details for a hotel with <br>everything associated to it</h2>
@@ -1009,7 +1179,6 @@ properties.read</p>
           </span><span class="s2">"agency"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
             </span><span class="s2">"agency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotelsng"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"agency_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a965ed6e-c292-4263-b4de-d01057984441"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"agreement"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
               </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3252</span><span class="p">,</span><span class="w">
               </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10002</span><span class="p">,</span><span class="w">
@@ -1050,6 +1219,85 @@ properties.read</p>
 <td>access_token</td>
 <td>String</td>
 <td>Your access token</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the hotel</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>code peculiar to the type of currency</td>
+</tr>
+<tr>
+<td>is_bookable</td>
+<td>integer</td>
+<td>bookings available for a hotel</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment employed</td>
+</tr>
+<tr>
+<td>driving_instructions</td>
+<td>string</td>
+<td>directions to the place</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>status of the hotel</td>
+</tr>
+<tr>
+<td>minrate</td>
+<td>integer</td>
+<td>the minimum rate</td>
+</tr>
+<tr>
+<td>maxrate</td>
+<td>integer</td>
+<td>the maximum rate</td>
+</tr>
+<tr>
+<td>unique_url</td>
+<td>string</td>
+<td>url unique to the hotel</td>
+</tr>
+<tr>
+<td>property_type_id</td>
+<td>integer</td>
+<td>Id of the type of property</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Id peculiar to user</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of property</td>
+</tr>
+<tr>
+<td>agency</td>
+<td>string</td>
+<td>the agency involved</td>
+</tr>
+<tr>
+<td>deal_status</td>
+<td>integer</td>
+<td>status of the deal</td>
 </tr>
 </tbody></table>
 <h1 id='images'>Images</h1>
@@ -1104,70 +1352,6 @@ size =<br>
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9191,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\\</span><span class="s2">/</span><span class="se">\\</span><span class="s2">/media.api.hng.tech</span><span class="se">\\</span><span class="s2">/img</span><span class="se">\\</span><span class="s2">/big</span><span class="se">\\</span><span class="s2">/lekki-oxford-hotels-ltd-lagos-8297.jpg,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"facility_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-07 13:56:12,"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.hotels.ng/hotels/hotel_id/images?access_token=</code></p>
@@ -1188,6 +1372,50 @@ size =<br>
 <td>access_token</td>
 <td>String</td>
 <td>Your Acess Token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>application_id</td>
+<td>integer</td>
+<td>Id of the applied hotel</td>
+</tr>
+<tr>
+<td>object_id</td>
+<td>integer</td>
+<td>Id of the object supplied</td>
+</tr>
+<tr>
+<td>facility_type_id</td>
+<td>integer</td>
+<td>Id of the facility</td>
+</tr>
+<tr>
+<td>object_type</td>
+<td>string</td>
+<td>type of object supplied</td>
+</tr>
+<tr>
+<td>facility_name</td>
+<td>string</td>
+<td>name of facility supplied</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>string</td>
+<td>link to the image of the specific hotel</td>
 </tr>
 </tbody></table>
 <h1 id='facilities'>Facilities</h1>
@@ -1257,7 +1485,46 @@ size =<br>
 <tr>
 <td>access_token</td>
 <td>String</td>
-<td>Your access token</td>
+<td>Your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>object_id</td>
+<td>integer</td>
+<td>Id of the object supplied</td>
+</tr>
+<tr>
+<td>facility_type_id</td>
+<td>integer</td>
+<td>Id of the facility</td>
+</tr>
+<tr>
+<td>object_type</td>
+<td>string</td>
+<td>type of object supplied</td>
+</tr>
+<tr>
+<td>facility_name</td>
+<td>string</td>
+<td>name of facility supplied</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>string</td>
+<td>link to the image of facility</td>
 </tr>
 </tbody></table>
 <h1 id='reviews'>Reviews</h1>
@@ -1383,6 +1650,55 @@ Reviews.read</p>
 <td>Your Acess Token</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of the reviewer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>title of the review</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>string</td>
+<td>comment of the reviewer</td>
+</tr>
+<tr>
+<td>overall_rating</td>
+<td>integer</td>
+<td>General rating of the hotel</td>
+</tr>
+<tr>
+<td>review_id</td>
+<td>integer</td>
+<td>Id of the review</td>
+</tr>
+<tr>
+<td>score</td>
+<td>integer</td>
+<td>Score of the review</td>
+</tr>
+</tbody></table>
 <h1 id='location'>Location</h1>
 <p>Acess to all Location Related Things - List of Scopes to be used in Authorization <br>
 locations.read</p>
@@ -1468,6 +1784,45 @@ locations.read</p>
 <td>access_token</td>
 <td>String</td>
 <td>Your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of Country</td>
+</tr>
+<tr>
+<td>continent_id</td>
+<td>integer</td>
+<td>Id of the Continent where the country is</td>
+</tr>
+<tr>
+<td>object_type</td>
+<td>string</td>
+<td>type of object supplied</td>
+</tr>
+<tr>
+<td>facility_name</td>
+<td>string</td>
+<td>name of facility supplied</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>string</td>
+<td>link to the image of facility</td>
 </tr>
 </tbody></table>
 <h2 id='show-list-of-properties-around-br-a-location'>Show list of properties around <br>a location</h2>
@@ -1559,6 +1914,110 @@ https://api.hotels.ng/location/propertylocations/property_id/property?access_tok
 <td>access_token</td>
 <td>String</td>
 <td>Your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>road_id</td>
+<td>string</td>
+<td>Id of the road to the location</td>
+</tr>
+<tr>
+<td>area_id</td>
+<td>string</td>
+<td>Id of the area to the location</td>
+</tr>
+<tr>
+<td>city_id</td>
+<td>string</td>
+<td>Id of the city to the location</td>
+</tr>
+<tr>
+<td>state_id</td>
+<td>string</td>
+<td>Id of the state to the location</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>address to the location</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>integer</td>
+<td>latitude of the hotel&#39;s location</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>integer</td>
+<td>longitude of the hotel&#39;s location</td>
+</tr>
+<tr>
+<td>area.id</td>
+<td>integer</td>
+<td>Id of the area</td>
+</tr>
+<tr>
+<td>area.name</td>
+<td>string</td>
+<td>name of the area</td>
+</tr>
+<tr>
+<td>city.id</td>
+<td>integer</td>
+<td>Id of the city</td>
+</tr>
+<tr>
+<td>city.name</td>
+<td>string</td>
+<td>Name of the city</td>
+</tr>
+<tr>
+<td>city.country_code</td>
+<td>string</td>
+<td>country code of the city</td>
+</tr>
+<tr>
+<td>country.id</td>
+<td>integer</td>
+<td>Id of the country</td>
+</tr>
+<tr>
+<td>country.name</td>
+<td>string</td>
+<td>name of the country</td>
+</tr>
+<tr>
+<td>continent.id</td>
+<td>integer</td>
+<td>Id of the continent</td>
+</tr>
+<tr>
+<td>continent.code</td>
+<td>integer</td>
+<td>Id of the continent</td>
+</tr>
+<tr>
+<td>countinent.name</td>
+<td>string</td>
+<td>name of the continent</td>
 </tr>
 </tbody></table>
 <h1 id='rooms'>Rooms</h1>
@@ -1660,6 +2119,40 @@ Rooms.read</p>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of the room</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the room</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment given</td>
+</tr>
+</tbody></table>
 <h1 id='ratings'>Ratings</h1>
 <p>Access to all Rates Flag <br>
 List of Scopes that can be used in Authorization:<br>
@@ -1744,6 +2237,50 @@ https://api.hotels.ng/rates/</span><span class="si">{</span><span class="nv">rat
 <td>An integer.</td>
 </tr>
 </tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of a particular room</td>
+</tr>
+<tr>
+<td>rate_tag_id</td>
+<td>integer</td>
+<td>Id of the tag rate</td>
+</tr>
+<tr>
+<td>rack_price</td>
+<td>integer</td>
+<td>Price of the rack</td>
+</tr>
+<tr>
+<td>buying_price</td>
+<td>integer</td>
+<td>Buying price</td>
+</tr>
+<tr>
+<td>Selling_price</td>
+<td>integer</td>
+<td>Selling price</td>
+</tr>
+</tbody></table>
 <h2 id='get-all-available-flags'>Get all available flags</h2>
 <blockquote>
 <p>Example request:</p>
@@ -1797,6 +2334,20 @@ https://api.hotels.ng/rates/flags/all?access_token=
 <td>access_token</td>
 <td>string</td>
 <td>your access token</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-2'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>flag_name</td>
+<td>string</td>
+<td>Name of the flag rate</td>
 </tr>
 </tbody></table>
 <h2 id='get-flags-by-rate-id'>Get flags by rate Id</h2>
@@ -1858,6 +2409,25 @@ https://api.hotels.ng/rates/flag/</span><span class="si">{</span><span class="nv
 <td>id</td>
 <td>Number</td>
 <td>id to return all flag ratings</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-3'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>flag_name</td>
+<td>string</td>
+<td>Name of the flag rate</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Id of the flag</td>
 </tr>
 </tbody></table>
 <h2 id='fetch-multiple-flag-rates-by-id'>Fetch multiple flag rates by Id</h2>
@@ -1938,6 +2508,55 @@ https://api.hotels.ng/rates/flags/multiple/fetch?rate_ids=&amp;access_token=
 <td>rate_ids</td>
 <td>Nill</td>
 <td>string</td>
+</tr>
+</tbody></table>
+<h3 id='response-body-4'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of a particular room</td>
+</tr>
+<tr>
+<td>rate_tag_id</td>
+<td>integer</td>
+<td>Id of the tag rate</td>
+</tr>
+<tr>
+<td>rack_price</td>
+<td>integer</td>
+<td>Price of the rack</td>
+</tr>
+<tr>
+<td>buying_price</td>
+<td>integer</td>
+<td>Buying price</td>
+</tr>
+<tr>
+<td>Selling_price</td>
+<td>integer</td>
+<td>Selling price</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>priority of the rate flag</td>
 </tr>
 </tbody></table>
 

@@ -79,20 +79,20 @@ Parameter | Type | Description
 --------- | ------- | -----------
 access_token | String | Your access token
 
+
 ###Response Body
 
 Attribute | Type | Description
 --------- | ------- | -----------
-        id| integer | Hotel identifier.
-name | string | Name of hotel
-status | string | Status of a property
-payment_type | string | Type of payment
-property_type_id|integer|Id of  property
- currency_code| string | Code of currency
-is_bookable | boolean | If an hotel is bookable
-property_type | string | Type of property
-driving_instructions | string | Driving instructions to the hotel
-unique_url | string | A unique url for the hotel
+        id| integer | Customer user-supplied webhook identifier.
+name | string | name of the hotel
+currency_code| string| code peculiar to the type of currency
+minrate| integer |the minimum rate
+maxrate| integer | the maximum rate
+is_bookable|integer|the number of booking available
+property_type|string|the type of property
+rating|string|rating of the hotel
+driving_instructions|string|directions to the place
 
 ## Show details for a hotel
 
@@ -148,7 +148,6 @@ var_dump($response);
         "0": {
           "id": 1804,
           "property_id": 10002,
-          "agent_uuid": "a965ed6e-c292-4263-b4de-d01057984441",
           "property_ref_code": 10002,
           "agency": "Hotelsng"
         }
@@ -175,16 +174,23 @@ access_token | String | Your access token
 
 Attribute | Type | Description
 --------- | ------- | -----------
-        id| integer | Hotel identifier.
-name | string | Name of hotel
-status | string | Status of a property
-payment_type | string | Type of payment
-property_type_id|integer|Id of  property
- currency_code| string | Code of currency
-is_bookable | boolean | If an hotel is bookable
-property_type | string | Type of property
-driving_instructions | string | Driving instructions to the hotel
-unique_url | string | A unique url for the hotel
+name | string | name of the hotel
+currency_code| string| code peculiar to the type of currency
+status|string|status of the hotel
+is_bookable|integer|bookings available for a hotel
+payment_type|string|type of payment employed
+driving_instructions|string|directions to the place
+minrate| integer |the minimum rate
+maxrate| integer | the maximum rate
+unique_url|string|url unique to the hotel
+property_type_id|integer|Id of the type of property
+id| integer|Id peculiar to reference
+property_id|integer|Id of property
+agent_uuid|string|Internal Id peculiar to the agent
+propert_ref_code|integer|ref code peculiar to the property
+agency|string|the agency involved
+
+
 
 
 ## Show details for a hotel with <br>everything associated to it
@@ -254,7 +260,6 @@ var_dump($response);
           "agency": {
             "id": 1,
             "agency": "Hotelsng",
-            "agency_uuid": "a965ed6e-c292-4263-b4de-d01057984441",
             "agreement": {
               "id": 3252,
               "property_id": 10002,
@@ -288,17 +293,19 @@ Parameter | Type | Description
 hotel_id | Number | id of the Hotel
 access_token | String | Your access token
 
-###Response Body
-
 Attribute | Type | Description
 --------- | ------- | -----------
-        id| integer | Hotel identifier.
-name | string | Name of hotel
-status | string | Status of a property
-payment_type | string | Type of payment
-property_type_id|integer|Id of  property
- currency_code| string | Code of currency
-is_bookable | boolean | If an hotel is bookable
-property_type | string | Type of property
-driving_instructions | string | Driving instructions to the hotel
-unique_url | string | A unique url for the hotel
+name | string | name of the hotel
+currency_code| string| code peculiar to the type of currency
+is_bookable|integer|bookings available for a hotel
+payment_type|string|type of payment employed
+driving_instructions|string|directions to the place
+status|string|status of the hotel
+minrate| integer |the minimum rate
+maxrate| integer | the maximum rate
+unique_url|string|url unique to the hotel
+property_type_id|integer|Id of the type of property
+id| integer|Id peculiar to user
+property_id|integer|Id of property
+agency|string|the agency involved
+deal_status|integer|status of the deal 

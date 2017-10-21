@@ -208,7 +208,8 @@ id | Number| id to return all flag ratings
 Attribute | Type | Description
 --------- | ------- | -----------
   flag_name| string | Name of the flag rate
-  
+         id| integer| Id of the flag
+
 
 ##Fetch multiple flag rates by Id
 
@@ -284,7 +285,6 @@ Parameter | Default | Description
 access_token | Nill | string
 rate_ids | Nill| string
 
-
 ###Response Body
 
 Attribute | Type | Description
@@ -296,7 +296,7 @@ room_id| integer| Id of a particular room
  rack_price| integer | Price of the rack
 buying_price | integer | Buying price
 Selling_price | integer | Selling price
-
+priority| integer|priority of the rate flag
 
 
 
