@@ -218,8 +218,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
       <div class="login-page">
  <div class="form">
    <form action= "index.php" method="post" class="login-form">
-     <input type="text" placeholder="username" name="email"/>
-     <input type="password" placeholder="password" name="password"/>
+     <input type="text" placeholder="username" required="" name="email"/>
+     <input type="password" placeholder="password" required="" name="password"/>
      <button name="login">login</button>
      <p class="message">You need to log in to gain access</p>
    </form>
