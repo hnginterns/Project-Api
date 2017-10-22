@@ -3,6 +3,7 @@ Access to all Hotel related things - List of Scopes to be used in Authorization 
 properties.read
 
 
+The hotels API allows you to get the list of hotels, show details for a hotel and every thing associated to it. This API vould also return details like directons to a hotel, website of the hotel and some other basic information about the hotel the user is looking for. The scopes unique to the User is read.
 ## Get list of hotels
 
 

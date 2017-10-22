@@ -386,7 +386,7 @@
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='index.php'>log out</a></li>
+            <li><a href='index.php'>Log out</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -492,17 +492,21 @@ You are logged in.
 </tr>
 </tbody></table>
 <h1 id='search'>Search</h1>
+<p>With this endpoint, you can search of hotels based on some specific criteria of your choice and these criteria can be based on the type of property, based on your current location, it could even be based on the name of a hotel you know of.</p>
+
 <p>Search for Hotels with parameters 
 Scope to be used in Authorization 
 Query For a List
 For a List of parameter values, <em>see below</em>
-Property_type : 
-*   <code>&#39;Villa&#39;</code>, 
-*   <code>&#39;Apartment&#39;</code>,
-*   <code>&#39;Guest House&#39;</code>,
-*   <code>&#39;Hotel&#39;</code>, 
-*   <code>&#39;Luxury Hotel&#39;</code>, 
-*   <code>&#39;Guest House&#39;</code></p>
+Property_type : </p>
+
+<ul>
+<li>  <code>&#39;Villa&#39;</code>, <br></li>
+<li>  <code>&#39;Apartment&#39;</code>,<br></li>
+<li>  <code>&#39;Guest House&#39;</code>,<br></li>
+<li>  <code>&#39;Hotel&#39;</code>, <br></li>
+<li>  <code>&#39;Luxury Hotel&#39;</code>, <br></li>
+</ul>
 <h2 id='search-for-hotels'>Search for hotels</h2>
 <p>This endpoint allows you to search For Hotels</p>
 
@@ -733,6 +737,8 @@ Bookings.read,<br>
 Bookings.create,<br>
 Bookings.update.<br>
 Bookings.delete<br></p>
+
+<p>The booking API is able to get bookings by email, details of specific bookings, total bookings made, create a new booking for a specific hotel, get the list of contacts for a property as well as getting them by Id. Most of the features of this API are accessible only by an admin. The available scopes are read, create, update and delete.</p>
 <h2 id='get-bookings-by-email'>Get Bookings by email</h2>
 <blockquote>
 <p>Example request:</p>
@@ -1505,6 +1511,8 @@ properties.read,<br>
 properties.create,<br>
 properties.delete ,<br>
 properties.update<br></p>
+
+<p>The hotels API allows you to get the list of hotels, show details for a hotel and every thing associated to it. This API vould also return details like directons to a hotel, website of the hotel and some other basic information about the hotel the user is looking for. The scopes unique to the Admin are create, delete, read and update.</p>
 <h2 id='get-list-of-hotels'>Get list of hotels</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2007,6 +2015,8 @@ Images.read,<br>
 Images.create,<br>
 Images.delete,<br>
 Images.update<br></p>
+
+<p>The Images endpoint returns images for a particular hotel. Images could be small, medium or big depending on the preference of the user. The scopes available to be the admin are the read, create, delete and update scopes.</p>
 <h2 id='show-images-for-a-particular-hotel'>Show images for a particular hotel</h2>
 <p>This endpoint fetches images for a specific hotel.<br>
 Image URL is in this format https://media.api.hng.tech/img/size/name_of_image.jpg.<br>
@@ -2128,6 +2138,8 @@ size =<br>
     Facilities.create,<br>
     Facilities.delete, <br>
     Facilities.update<br></p>
+
+<p>The facilities API shows the facilities a hotel has like restaurant, as well as images of the faciilty, the API could also get bank details of a specific hotel like bank, name account name and account number. Only the admin can access the bank details of this API. The scopes available are read, create, delete and update.</p>
 <h2 id='show-facilities-for-a-hotel'>Show facilities for a hotel</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2335,6 +2347,8 @@ Reviews.read,<br>
 Reviews.create,<br>
 Reviews.delete,<br>
 Reviews.update,<br></p>
+
+<p>The Reviews API returns all reviews made by users that must have patronized a hotel, comments, ratings by the user of the hotels as well as ratings of the hotel.  The admin has privileges of adding a review for a specific hotel. The scopes available to the admin are read, create, delete, update.</p>
 <h2 id='show-reviews-for-a-specific-hotel'>Show reviews for a specific hotel</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2653,6 +2667,11 @@ locations.read,<br>
 locations.create,<br>
 locations.delete,<br>
 locations.update,<br></p>
+
+<p>The location API shows details about a location regarding a hotel, addresses, the latitude
+and longitude, the continent the hotel is, properties around the hotel, It can viewed by all users
+who might need location details about an hotel they want to book. The API has read, delete,
+create and delete scopes peculiar to the admin user.</p>
 <h2 id='show-list-of-countries'>Show list of countries</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2975,6 +2994,8 @@ locations.update,<br></p>
 Rooms.read,</br>
 Rooms.delete, </br>
 Rooms.update</br></p>
+
+<p>The Rooms Api gives details about the rooms in a hotel, It could get rooms by Id, and also show the name of the rooms as well as the Id of the property as well as other information pertaining to rooms. The scopes available to the Admin are read, delete, update and create.</p>
 <h2 id='get-rooms-for-a-particular-hotel-based-on-hotel-id'>Get Rooms for a Particular Hotel Based on Hotel id</h2>
 <blockquote>
 <p>Example request:</p>
@@ -3111,7 +3132,9 @@ List of Scopes that can be used in Authorization:<br>
 rates.read<br>
 rates.create<br>
 rates.delete<br>
-rates.update</p>
+rates.update<br></p>
+
+<p>The Ratings API returns the rates of at which rooms go for, rate flags, rate Ids, multiple flag rates and it also gives the admin priviledges like adding a custom rate, and getting corporate rates. This API has read,create,delete and update scopes.</p>
 <h2 id='get-details-about-a-single-rate-br-by-id'>Get details about a single rate<br>by Id</h2>
 <blockquote>
 <p>Example request:</p>
@@ -3785,6 +3808,11 @@ Facilities.read,<br>
 Reports.create,<br>
 Reports.delete,<br> 
 Reports.update</p>
+
+<p>The Reports API allows you to view the log concerning bookings that have been reviewed, count the number of
+bookings, get multiple bookings by Id with the total count as well as the range of days
+in a month in which bookings can be made. The API also allows you to create, read, delete and update
+reports.</p>
 <h2 id='get-bookings-that-have-been-reviewed'>Get Bookings that have Been Reviewed</h2>
 <blockquote>
 <p>Example request:</p>
@@ -4091,7 +4119,11 @@ Reports.update</p>
 <td>number of bookings returned during the date range</td>
 </tr>
 </tbody></table>
-<h1 id='users'>Users</h1><h2 id='the-end-point-shows-list-of-users-br'>The end Point shows list of  users</br></h2>
+<h1 id='users'>Users</h1>
+<p>The Users API allows you to view the list of users, and also gives you admin privileges like
+authenticating the user. It also shows details of the user. The API cannot be viewed by ordinary
+ users, only the admins.</p>
+<h2 id='the-end-point-shows-list-of-users-br'>The end Point shows list of  users</br></h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>

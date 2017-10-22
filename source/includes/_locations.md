@@ -2,6 +2,10 @@
 Acess to all Location Related Things - List of Scopes to be used in Authorization <br>
 locations.read
 
+The location API shows details about a location regarding a hotel, addresses, the latitude
+and longitude, the continent the hotel is, properties around the hotel, It can viewed by all users
+who might need location details about an hotel they want to book. The API has only the read scope peculiar to the normal user.
+
 ##Show list of countries
 
 > Example request:

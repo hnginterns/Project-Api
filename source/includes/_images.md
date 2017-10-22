@@ -2,6 +2,8 @@
 Acess to all Reports Related Things - List of Scopes to be used in Authorization<br>
 Images.read
 
+The Images endpoint returns images for a particular hotel. Images could be small, medium or big depending on the preference of the user. The scope available to be the user is read.
+##Show images for a particular hotel
 
 ##Show images for a particular hotel
 

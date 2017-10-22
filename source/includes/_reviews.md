@@ -2,6 +2,8 @@
 Acess to all Reviews Related Things - List of Scopes to be used in Authorization <br>
 Reviews.read
 
+
+The Reviews API returns all reviews made by users that must have patronized a hotel, comments, ratings by the user of the hotels as well as ratings of the hotel.  The admin has some certain privileges. The scope available to the user is only the read read scope.
 ##Show reviews for a specific hotel
 
 > Example request:

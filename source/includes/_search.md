@@ -7,12 +7,11 @@ Scope to be used in Authorization
 Query For a List
 For a List of parameter values, *see below*
 Property_type : 
-*	`Villa`, 
-*	`Apartment`,
-*	`Guest House`,
-*	`Hotel`, 
-*	`Luxury Hotel`, 
-*	`Guest House`
+*	`Villa`, <br>
+*	`Apartment`,<br>
+*	`Guest House`,<br>
+*	`Hotel`, <br>
+*	`Luxury Hotel`, <br>
 
 ##Search for hotels
 	

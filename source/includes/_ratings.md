@@ -4,6 +4,8 @@ List of Scopes that can be used in Authorization:<br>
 rates.read
 
 
+The Ratings API returns the rates of at which rooms go for, rate flags, rate Ids, multiple flag rates and it also gives the admin some certain priviledges. This API has only the read scope peculiar to the normal user.
+
 
 
 ##Get details about a single rate<br>by Id

@@ -2,6 +2,8 @@
 Access to all Rooms related things - List of Scopes to be used in Authorization <br>
 Rooms.read
 
+The Rooms Api gives details about the rooms in a hotel, It could get rooms by Id, and also show the name of the rooms as well as the Id of the property as well as other information pertaining to rooms. The scope available to the normal user is read.
+
 ## Get Rooms for a Particular Hotel Based on Hotel id
 > Example request:
 
