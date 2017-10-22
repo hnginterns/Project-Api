@@ -676,7 +676,7 @@ Property_type : </p>
 <tr>
 <td>Total</td>
 <td>integer</td>
-<td>Total result searched</td>
+<td>Total hotel searches near a location</td>
 </tr>
 </tbody></table>
 <h2 id='get-hotel-count-in-a-location'>Get hotel count in a location</h2>
@@ -754,9 +754,9 @@ Property_type : </p>
 </tr>
 </thead><tbody>
 <tr>
-<td>Total</td>
+<td>count</td>
 <td>integer</td>
-<td>Total result searched</td>
+<td>Total hotel count</td>
 </tr>
 </tbody></table>
 <h1 id='bookings'>Bookings</h1>
@@ -839,20 +839,6 @@ Bookings.delete<br></p>
 </tbody></table>
 
 <p>This endpoint Fetches all Bookings,bookings by email.</p>
-<h3 id='response-body'>Response Body</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Total</td>
-<td>integer</td>
-<td>Total bookings</td>
-</tr>
-</tbody></table>
 <h2 id='get-booking-details-of-a-specific-booking'>Get Booking Details of a Specific Booking</h2>
 <blockquote>
 <p>Example request:</p>
@@ -3589,6 +3575,20 @@ https://api.hotels.ng/internal/rates/flag/</span><span class="si">{</span><span 
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+</tbody></table>
+<h3 id='response-body'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Message</td>
+<td>String</td>
+<td>status on the result of the API call</td>
 </tr>
 </tbody></table>
 <h2 id='fetch-multiple-flag-rates-by-id'>Fetch multiple flag rates by Id</h2>
