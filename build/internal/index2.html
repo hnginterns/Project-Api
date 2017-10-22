@@ -665,7 +665,7 @@ Property_type : </p>
 <td>True</td>
 </tr>
 </tbody></table>
-<h3 id='response-body'>Response Body</h3>
+<h3 id='response-body-2'>Response Body</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -674,9 +674,19 @@ Property_type : </p>
 </tr>
 </thead><tbody>
 <tr>
-<td>Total</td>
-<td>integer</td>
-<td>Total hotel searches near a location</td>
+<td>Properties</td>
+<td>String</td>
+<td>Properties around the locale</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>String</td>
+<td>Message about property</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Name of owner</td>
 </tr>
 </tbody></table>
 <h2 id='get-hotel-count-in-a-location'>Get hotel count in a location</h2>
@@ -745,7 +755,7 @@ Property_type : </p>
 <td>True</td>
 </tr>
 </tbody></table>
-<h3 id='response-body'>Response Body</h3>
+<h3 id='response-body-3'>Response Body</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -756,7 +766,7 @@ Property_type : </p>
 <tr>
 <td>count</td>
 <td>integer</td>
-<td>Total hotel count</td>
+<td>Total number of hotels searched counted</td>
 </tr>
 </tbody></table>
 <h1 id='bookings'>Bookings</h1>
@@ -1533,6 +1543,8 @@ Bookings.delete<br></p>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
+<h3 id='response-body-3'>Response Body</h3>
+<p>message|string|status of the API call</p>
 <h1 id='hotels'>Hotels</h1>
 <p>Access to all Hotel related things - List of Scopes to be used in Authorization <br>
 properties.read,<br>
@@ -2167,7 +2179,8 @@ size =<br>
     Facilities.delete, <br>
     Facilities.update<br></p>
 
-<p>The facilities API shows the facilities a hotel has like restaurant, as well as images of the faciilty, the API could also get bank details of a specific hotel like bank, name account name and account number. Only the admin can access the bank details of this API. The scopes available are read, create, delete and update.</p>
+<p>The facilities API shows the facilities a hotel has like restaurant, as well as images of the faciilty, the API could also get bank details of a specific hotel like bank, name account name and account number.<br>
+Only the admin can access the bank details of this API. The scopes available are read, create, delete and update.</p>
 <h2 id='show-facilities-for-a-hotel'>Show facilities for a hotel</h2>
 <blockquote>
 <p>Example request:</p>
@@ -3577,7 +3590,7 @@ https://api.hotels.ng/internal/rates/flag/</span><span class="si">{</span><span 
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
-<h3 id='response-body'>Response Body</h3>
+<h3 id='response-body-4'>Response Body</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -3586,9 +3599,9 @@ https://api.hotels.ng/internal/rates/flag/</span><span class="si">{</span><span 
 </tr>
 </thead><tbody>
 <tr>
-<td>Message</td>
-<td>String</td>
-<td>status on the result of the API call</td>
+<td>message</td>
+<td>string</td>
+<td>status message on the API call</td>
 </tr>
 </tbody></table>
 <h2 id='fetch-multiple-flag-rates-by-id'>Fetch multiple flag rates by Id</h2>
@@ -3671,7 +3684,7 @@ https://api.hotels.ng/internal/rates/flags/multiple/fetch?rate_ids=&amp;access_t
 <td>string</td>
 </tr>
 </tbody></table>
-<h3 id='response-body-4'>Response Body</h3>
+<h3 id='response-body-5'>Response Body</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -3795,7 +3808,7 @@ https://api.hotels.ng/internal/rates2/properties?company_rates=
 <td>returns company rates</td>
 </tr>
 </tbody></table>
-<h3 id='response-body-5'>Response Body</h3>
+<h3 id='response-body-6'>Response Body</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
