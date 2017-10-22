@@ -1,5 +1,5 @@
 <?php
-/* User login process, checks if user exists and password is correct */
+/* User login process, checks if user exists and password is correct */ 
 
 // Escape email to protect against SQL injections
 $email = $mysqli->escape_string($_POST['email']);
@@ -25,7 +25,7 @@ else { // User exists
         header("location: index2.html");
     }
     else {
-        $_SESSION['message'] = "You have entered wrong password, try again!";
+        $_SESSION['message'] =  "You have entered wrong password, try again!";
         header("location: error.php");
     }
 }
