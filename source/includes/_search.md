@@ -54,7 +54,7 @@ var_dump($response);
 > Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "data": {
@@ -62,7 +62,7 @@ var_dump($response);
       "bookings": null
     }
   }
-]
+
 ```
 
 
@@ -88,6 +88,8 @@ property_type | String | Type of property to request | False
 Attribute | Type | Description
 --------- | ------- | -----------
  Total | integer| Total result searched
+
+
 
 ##Search for properties nearby
 
@@ -117,9 +119,12 @@ var_dump($response);?>
 
 ```json
 {
-    "data": [],
-    "status": "success"
-}
+    "status": "success",
+    "data": {
+      "total": 0,
+      "bookings": null
+    }
+  }
 ```
 
 ###	HTTP Request
@@ -168,9 +173,19 @@ var_dump($response);?>
 
 ```json
 {
-    "data": [],
-    "status": "success"
-}
+    "status": "success",
+    "data": {
+      "total": 0,
+      "bookings": null
+    }
+  },
+  {
+    "status": "success",
+    "data": {
+      "total": 0,
+      "bookings": null
+    }
+  }
 ```
 
 ###	 HTTP Request
