@@ -79,7 +79,7 @@ access_token | String | Token generated with client_id and client_credentials | 
 with_images | Boolean | Should the response include property's image url | False
 with_rates | Boolean | Should the response include property's rate | False
 filters | String | Filtering out the data not needed from the response | False
-search_type | String |  | False
+search_type | String | Type of Search request | False
 property_type | String | Type of property to request | False
 
 
