@@ -197,9 +197,9 @@ GET `https://api.hotels.ng/search/location/count/bulk?access_token=&property_typ
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token | String | Token generated with client_id and client_credentials | True
-property_type | String |  | False
-location_type | String |  | False
-location | Array | Token generated with client_id and client_credentials | True
+property_type | String | Type of property | False
+location_type | String | Type of place | False
+location | Array | Location of places | True
 
 ###Response Body
 Attribute | Type | Description
