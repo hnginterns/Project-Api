@@ -30,54 +30,43 @@ var_dump($response);
 
   ```json
   
-  {
-    "0": {
-      "room_id": 2109,
-      "name": "Standard Room (Single)",
-      "property_id": 43864,
-      "description": null,
-      "number_of_guests": null,
-      "minimum_stay_nights": null,
-      "payment_type": "all",
-      "number_of_rooms": null
+{ 
+  "data":[  
+    {  
+      "room_id":2109,
+      "name":"Standard Room (Single)",
+      "property_id":"43864",
+      "description":"",
+      "number_of_guests":null,
+      "minimum_stay_nights":null,
+      "payment_type":"all",
+      "number_of_rooms":null
     },
-    "1": {
-      "room_id": 2110,
-      "name": "Classic Single Room",
-      "property_id": 43864,
-      "description": null,
-      "number_of_guests": null,
-      "minimum_stay_nights": null,
-      "payment_type": "all",
-      "number_of_rooms": null
+    {  
+      "room_id":2110,
+      "name":"Classic Single Room",
+      "property_id":"43864",
+      "description":"",
+      "number_of_guests":null,
+      "minimum_stay_nights":null,
+      "payment_type":"all",
+      "number_of_rooms":null
     },
-    "status": "success",
-    "data": null
-  },
-  {
-    "0": {
-      "room_id": 2109,
-      "name": "Standard Room (Single)",
-      "property_id": 43864,
-      "description": null,
-      "number_of_guests": null,
-      "minimum_stay_nights": null,
-      "payment_type": "all",
-      "number_of_rooms": null
-    },
-    "1": {
-      "room_id": 2110,
-      "name": "Classic Single Room",
-      "property_id": 43864,
-      "description": null,
-      "number_of_guests": null,
-      "minimum_stay_nights": null,
-      "payment_type": "all",
-      "number_of_rooms": null
-    },
-    "status": "success",
-    "data": null
-  }
+    {  
+      "room_id":2111,
+      "name":"Deluxe Room",
+      "property_id":"43864",
+      "description":"",
+      "number_of_guests":null,
+      "minimum_stay_nights":null,
+      "payment_type":"all",
+      "number_of_rooms":null
+    }
+  ],
+  "status":"success"
+}
+
+
 
 ```
 ### HTTP Request
@@ -87,7 +76,7 @@ var_dump($response);
 ### Url Parameters
 Parameter | Type | Description
 --------- | ------- | -----------
-Room_id | Number | Local id assigned to that hotel 
+Hotel_id | Number | Local id assigned to that hotel 
 access_token | String | Generated access token from Oauth2 developer credentials
 
 
@@ -95,8 +84,9 @@ access_token | String | Generated access token from Oauth2 developer credentials
 
 Attribute | Type | Description
 --------- | ------- | -----------
-        id| integer | Customer user-supplied webhook identifier.
+        
 room_id | integer | Id of the room
 name| string| Name of the room
-  property_id| integer |Id of the property
- payment_type| string | type of payment given
+property_id| integer |Id of the property
+description| string | Description of the room type
+payment_type| string | type of payment given

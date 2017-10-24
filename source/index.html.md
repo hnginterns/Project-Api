@@ -97,5 +97,5 @@ Attributes | Type | Description
 --------- | ------- | -----------
 access_token| string|access token issued to the consumer
 token_type | string |type of token issued
-expires_in | integer |the time the token could last for
+expires_in | integer |the duration of time the token is valid for
 

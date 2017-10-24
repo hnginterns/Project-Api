@@ -66,7 +66,7 @@ var_dump($response);
       }
     },
     "status": "success"
-  },
+  }
 
 
 ```
@@ -89,10 +89,12 @@ Attribute | Type | Description
 --------- | ------- | -----------
         id| integer | Customer user-supplied webhook identifier.
 name | string | Name of Country
+code | string | Code of Country
 continent_id| integer| Id of the Continent where the country is
-  object_type| string |type of object supplied
- facility_name| string | name of facility supplied
-img_url | string | link to the image of facility
+  latitude| string |Latitude of country
+  longitude| string |Longitude of country
+  continent| object |Details of Continent where country is located
+
 
 
 
