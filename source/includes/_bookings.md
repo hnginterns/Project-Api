@@ -29,7 +29,7 @@ var_dump($response);
  >Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "data": null
@@ -50,7 +50,7 @@ var_dump($response);
     "status": "success",
     "data": null
   }
-]
+
 ```
 This endpoint Fetches booking details for a specific booking.
 

@@ -35,7 +35,7 @@ var_dump($response);?>
 >Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "message": "Rate",
@@ -64,7 +64,7 @@ var_dump($response);?>
       "active_sun": 1
     }
   }
-]
+
 
 ```
 This Endpoint returns the details about a single rate by ID 
@@ -120,7 +120,7 @@ var_dump($response);?>
 > Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "message": "Available Flags",
@@ -129,7 +129,7 @@ var_dump($response);?>
       "id": 1
     }
   }
-]
+
 
 ```
 
@@ -181,7 +181,7 @@ var_dump($response);?>
 
 ```json
 
-[
+
   {
     "status": "success",
     "message": "All flags with rate 29981",
@@ -190,7 +190,7 @@ var_dump($response);?>
       "id": 1
     }
   },
-]
+
 
 ```
 This Endpoint returns all the Flags by rate id
@@ -242,7 +242,7 @@ var_dump($response);?>
 
 
 ```json
-[
+
   {
     "status": "success",
     "message": "Rate",
@@ -271,7 +271,7 @@ var_dump($response);?>
       "active_sun": 1
     }
   }
-]
+
 
 ```
 This Endpoint returns multiple rate flags by their id

@@ -29,7 +29,7 @@ var_dump($response);
  > Example Response:
 
   ```json
-  [
+  
   {
     "0": {
       "room_id": 2109,
@@ -78,7 +78,7 @@ var_dump($response);
     "status": "success",
     "data": null
   }
-]
+
 ```
 ### HTTP Request
 
