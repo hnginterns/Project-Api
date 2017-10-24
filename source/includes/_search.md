@@ -201,6 +201,7 @@ property_type | String |  | False
 location_type | String |  | False
 location | Array | Token generated with client_id and client_credentials | True
 
+###Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
  Count| Integer| Number of hotels around
