@@ -34,39 +34,53 @@ var_dump($response);
 
 ```json
 
-  {
-    "data": {
-      "0": {
-        "id": 1,
-        "name": "Afghanistan",
-        "code": "AF",
-        "continent_id": "3",
-        "latitude": "0.00000",
-        "longitude": "0.00000",
-        "continent": {
-          "id": 3,
-          "name": "Asia",
-          "latitude": "0.00",
-          "longitude": "0.00"
-        }
-      },
-      "1": {
-        "id": 2,
-        "name": "Albania",
-        "code": "AL",
-        "continent_id": "5",
-        "latitude": "0.00000",
-        "longitude": "0.00000",
-        "continent": {
-          "id": 5,
-          "name": "Europe",
-          "latitude": "0.00",
-          "longitude": "0.00"
-        }
+{
+"data":[  
+    {  
+      "id":1,
+      "name":"Afghanistan",
+      "code":"AF",
+      "continent_id":"3",
+      "latitude":"0.00000",
+      "longitude":"0.00000",
+      "continent":{  
+        "id":3,
+        "name":"Asia",
+        "latitude":"0.00",
+        "longitude":"0.00"
       }
     },
-    "status": "success"
-  }
+    {  
+      "id":2,
+      "name":"Albania",
+      "code":"AL",
+      "continent_id":"5",
+      "latitude":"0.00000",
+      "longitude":"0.00000",
+      "continent":{  
+        "id":5,
+        "name":"Europe",
+        "latitude":"0.00",
+        "longitude":"0.00"
+      }
+    },
+    {  
+      "id":3,
+      "name":"Algeria",
+      "code":"DZ",
+      "continent_id":"1",
+      "latitude":"0.00000",
+      "longitude":"0.00000",
+      "continent":{  
+        "id":1,
+        "name":"Africa",
+        "latitude":"0.00",
+        "longitude":"0.00"
+      }
+    }
+  ],
+  "status": "success"
+}
 
 
 ```
