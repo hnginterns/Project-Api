@@ -1,4 +1,4 @@
-# Ratings
+# Rates
 Access to all Rates Flag <br>
 List of Scopes that can be used in Authorization:<br>
 rates.read
@@ -131,6 +131,7 @@ var_dump($response);?>
   }
 }
 
+
 ```
 
 This Endpoint returns all the available Flags
@@ -181,6 +182,7 @@ var_dump($response);?>
 
 ```json
 
+
 {
   "status": "success",
   "message": "All flags with rate 29981",
@@ -189,6 +191,7 @@ var_dump($response);?>
     "id": 1
   }
 },
+
 
 ```
 This Endpoint returns all the Flags by rate id
@@ -269,6 +272,7 @@ var_dump($response);?>
     "active_sun": 1
   }
 }
+
 
 ```
 This Endpoint returns multiple rate flags by their ID.
