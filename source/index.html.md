@@ -17,7 +17,7 @@ includes:
   - reviews
   - locations
   - rooms
-  - ratings
+  - rates
   
 search: true
 ---

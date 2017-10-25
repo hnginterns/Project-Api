@@ -245,34 +245,23 @@ var_dump($response);?>
 ```json
 
 {
-  "status": "success",
-  "message": "Rate",
-  "data": {
-    "id": 1,
-    "property_id": 98319,
-    "room_id": 10,
-    "rate_name": null,
-    "rate_tag_id": 1,
-    "rack_price": 55000,
-    "buying_price": 49500,
-    "buying_price_usd\"": null,
-    "selling_price": 55000,
-    "selling_price_usd\"": null,
-    "priority": 1,
-    "start_date": {},
-    "end_date": {},
-    "active_start": {},
-    "active_end": {},
-    "active_mon": 1,
-    "active_tue": 1,
-    "active_wed": 1,
-    "active_thu": 1,
-    "active_fri": 1,
-    "active_sat": 1,
-    "active_sun": 1
-  }
+    "status": "success",
+    "message": "Rates with Flag Ids",
+    "data": {
+        "53140": [
+            "1",
+            "3"
+        ],
+        "53141": [
+            "2",
+            "5",
+            "7"
+        ],
+        "53146": [
+            "2"
+        ]
+    }
 }
-
 
 ```
 This Endpoint returns multiple rate flags by their ID.
