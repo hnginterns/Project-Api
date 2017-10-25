@@ -39,22 +39,37 @@ var_dump($response);
 
 ```json
     
-  {
-    "data": {
-      "id": "9191,",
-      "application_id": "1,",
-      "object_id": "25449,",
-      "title": "null,",
-      "description": "null,",
-      "url": "https:\\/\\/media.api.hng.tech\\/img\\/big\\/lekki-oxford-hotels-ltd-lagos-8297.jpg,",
-      "room_id": "null,",
-      "facility_id": "null,",
-      "priority": "0,",
-      "created_at": "2017-03-07 13:56:12,",
-      "updated_at": {}
+{  
+  "data":[  
+    {  
+      "id":9191,
+      "application_id":"1",
+      "object_id":25449,
+      "title":null,
+      "description":null,
+      "url":"https:\/\/media.api.hng.tech\/img\/big\/lekki-oxford-hotels-ltd-lagos-8297.jpg",
+      "room_id":null,
+      "facility_id":null,
+      "priority":"0",
+      "created_at":"2017-03-07 13:56:12",
+      "updated_at":"2017-03-07 13:56:12"
     },
-    "status": "success"
-  },
+    {  
+      "id":9192,
+      "application_id":"1",
+      "object_id":25449,
+      "title":null,
+      "description":null,
+      "url":"https:\/\/media.api.hng.tech\/img\/big\/lekki-oxford-hotels-ltd-lagos-8298.jpg",
+      "room_id":null,
+      "facility_id":null,
+      "priority":"1",
+      "created_at":"2017-03-07 13:56:12",
+      "updated_at":"2017-03-07 13:56:12"
+    }
+  ],
+  "status":"success"
+}
 
 ```
 

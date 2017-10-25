@@ -124,37 +124,39 @@ var_dump($response);?>
 
 ```json
 
-  {
-    "status": "success",
-    "data": {
-      "name": "Adidas International Hotel",
-      "description": null,
-      "status": "active",
-      "currency_code": "NGN",
-      "website": null,
-      "checkin_time": null,
-      "checkout_time": null,
-      "is_bookable": 1,
-      "payment_type": "all",
-      "driving_instructions": "From Lagos State University Lagos Badagry Road, Ojo, Head northeast on Lagos State University toward LASU MAIN Rd 97 m Turn right onto LASU MAIN Rd  Pass by Tito Cakes and Events (on the left) 800 m Turn right onto Lagos - Badagry Expy 300 m Turn left toward F100/Lagos - Badagry Exp y12 m Merge onto F100/Lagos - Badagry Expy 850 m Turn right toward Alhaji Adisa Osiefa Street 55 m Turn right onto Alhaji Adisa Osiefa Street\"",
-      "minrate": 0,
-      "maxrate": 0,
-      "unique_url": "10002-adidas-international-hotel-lagos",
-      "star_rating": null,
-      "policy": null,
-      "property_type_id": 1,
-      "meal_plan": null,
-      "number_of_rooms": null,
-      "reference": {
-        "0": {
-          "id": 1804,
-          "property_id": 10002,
-          "property_ref_code": 10002,
-          "agency": "Hotelsng"
-        }
+{  
+  "data":{  
+    "name":"Sunfit International Limited",
+    "description":"<p>Sunfit International provides fast and efficient customer services, even previous guests can attest to this.<\/p>",
+    "status":"active",
+    "currency_code":"NGN",
+    "website":"http:\/\/www.sunfitltd.com\/",
+    "checkin_time":null,
+    "checkout_time":null,
+    "is_bookable":"1",
+    "added_by_admin":"0",
+    "payment_type":"all",
+    "driving_instructions":"Take Rafui Babatunde Tinubu Rd and Parliament Rd to Lagos - Badagry Express Way, 5 min (2.2 km).",
+    "minrate":"15698.00000",
+    "maxrate":"59935.00000",
+    "unique_url":"43864-sunfit-international-ltd-lagos",
+    "star_rating":null,
+    "policy":"<p>Check in: From 2:00 pm<br \/>Check out: By 12:00 pm<br \/>Children: Kids not older than 5 can stay for free<br \/>Pets: Pets are not permitted<\/p>",
+    "property_type_id":"1",
+    "meal_plan":null,
+    "number_of_rooms":"0",
+    "reference":[  
+      {  
+        "id":35,
+        "property_id":"43864",
+        "agent_uuid":"a965ed6e-c292-4263-b4de-d01057984441",
+        "property_ref_code":"43864",
+        "agency":"Hotelsng"
       }
-    }
-  }
+    ]
+  },
+  "status":"success"
+}
 
 ```
 

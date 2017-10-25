@@ -30,75 +30,81 @@ var_dump($response);
 
  ```json
 
-    {
-    "status": "success",
-    "data": {
-      "id": 3555,
-      "booking_id": null,
-      "property_id": 43864,
-      "user_id": null,
-      "name": "bimbo",
-      "email": null,
-      "title": "okay",
-      "location_id": null,
-      "comment": "I enjoyed my stay, the service was very good and the rooms were quite comfortable. There was no such thing as being unsatisfied. The staffs were prompt with all the services",
-      "overall_rating": 2,
-      "is_published": 1,
-      "created_at": {},
-      "updated_at": {},
-      "deleted_at": null,
-      "published_at": {},
-      "review_score": [
-        {
-          "id": 3236,
-          "review_id": 3555,
-          "criterion_id": 1,
-          "score": 2,
-          "created_at": null,
-          "updated_at": null,
-          "deleted_at": null
+{  
+  "status":"success",
+  "data":[  
+    {  
+      "id":3555,
+      "booking_id":null,
+      "property_id":"43864",
+      "user_id":null,
+      "name":"bimbo",
+      "email":null,
+      "title":"okay",
+      "location_id":null,
+      "comment":"I enjoyed my stay, the service was very good and the rooms were quite comfortable.",
+      "overall_rating":"2.00",
+      "is_published":"1",
+      "created_at":"2014-12-02 04:08:38",
+      "updated_at":"2016-04-07 11:24:16",
+      "deleted_at":null,
+      "published_at":"2014-12-02 04:08:38",
+      "review_score":[  
+        {  
+          "id":3236,
+          "review_id":"3555",
+          "criterion_id":"1",
+          "score":"2",
+          "created_at":null,
+          "updated_at":null,
+          "deleted_at":null
         },
-        {
-          "id": 14323,
-          "review_id": 3555,
-          "criterion_id": 5,
-          "score": 2,
-          "created_at": null,
-          "updated_at": null,
-          "deleted_at": null
+        {  
+          "id":14323,
+          "review_id":"3555",
+          "criterion_id":"5",
+          "score":"2",
+          "created_at":null,
+          "updated_at":null,
+          "deleted_at":null
         },
-        {
-          "id": 25410,
-          "review_id": 3555,
-          "criterion_id": 2,
-          "score": 2,
-          "created_at": null,
-          "updated_at": null,
-          "deleted_at": null
+        {  
+          "id":25410,
+          "review_id":"3555",
+          "criterion_id":"2",
+          "score":"2",
+          "created_at":null,
+          "updated_at":null,
+          "deleted_at":null
         },
-        {
-          "id": 36497,
-          "review_id": 3555,
-          "criterion_id": 3,
-          "score": 2,
-          "created_at": null,
-          "updated_at": null,
-          "deleted_at": null
+        {  
+          "id":36497,
+          "review_id":"3555",
+          "criterion_id":"3",
+          "score":"2",
+          "created_at":null,
+          "updated_at":null,
+          "deleted_at":null
         },
-        {
-          "id": 47584,
-          "review_id": 3555,
-          "criterion_id": 4,
-          "score": 2,
-          "created_at": null,
-          "updated_at": null,
-          "deleted_at": null
+        {  
+          "id":47584,
+          "review_id":"3555",
+          "criterion_id":"4",
+          "score":"2",
+          "created_at":null,
+          "updated_at":null,
+          "deleted_at":null
         }
       ],
-      "review_tag": [],
-      "review_comments": []
+      "review_tag":[  
+
+      ],
+      "review_comments":[  
+
+      ]
     }
-  },
+  ]
+}
   
 
 

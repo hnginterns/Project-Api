@@ -31,23 +31,45 @@ var_dump($response);Response
 
 ```json
 
-  {
-
-    "status": "success",
-    "message": "Object facilities",
-    "data": {
-      "id": 1967,
-      "object_id": 25449,
-      "facility_type_id": 100,
-      "facility_type_count": null,
-      "object_type": "hotel",
-      "created_at": {},
-      "updated_at": null,
-      "facility_name": "Restaurant",
-      "img_url": "restaurant.png"
+{  
+  "status":"success",
+  "message":"Object facilities",
+  "data":[  
+    {  
+      "id":1967,
+      "object_id":"25449",
+      "facility_type_id":"100",
+      "facility_type_count":null,
+      "object_type":"hotel",
+      "created_at":"2017-01-22 19:54:01",
+      "updated_at":null,
+      "facility_name":"Restaurant(s) ",
+      "img_url":"restaurant.png"
+    },
+    {  
+      "id":1968,
+      "object_id":"25449",
+      "facility_type_id":"101",
+      "facility_type_count":null,
+      "object_type":"hotel",
+      "created_at":"2017-01-22 19:54:01",
+      "updated_at":null,
+      "facility_name":"Bar\/Lounge",
+      "img_url":"bar.png"
+    },
+    {  
+      "id":1969,
+      "object_id":"25449",
+      "facility_type_id":"105",
+      "facility_type_count":null,
+      "object_type":"hotel",
+      "created_at":"2017-01-22 19:54:01",
+      "updated_at":null,
+      "facility_name":"Wireless Internet",
+      "img_url":"wireless.png"
     }
-
-  }
+  ]
+}
 
 
 ```
