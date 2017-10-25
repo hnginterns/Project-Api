@@ -54,7 +54,7 @@ var_dump($response);
 > Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "data": {
@@ -62,7 +62,7 @@ var_dump($response);
       "bookings": null
     }
   }
-]
+
 ```
 
 
@@ -79,7 +79,7 @@ access_token | String | Token generated with client_id and client_credentials | 
 with_images | Boolean | Should the response include property's image url | False
 with_rates | Boolean | Should the response include property's rate | False
 filters | String | Filtering out the data not needed from the response | False
-search_type | String |  | False
+search_type | String | Type of Search request | False
 property_type | String | Type of property to request | False
 
 
@@ -88,6 +88,8 @@ property_type | String | Type of property to request | False
 Attribute | Type | Description
 --------- | ------- | -----------
  Total | integer| Total result searched
+
+
 
 ##Search for properties nearby
 
@@ -117,9 +119,12 @@ var_dump($response);?>
 
 ```json
 {
-    "data": [],
-    "status": "success"
-}
+    "status": "success",
+    "data": {
+      "total": 0,
+      "bookings": null
+    }
+  }
 ```
 
 ###	HTTP Request
@@ -168,9 +173,19 @@ var_dump($response);?>
 
 ```json
 {
-    "data": [],
-    "status": "success"
-}
+    "status": "success",
+    "data": {
+      "total": 0,
+      "bookings": null
+    }
+  },
+  {
+    "status": "success",
+    "data": {
+      "total": 0,
+      "bookings": null
+    }
+  }
 ```
 
 ###	 HTTP Request
@@ -182,10 +197,11 @@ GET `https://api.hotels.ng/search/location/count/bulk?access_token=&property_typ
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token | String | Token generated with client_id and client_credentials | True
-property_type | String |  | False
-location_type | String |  | False
-location | Array | Token generated with client_id and client_credentials | True
+property_type | String | Type of property | False
+location_type | String | Type of place | False
+location | Array | Location of places | True
 
+###Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
  Count| Integer| Number of hotels around

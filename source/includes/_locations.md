@@ -33,7 +33,7 @@ var_dump($response);
  > Example response:
 
 ```json
-[
+
   {
     "data": {
       "0": {
@@ -68,7 +68,7 @@ var_dump($response);
     "status": "success"
   },
 
-]
+
 ```
 This endpoint shows the list of countries.
 
@@ -125,7 +125,7 @@ var_dump($response);?>
  > Example response:
 
  ```json
- [
+ 
   {
     "status": "success",
     "data": null,
@@ -166,7 +166,7 @@ var_dump($response);?>
     }
   },
 
-]
+
 ```
 This endpoint shows a list of properties around a location
 

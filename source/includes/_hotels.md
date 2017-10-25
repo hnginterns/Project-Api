@@ -31,7 +31,7 @@ var_dump($response);?>
 > Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "data": {
@@ -65,7 +65,7 @@ var_dump($response);?>
       }
     }
   },
-]
+
 ```
 
 This endpoint returns an array of Hotels.
@@ -123,7 +123,7 @@ var_dump($response);?>
 > Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "data": {
@@ -155,7 +155,7 @@ var_dump($response);?>
       }
     }
   }
-]
+
 ```
 
 This endpoint shows the details of a particular hotel.
@@ -222,7 +222,7 @@ var_dump($response);?>
 > Example response:
 
 ```json
-[
+
   {
     "status": "success",
     "data": {
@@ -279,7 +279,7 @@ var_dump($response);?>
       }
     }
   },
-] 
+
 ```
 This endpoint gets details of a hotel and everything associated to it
 

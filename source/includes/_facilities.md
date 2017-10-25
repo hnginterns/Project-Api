@@ -30,7 +30,7 @@ var_dump($response);Response
 > Example response:
 
 ```json
-[
+
   {
 
     "status": "success",
@@ -49,7 +49,7 @@ var_dump($response);Response
 
   }
 
-]
+
 ```
 
 This endpoint shows the facilities available for a specific hotel.

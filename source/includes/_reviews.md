@@ -29,7 +29,7 @@ var_dump($response);
 > Example response:
 
  ```json
-[
+
     {
     "status": "success",
     "data": {
@@ -100,7 +100,7 @@ var_dump($response);
     }
   },
   
-]
+
 
 ```
 This endpoint shows the reviews for a specific hotel.
