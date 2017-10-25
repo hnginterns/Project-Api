@@ -17,7 +17,7 @@ includes:
   - reviews
   - locations
   - rooms
-  - ratings
+  - rates
   
 search: true
 ---
@@ -50,25 +50,22 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 
-var_dump($response);
+var_dump($response);?>
 ```
 
 > Example response:
 
 ```json
-[
-  {
-    "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
-    "token_type": "Bearer",
-    "expires_in": 3600
-  }
-]
+{
+  "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}
 ```
 
 
-Hotels.ng uses Client id and Client Secret to allow access to the api.The client id and secret would provide an access token which would now grant you access to all our Hotels.ng endpoints. 
-
-The default grantType is <strong>client_credentials.</strong><br>
+Hotels.ng uses <strong>Client ID</strong> and <strong>Client Secret</strong> to allow access to our API. The Client ID and Secret will provide an Access Token which will now grant you access to all our Hotels.ng Endpoints.<br> 
+The default GrantType is <em>client_credentials.</em><br>
 The List of scopes are available at the deck of all the endpoints you are consuming. <br>
 You can make use of multiple scopes by using ',' as delimiter.<br>
 
@@ -84,10 +81,10 @@ Make sure you sign up for a developer key
 
 Parameter | Type | Description
 --------- | ------- | -----------
-grant_type| string|level of access the api supports 
-client_id | string |the id of the user requesting the api
-client_secret | string |Your secret key
-client_id | string |Endpoint trying to consume
+grant_type| String|Level of access the API Supports 
+client_id | String |ID of the user requesting access
+client_secret | String |Your secret key
+scope | String |Operation to perform (Read, Write, Update or Delete)
 
 
 
