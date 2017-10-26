@@ -25,11 +25,11 @@ size =<br>
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://api.hotels.ng/hotels/hotel_id/images');
+$request->setUrl('https://api.hotels.ng/hotels/134/images');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
-  'access_token' => ''
+  'access_token' => 'XXXXXXXXX'
 ));
 
 try {
@@ -80,7 +80,7 @@ try {
 ```
 
 ### HTTP Request
-`GET https://api.hotels.ng/hotels/hotel_id/images?access_token=`
+`GET https://api.hotels.ng/hotels/{hotel_id}/images?access_token=`
 
 
 ### Query Parameters
