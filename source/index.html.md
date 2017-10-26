@@ -16,7 +16,6 @@ includes:
   - facilities
   - reviews
   - locations
-  - rooms
   - rates
   
 search: true
