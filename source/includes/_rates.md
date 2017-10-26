@@ -20,7 +20,7 @@ $request->setUrl('http://api.hotels.ng/rates/25449/detail');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
-  'access_token' => 'igMDaCjMlYBMTiKWF55PPpVORl6WDhGepU8ARBZc'
+  'access_token' => 'xxxxxxxxx'
 ));
 try {
   $response = $request->send();
@@ -104,7 +104,7 @@ $request->setUrl('http://api.hotels.ng/rates/flags/all');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
-  'access_token' => 'VSypekcmmnmgvCU6Wn1gCDXWfA0iTBes6oe2LCWI'
+  'access_token' => 'xxxxxxxxx'
 ));
 
 try {
@@ -163,7 +163,7 @@ $request->setUrl('api.hotels.ng/rates/flags/29981');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
-  'access_token' => 'raQpeHeFlhwlr1EgSlPmvTsCjFcpQDKdVW8iP06j'
+  'access_token' => 'xxxxxxxxx'
 ));
 
 try {
@@ -222,7 +222,7 @@ $request->setUrl('http://api.hotels.ng/rates/flags/multiple/fetch/');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
-  'access_token' => 'NxTIhWb1FBPtIeRVI6AYe9hTYddMJipmPMdvU5XQ',
+  'access_token' => 'xxxxxxxxx',
   'rate_ids' => '53146,53141,53140'
 ));
 try {
