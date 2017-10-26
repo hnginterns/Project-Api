@@ -1,12 +1,11 @@
 # Search
 
-With this endpoint, you can search of hotels based on some specific criteria of your choice and these criteria can be based on the type of property, based on your current location, it could even be based on the name of a hotel you know of.
+With this endpoint, you can search for hotels based on some specific criteria of your choice. These criteria can be based on the type of property, locations, name of a hotel and so forth.
 
-Search for Hotels with parameters 
-Scope to be used in Authorization 
-Query For a List
-For a List of parameter values, *see below*
-Property_type : 
+Search for Hotels with parameters <br>
+Scope to be used in Authentication - <em>query</em> <br>
+For a List of parameter values, *see below* <br>
+Property_type : <br>
 *	`Villa`, <br>
 *	`Apartment`,<br>
 *	`Guest House`,<br>
@@ -15,7 +14,7 @@ Property_type :
 
 ##Search for hotels
 	
-	This endpoint allows you to search For Hotels
+	This endpoint allows you to search for Hotels
 
 > Example request:
 
@@ -111,58 +110,6 @@ var_dump($response);
             "road": "",
             "images": [
                 {
-                    "id": 74758,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/bd12e82df7d209c34dd50a62df6109da.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:36",
-                    "updated_at": "2017-05-12 11:03:36"
-                },
-                {
-                    "id": 74757,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/f56fa165feccffab4401a6ed120880d7.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:34",
-                    "updated_at": "2017-05-12 11:03:34"
-                },
-                {
-                    "id": 74755,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/98cb2d8771ec35fe17c04429bbb5afa8.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:32",
-                    "updated_at": "2017-05-12 11:03:32"
-                },
-                {
-                    "id": 74754,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/ee44e339153641f06ebf9ff1871cb1ff.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:30",
-                    "updated_at": "2017-05-12 11:03:30"
-                },
-                {
                     "id": 74753,
                     "application_id": "1",
                     "object_id": 1015245,
@@ -187,19 +134,6 @@ var_dump($response);
                     "priority": "0",
                     "created_at": "2017-05-12 11:03:27",
                     "updated_at": "2017-05-12 11:03:27"
-                },
-                {
-                    "id": 74749,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/0de1c09ec30d56f9628dc4838db45790.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:25",
-                    "updated_at": "2017-05-12 11:03:25"
                 },
                 {
                     "id": 74748,
@@ -260,15 +194,19 @@ var_dump($response);
                     "provider": "hotelsng",
                     "room_id": 36096
                 }
-            ]
-        },
+            ]...
+        }...
+    ],
+    "status": "success"
+}
+    
 ```
 
 
 
 ### HTTP Request
 
-`GET https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=`
+`GET https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters={}&search_type=property&property_type=hotel&query={}`
 
 ### Query Parameters
 
@@ -277,19 +215,20 @@ Parameter | Type | Description | Required
 access_token | String | Token generated with client_id and client_credentials | True
 with_images | Boolean | Should the response include property's image url | Optional
 with_rates | Boolean | Should the response include property's rate | Optional
-filters | String | Filtering out the data not needed from the response | optional
+filters | String | Filtering out the data not needed from the response | Optional
 search_type | String | Type of Search request | Optional
 property_type | String | Type of property to request | Optional
+query | String | The city, state and country of search | True
 
 
 ###Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
  country | string| name of country
- continent|string|the continent the hotel is in
- longitude|integer|longitude of the hotel
- latitude|integer|latitude of the hotel
- location_type|string|type of location
+ continent|string|The continent the hotel is in
+ longitude|integer|Longitude of the hotel
+ latitude|integer|Latitude of the hotel
+ location_type|string|Type of location
  state|string|state where the hotel is located
  city_code|string|city code of the hotel
  country_code|string|country code of the hotel
@@ -357,7 +296,7 @@ var_dump($response);?>
             "deal_status": 5,
             "weight": 32.346737,
             "area": "",
-            "facility_type_icons": "parking.png,restaurant.png,cabletv.png,refridgerator.png,bar.png,electricity.png,parking_letter.png,POS,laundry.png,security.png,hall.png,restaurant.png,Taxi Pickup,cctv.png,electronic_access.png,mug.png,,wireless.png,star.png,desk.png,telephone.png,Wardrobe,plasma.png,cabletv.png,refridgerator.png,Shower,Wine/water,mug.png,room_service.png,bar.png",
+            "facility_type_icons": "parking.png,restaurant.png,cabletv.png,refridgerator.png,bar.png,electricity.png,parking_letter.png...",
             "agency": "Hotelsng",
             "country_id": 154,
             "continent": "Africa",
@@ -367,15 +306,15 @@ var_dump($response);?>
             "property_url": "18456-bay-marriot-hotel-rivers",
             "status": "active",
             "max_rate_ngn": 100000,
-            "facility_type_ids": "100,110,113,116,117,119,121,122,128,130,143,151,153,172,178,182,184,203,205,216,233,264,271,274,281,284",
-            "description": "<p><span id=\"\" style=\"font-size: 13px; font-family: arial,sans,sans-serif;\" data-sheets-value=\"{\" data-sheets-userformat=\"{\">Garden City Marriott Hotel is a top hotel located in <strong>39 Tombia Street by Le Meridien Road, GRA, Port Harcourt.</strong> The hotel is very appropriate for guests on a business trip. <br /><br />The hotel features rooms fitted with air-conditioners, wardrobes, telephone, refrigerator, TV with satellite reception, coffee/tea makers, sofas, work table/chairs, king-sized beds and en-suite bathrooms. The rooms are classified into deluxe, super deluxe, ambassadorial and royal suite.<br /><br />The hotel offers breakfast daily at a surcharge<strong>.</strong> Other meals may be ordered at the on-site restaurant which serves continental and local dishes and guests can enjoy an array of alcoholic and non-alcoholic drinks stocked at the bar. <br /><br />The hotel features conference facilities to host social and corporate events. Airport pickup, laundry, and car hire services are available at a fee. Room service is available to help with all guests requirement. The premises are guarded by security personnel and onsite parking is allowed. <br /><br /><strong>Terms and Conditions</strong><br />Check In- 10:00 am (ID Required)<br />Check Out- 12:00 pm<br />Payments- cash, visa and master card<br />Children- kids are welcome to stay at no extra cost.<br /><br /><strong>Interesting Places to Visit Near Garden City Marriott Hotel</strong><br />Polo club<br />Blue Elephant Restaurant<br />Film House<br />Shoprite</span></p>",
+            "facility_type_ids": "100,110,113,116,117,119,121,122,128,130,143,151,153,172,178,182,184,203,205,216",
+            "description": "<p><span id=\"\" style=\"font-size: 13px; font-family: arial,sans,sans-serif;\" data-sheets-value=\"{\" data-sheets-userformat=\"{\">Garden City Marriott Hotel is a top hotel located in <strong>39 Tombia Street by Le Meridien Road, GRA, Port Harcourt.</strong>...",
             "is_disabled": 0,
             "max_rate": 100000,
             "is_active": 1,
             "road_id": 0,
             "agency_id": "1",
             "currency_code": "NGN",
-            "facility_type_names": "Adequate Parking,Restaurant(s) ,DSTV,Refrigerator,Bar,24 hours Electricity,Parking Garage,POS,Laundry,Security Guard,Event Hall,Restaurant(s) ,Taxi Pickup,CCTV camera,Key Card system,Coffee Tea Maker,King sized bed,Wi-fi Internet Access,Air Conditioning,Study Desk,Telephone,Wardrobe,Television,DSTV,Refrigerator,Shower,Wine/water,Coffee Tea Maker,Room Service,Mini Bar In Room",
+            "facility_type_names": "Adequate Parking,Restaurant(s) ,DSTV,Refrigerator,Bar,24 hours Electricity,Parking Garage,POS,Laundry,Security Guard,Event Hall,Restaurant(s) CCTV camera...",
             "min_rate": 10000,
             "address": "39 Tombia Street by Le Meridien Road, GRA, Port Harcourt",
             "review_count": 26,
@@ -392,19 +331,7 @@ var_dump($response);?>
             "is_bookable": 1,
             "road": "",
             "images": [
-                {
-                    "id": 5206,
-                    "application_id": "1",
-                    "object_id": 18456,
-                    "title": null,
-                    "description": null,
-                    "url": "https://media.api.hng.tech/img/big/bay-marriot-hotel-rivers-60269.jpg",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "1",
-                    "created_at": "2017-03-07 13:56:12",
-                    "updated_at": "2017-03-07 13:56:12"
-                },
+              
                 {
                     "id": 5181,
                     "application_id": "1",
@@ -418,19 +345,7 @@ var_dump($response);?>
                     "created_at": "2017-03-07 13:56:12",
                     "updated_at": "2017-03-07 13:56:12"
                 },
-                {
-                    "id": 5193,
-                    "application_id": "1",
-                    "object_id": 18456,
-                    "title": null,
-                    "description": null,
-                    "url": "https://media.api.hng.tech/img/big/bay-marriot-hotel-rivers-25975.png",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "3",
-                    "created_at": "2017-03-07 13:56:12",
-                    "updated_at": "2017-03-07 13:56:12"
-                },
+               
                 {
                     "id": 5189,
                     "application_id": "1",
@@ -443,18 +358,25 @@ var_dump($response);?>
                     "priority": "4",
                     "created_at": "2017-03-07 13:56:12",
                     "updated_at": "2017-03-07 13:56:12"
-                },
+                }
+            ]
+        }...  
+    ]
+    "status": "success"
+}
 ```
 
 ###	HTTP Request
   
-`GET https://api.hotels.ng/search/nearby?access_token= `
+`GET https://api.hotels.ng/search/nearby?access_token=&property_type=hotel&property_id=1006597`
 
 ### Query Parameters
 
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token| String | Token generated with client_id and client_credentials | True
+property-type| String |Type of property to request | True
+property_id | String | Id associated to a property | True
 
 ### Response Body
 Attribute | Type | Description
@@ -466,7 +388,9 @@ Attribute | Type | Description
 
 ## Get hotel count in a location
 
-	This endpoint will return the number of hotels that are around a particular location, you will be required to provide the location and your access token as query parameters in order to get a successful response. The location can be an address in a country or region.
+	This endpoint retrieves detailed information about a city/state in a country.The information includes;the number of hotels,brief description of the city, the city code and so forth. 
+    To fetch this information, you will be required to provide the location and your access token as query parameters in order to get a successful response. The location can be a state/city in a country or region.
+    
 
 > Example request:
 
@@ -496,7 +420,7 @@ var_dump($response);?>
     "data": {
         "Lugbe": {
             "city": "Lugbe",
-            "description": "",
+            "description": "Lugbe is a fine city...",
             "area": "",
             "country": "Nigeria",
             "continent": "Africa",
@@ -519,16 +443,17 @@ var_dump($response);?>
 
 ###	 HTTP Request
 
-GET `https://api.hotels.ng/search/location/count/bulk?access_token=&property_type=&location_type=&location=`
+GET `https://api.hotels.ng/search/location/count/bulk?property_type=&location_type=&locations=[]&country=&access_token=`
 
 ### Query Parameters
 
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token | String | Token generated with client_id and client_credentials | True
-property_type | String | Type of property | Optional
-location_type | String | Type of place | Optional
-location | Array | Location of places | True
+property_type | String | Type of property | True
+location_type | String | Type of place (e.g city,state)| True
+location | Array | Location of places(e.g lagos,Uyo,Akwa Ibom). Information about multiple location can be gotten using the delimiter ','| True
+country | String | The location's country | True
 
 ###Response Body
 

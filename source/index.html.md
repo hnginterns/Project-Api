@@ -64,9 +64,9 @@ var_dump($response);?>
 ```
 
 
-Hotels.ng uses <strong>Client ID</strong> and <strong>Client Secret</strong> to allow access to our API. The Client ID and Secret will provide an Access Token which will now grant you access to all our Hotels.ng Endpoints.<br> 
-The default GrantType is <em>client_credentials.</em><br>
-The List of scopes are available at the deck of all the endpoints you are consuming. <br>
+Hotels.ng uses <strong>client_id</strong> and <strong>client_secret</strong> to allow access to our API. The Client ID and Secret will provide an Access Token which will now grant you access to all our Hotels.ng Endpoints.<br> 
+The default <strong>grant_type</strong> is <em>client_credentials.</em><br>
+The List of <strong>scopes</strong> are available at the deck of all the endpoints you are consuming. <br>
 You can make use of multiple scopes by using ',' as delimiter.<br>
 
 <aside class="notice">
@@ -84,7 +84,7 @@ Parameter | Type | Description
 grant_type| String|Level of access the API Supports 
 client_id | String |ID of the user requesting access
 client_secret | String |Your secret key
-scope | String |Operation to perform (Read, Write, Update or Delete)
+scope | String |Operation to perform. (<em>query, properties.read, images.read, facilities.read,...</em>)
 
 
 
