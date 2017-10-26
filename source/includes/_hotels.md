@@ -3,7 +3,7 @@ Access to all Hotel related things - List of Scopes to be used in Authorization 
 properties.read
 
 
-The hotels API allows you to get the list of hotels, show details for a hotel and every thing associated to it. This API vould also return details like directons to a hotel, website of the hotel and some other basic information about the hotel the user is looking for. The scopes unique to the User is read.
+The hotels API allows you to get the list of hotels, show details for a hotel and every thing associated to it. This API vould also return details like directons to a hotel, website of the hotel and some other basic information about the hotel the user is looking for. The scope unique to the User is read.
 ## Get list of hotels
 
 
@@ -57,13 +57,7 @@ var_dump($response);?>
         "payment_type": "all",
         "meal_plan": null,
         "driving_instructions": "From Wuse Market, Zone 4, Abuja Head west on Wuse Market Rd toward Kashim Ibrahim Way 72 m Turn right at Leilas Mobile Massage onto Kashim Ibrahim Way  Pass by Sterling Bank Abuja Main (on the right in 400 m) 1.3 km Turn right onto Ahmadu Bello Way  Drive along Eden Place Apartments (on the right for 190 m) 800 m Turn left onto Ademola Adetokunbo Cres 140 m Turn right at Hair Studio onto Cairo Cres/Cairo Street  Pass by Ecobank (on the left) 350 m Turn left onto Cairo Cres/Cairo Street/Kampala St/Kampala Cres Destination will be on the right",
-        "added_by_admin": 0,
         "unique_url": "10000-redeemers-cherith-guest-house-abuja",
-        "is_priority": null,
-        "boost": 1,
-        "created_at": {},
-        "updated_at": {},
-        "deleted_at": null
       }
     }
   },
@@ -135,8 +129,6 @@ var_dump($response);?>
         "website": "http://lekkioxfordhotels.com",
         "checkin_time": null,
         "checkout_time": null,
-        "is_bookable": "1",
-        "added_by_admin": "0",
         "payment_type": "all",
         "driving_instructions": "LANDMARK:\r\nLekki Phase 1 \r\nTake Emmanuel Abimbola Cole St and Freedom Way to Lagos-Epe Express Rd/Lekki - Epe Express Road in Lekki 7 min. Follow Lekki - Epe Express Road to Akanni Ajiran St\r\n9 min.Turn right at Philip Stores onto Akanni Ajiran St. Pass by Sterling Bank (on the right)\r\nDestination will be on the left",
         "minrate": "8000.00000",
@@ -519,4 +511,4 @@ property_type_id|integer|Id of the type of property
 id| integer|Id peculiar to user
 property_id|integer|Id of property
 agency|string|the agency involved
-deal_status|integer|status of the deal 
+facility_type.img_url|string|image url of the type of facility
