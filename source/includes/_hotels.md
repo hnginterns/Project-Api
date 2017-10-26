@@ -97,7 +97,7 @@ property_type|string|the type of property
 rating|string|rating of the hotel
 driving_instructions|string|directions to the place
 
-## Show details for a hotel
+## Shows hotel information
 
 
 > Example request:
@@ -128,8 +128,8 @@ var_dump($response);?>
 {
 
     "data": {
-        "name": "Lekki Oxford Hotels",
-        "description": "<p>Lekki Oxford Hotel is <strong>3-Star</strong>&nbsp;hotel located at <strong>No. 10-12 Agungi road, off Lekki-Ajah Expressway before Chevron Roundabout</strong>. It is situated in a serene and tranquil environment; and provides guests with excellent rejuvenating and relaxing facilities.<br /><br />Rooms at the Lekki Oxford Hotel fall into the following categories: Royal room, Queen, Kings, Diplomatic Suite, and Ambassador Suite. These rooms come with an array of top-notch room facilities, which include: great spacing, luxurious double and single beds, sofas and center tables, study desks and chairs, wireless internet connection, flat-screen television sets with access to a variety of local and international channels, air conditioning, refrigerator and en-suite bathrooms with complimentary toiletries.<br /><br />Lekki Oxford Hotel also offers great services such as: regular power supply, a restaurant, bar/lounge and guaranteed security facilitated by competent security personnel.<br /><br />Other services on offer at Lekki Oxford Hotel include: laundry services, daily newspaper supply, airport pickup plus housekeeping and room services.</p>\r\n<p><strong>Places Of Interest Near Lekki Oxford Hotels</strong><br />The Palms Shopping Mall<br />Lekki Conservation Centre<br />Elegushi beach<br />Bespoke Event Center<br />House on the Rock main Church<br />KFA events centre.</p>\r\n<p><strong>Terms and Conditions</strong><br />Check in: from 12:00pm<br />Check out: by 12:00pm<br />Children: free stay for Babies and kids<br />Payment: Cash<br />Pets: Not allowed.</p>\r\n<p><strong>FAQs</strong><br />Q: Does Lekki Oxford Hotel have a restaurant?<br />A: Yes, there is a restaurant with seasoned chefs and cooks to cater to guests' nutritional needs</p>\r\n<p>Q: Does Lekki Oxford Hotel offer airport pickup services?<br />A: Yes, but at an extra cost</p>\r\n<p>Q: Does Lekki Oxford Hotel provide guests with internet accessibility?<br />A: At Lekki Oxford Hotel, there is a provision of high-speed wireless internet <br />facilities for guests.</p>\r\n<p>Q: Are children allowed to lodge alongside their parents at Lekki Oxford Hotel?<br />Yes. Babies and kids are allowed to stay for free.<br /><br />Q: Is a Bar/Lounge at Lekki Oxford Hotel?<br />A: It has a bar stocked with different drinks and wines.</p>",
+        "name": "Jakande British Hotels",
+        "description": "<p>Jakande British Hotel is <strong>3-Star</strong>&nbsp;hotel located at <strong>No. 125 Surulere road, off Lekki-Ajah Expressway.</strong>. It is situated in a serene and tranquil environment; and provides guests with excellent rejuvenating and relaxing facilities.<br /><br />Rooms at the Jakande British Hotel fall into the following categories: Royal room, Queen, Kings, Diplomatic Suite, and Ambassador Suite. These rooms come with an array of top-notch room facilities, which include: great spacing, luxurious double and single beds, sofas and center tables, study desks and chairs, wireless internet connection, flat-screen television sets with access to a variety of local and international channels, air conditioning, refrigerator and en-suite bathrooms with complimentary toiletries.<br /><br />Jakande British Hotel also offers great services such as: regular power supply, a restaurant, bar/lounge and guaranteed security facilitated by competent security personnel.<br /><br />Other services on offer at Jakande British Hotel include: laundry services, daily newspaper supply, airport pickup plus housekeeping and room services.</p>\r\n<p><strong>Places Of Interest Near Jakande British Hotels</strong><br />The Palms Shopping Mall<br />Lekki Conservation Centre<br />Elegushi beach<br />Bespoke Event Center<br />House on the Rock main Church<br />KFA events centre.</p>\r\n<p><strong>Terms and Conditions</strong><br />Check in: from 12:00pm<br />Check out: by 12:00pm<br />Children: free stay for Babies and kids<br />Payment: Cash<br />Pets: Not allowed.</p>\r\n<p><strong>FAQs</strong><br />Q: Does Jakande British Hotel have a restaurant?<br />A: Yes, there is a restaurant with seasoned chefs and cooks to cater to guests' nutritional needs</p>\r\n<p>Q: Does Jakande British Hotel offer airport pickup services?<br />A: Yes, but at an extra cost</p>\r\n<p>Q: Does Jakande British Hotel provide guests with internet accessibility?<br />A: At Jakande British Hotel, there is a provision of high-speed wireless internet <br />facilities for guests.</p>\r\n<p>Q: Are children allowed to lodge alongside their parents at Jakande British Hotel?<br />Yes. Babies and kids are allowed to stay for free.<br /><br />Q: Is a Bar/Lounge at Jakande British Hotel?<br />A: It has a bar stocked with different drinks and wines.</p>",
         "status": "active",
         "currency_code": "NGN",
         "website": "http://lekkioxfordhotels.com",
@@ -141,7 +141,7 @@ var_dump($response);?>
         "driving_instructions": "LANDMARK:\r\nLekki Phase 1 \r\nTake Emmanuel Abimbola Cole St and Freedom Way to Lagos-Epe Express Rd/Lekki - Epe Express Road in Lekki 7 min. Follow Lekki - Epe Express Road to Akanni Ajiran St\r\n9 min.Turn right at Philip Stores onto Akanni Ajiran St. Pass by Sterling Bank (on the right)\r\nDestination will be on the left",
         "minrate": "8000.00000",
         "maxrate": "35000.00000",
-        "unique_url": "25449-lekki-oxford-hotels-lagos",
+        "unique_url": "25449-jakande-British-hotels-lagos",
         "star_rating": "3",
         "policy": "<p>Check in: from 12:00pm<br />Check out: by 12:00pm<br />Children: free stay for Babies and kids<br />Payment: Cash<br />Pets: Not allowed.</p>",
         "property_type_id": "1",
@@ -162,7 +162,7 @@ var_dump($response);?>
 
 ```
 
-This endpoint shows the details of a particular hotel.
+This endpoint shows information for a particular hotel.
 
 ### HTTP Request
 
@@ -198,7 +198,7 @@ agency|string|the agency involved
 
 
 
-## Show details for a hotel with <br>everything associated to it
+## Shows hotel details
 
 
 > Example request:
@@ -490,7 +490,7 @@ var_dump($response);?>
             
 
 ```
-This endpoint gets details of a hotel and everything associated to it
+This endpoint gets details for a particular hotel.
 
 ### HTTP Request
 
