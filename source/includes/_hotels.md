@@ -11,21 +11,23 @@ The hotels API allows you to get the list of hotels, show details for a hotel an
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('http://api.hotels.ng/hotels');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXX-Your-Access_token-XXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+?>
 ```
 
 > Example response:
@@ -104,21 +106,23 @@ driving_instructions|string|directions to the place
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/hotels/{hotel_id}');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXX-Your-Access_token-XXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+?>
 ```
 
 
@@ -205,21 +209,23 @@ agency|string|the agency involved
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}/details?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/hotels/{hotel_id}/details');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXX-Your-Access_token-XXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+?>
 ```
 
 
