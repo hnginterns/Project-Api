@@ -29,6 +29,7 @@ try {
 } catch (HttpException $ex) {
   echo $ex;
 }
+?>
 ```
 >Example response:
 
@@ -114,6 +115,7 @@ try {
 } catch (HttpException $ex) {
   echo $ex;
 }
+?>
 ```
 > Example response:
 
@@ -173,6 +175,7 @@ try {
 } catch (HttpException $ex) {
   echo $ex;
 }
+?>
 ```
 > Example response:
 
@@ -232,6 +235,7 @@ try {
 } catch (HttpException $ex) {
   echo $ex;
 }
+?>
 ```
 > Example response:
 
