@@ -14,23 +14,21 @@ The Rate API returns the rates at which rooms go for, rate flags, rate Ids, mult
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "
-https://api.hotels.ng/rates/{rate_id}/detail?access_token=
-");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('http://staging.api.hng.tech/rates/25449/detail');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'igMDaCjMlYBMTiKWF55PPpVORl6WDhGepU8ARBZc'
 ));
+try {
+  $response = $request->send();
 
-$response = curl_exec($ch);
-curl_close($ch);
-
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 ```
 >Example response:
 
@@ -100,23 +98,22 @@ Selling_price | Integer | Selling price
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "
-https://api.hotels.ng/rates/flags/all?access_token=
-");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('http://staging.api.hng.tech/rates/flags/all');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'VSypekcmmnmgvCU6Wn1gCDXWfA0iTBes6oe2LCWI'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 ```
 > Example response:
 
@@ -160,23 +157,22 @@ Attribute | Type | Description
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "
-https://api.hotels.ng/rates/flag/{id}?access_token=
-");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('api.hotels.ng/rates/flags/29981');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'raQpeHeFlhwlr1EgSlPmvTsCjFcpQDKdVW8iP06j'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 ```
 > Example response:
 
@@ -220,23 +216,22 @@ ID| Integer| ID of the flag
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "
-https://api.hotels.ng/rates/flags/multiple/fetch?rate_ids=&access_token=
-");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('http://88.99.63.198:32619/rates/flags/multiple/fetch/');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'NxTIhWb1FBPtIeRVI6AYe9hTYddMJipmPMdvU5XQ',
+  'rate_ids' => '53146,53141,53140'
 ));
+try {
+  $response = $request->send();
 
-$response = curl_exec($ch);
-curl_close($ch);
-
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 ```
 > Example response:
 
