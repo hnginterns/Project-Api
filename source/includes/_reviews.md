@@ -10,21 +10,23 @@ The Reviews API returns all reviews made by users that must have patronized a ho
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}/reviews?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/hotels/{hotel_id}/reviews');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXX-Your-Access_token-XXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+?>
 ```
 > Example response:
 
