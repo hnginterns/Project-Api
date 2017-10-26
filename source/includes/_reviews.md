@@ -1,10 +1,13 @@
 # Reviews
-Acess to all Reviews Related Things - List of Scopes to be used in Authorization <br>
-Reviews.read
+Access to all reviews related things - List of Scopes to be used in Authentication <br>
+
+<em>properties.read</em>
 
 
-The Reviews API returns all reviews made by users that must have patronized a hotel, comments, ratings by the user of the hotels as well as ratings of the hotel.  The admin has some certain privileges. The scope available to the user is only the read read scope.
-##Show reviews for a specific hotel
+The Reviews API returns all reviews made by users that must have patronized a hotel, comments, ratings by the user of the hotels as well as ratings of the hotel.  The admin has  certain privileges.</br>
+The scope available to the user is only the read read scope.
+
+## Show reviews for a specific hotel
 
 > Example request:
 
@@ -12,7 +15,7 @@ The Reviews API returns all reviews made by users that must have patronized a ho
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://api.hotels.ng/hotels/{hotel_id}/reviews');
+$request->setUrl('https://api.hotels.ng/hotels/124783/reviews');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
