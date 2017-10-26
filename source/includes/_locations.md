@@ -12,21 +12,22 @@ who might need location details about an hotel they want to book. The API has on
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/location/countries');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/xml",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXX-Your-Access_token-XXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 ?>
 ```
 
@@ -118,23 +119,23 @@ continent_id| integer| Id of the Continent where the country is
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "
-https://api.hotels.ng/location/propertylocations/property_id/property?access_token=
-");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/location/propertylocations/{property_id}/property');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXX-Your-Access_token-XXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+?>
 ```
 
 
@@ -184,11 +185,11 @@ var_dump($response);?>
 
 
 ```
-This endpoint shows details of the location where a property is located.
+Returns the location details of a property.
 
 ### HTTP Request
 
-`GET https://api.hotels.ng/location/propertylocations/property_id/property?access_token=`
+`GET https://api.hotels.ng/location/propertylocations/{property_id}/property?access_token=`
 
 ### Query Parameters
 
