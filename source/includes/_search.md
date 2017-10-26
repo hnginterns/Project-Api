@@ -4,13 +4,15 @@ With this endpoint, you can search for hotels based on some specific criteria of
 
 Search for Hotels with parameters <br>
 Scope to be used in Authentication - <em>query</em> <br>
-For a List of parameter values, *see below* <br>
-Property_type : <br>
+For a List of parameter values, see below <br>
+property_type : <br>
 *	`Villa`, <br>
 *	`Apartment`,<br>
 *	`Guest House`,<br>
 *	`Hotel`, <br>
 *	`Luxury Hotel`, <br>
+
+
 
 ##Search for hotels
 	
@@ -20,34 +22,26 @@ Property_type : <br>
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/search');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, "[
-  {
-    \"state\": \"id ullamco in\"
-  },
-  {
-    \"country\": \"elit aliquip\",
-    \"city\": \"minim commodo\",
-    \"state\": \"exercitation pariatur non cupidatat\"
-  }
-]");
-
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXXXXXXXXXXXXXX',
+  'search_type' => 'property',
+  'query' => '{"property_name":"eni"}',
+  'filters{"sort_by":"default","page":1,"per_page":10' => ''
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 
-?>
 ```
 
 > Example response:
@@ -56,148 +50,74 @@ var_dump($response);
 {
     "data": [
         {
-            "rating": 0,
+            "rating": 6.733333,
             "area_id": 0,
-            "city_id": 136,
-            "city_master_id": 1813,
+            "city_id": 3,
+            "city_master_id": 1680,
             "property_type_id": 1,
-            "activities_id": "",
-            "min_rate_ngn": 160000,
-            "property_ref_code": "1015245",
-            "agency_uuid": "a965ed6e-c292-4263-b4de-d01057984441",
-            "likes": 3,
+            "activities_id": "2,11,16",
+            "min_rate_ngn": 6614,
+            "property_ref_code": "19831",
+            "agency_uuid": "a7889889-c292-4263-b4de-d7894084441",
+            "likes": 170,
             "country_code": "NG",
             "property_type": "Hotel",
-            "id": 1015245,
-            "property_name": "Casa Millie",
-            "city": "Ikeja GRA",
-            "deal_status": 0,
-            "weight": 0,
+            "id": 19831,
+            "property_name": "Motel Bellisima Limited",
+            "city": "Bonin",
+            "deal_status": 5,
+            "weight": 31.240808,
             "area": "",
-            "facility_type_icons": "wireless.png,star.png,electricity.png,plasma.png,bathroom.png,dining.png,dining.png,bathroom.png,laundry.png,laundry.png,security.png,security.png,security.png,,housekeeping.png",
+            "facility_type_icons": "swimming.png,restaurant.png,bar.png,electricity.png,wireless.png,laundry.png,cabletv.png,security.png,,Wardrobe,desk.png,plasma.png,star.png",
             "agency": "Hotelsng",
             "country_id": 154,
             "continent": "Africa",
-            "state": "Lagos",
-            "latitude": 0,
-            "city_code": "Ikeja GRA",
-            "property_url": "1015245-casa-millie",
+            "state": "Edo",
+            "latitude": 6.211462,
+            "city_code": "Benin",
+            "property_url": "19831-motel-bellisima-limited-edo",
             "status": "active",
-            "max_rate_ngn": 160000,
-            "facility_type_ids": "103,105,115,119,123,130,142,160,170,174,178,204,210,1796,2797,2940",
-            "description": "",
+            "max_rate_ngn": 22680,
+            "facility_type_ids": "100,101,103,108,117,119,142,143,180,205,216,233,264",
+            "description": "<p>Offering exceptional service at an affordable rate, Motel Bellisima Limited is...</p>",
             "is_disabled": 0,
-            "max_rate": 0,
+            "max_rate": 22680,
             "is_active": 1,
             "road_id": 0,
             "agency_id": "1",
             "currency_code": "NGN",
-            "facility_type_names": "Wireless Internet,Air Conditioning,24 hours Electricity,Flatscreen TV,Private Bathroom,In House Dining,Kitchen,Jacuzzi,Clothing Iron,Ironing,Accessible bathroom,Security,Security,Security Guard,Fenced compound,House Keeping,Beach towels ",
-            "min_rate": 0,
-            "address": "",
-            "review_count": 0,
-            "state_code": "Lagos",
-            "bookings_count": 2,
+            "facility_type_names": "Swimming Pool,Restaurant(s) ,Bar/Lounge,24 Electricity,Wi-fi Internet",
+            "min_rate": 6614,
+            "address": "1 hdybb street, Off mus Road",
+            "review_count": 3,
+            "state_code": "Edo",
+            "bookings_count": 90,
             "star_rating": 0,
             "is_deleted": 0,
             "continent_id": 1,
             "country": "Nigeria",
-            "longitude": 0,
+            "longitude": 5.635554,
             "meal_plan_ids": "",
             "location_tags_ids": "",
-            "state_id": 25,
+            "state_id": 13,
             "is_bookable": 1,
             "road": "",
-            "images": [
-                {
-                    "id": 74753,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/e358c75d85d6f65aa83cefd6e4aa0c00.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:29",
-                    "updated_at": "2017-05-12 11:03:29"
-                },
-                {
-                    "id": 74751,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/4c0b771189f25fdb19caf8e24f11fd5e.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:27",
-                    "updated_at": "2017-05-12 11:03:27"
-                },
-                {
-                    "id": 74748,
-                    "application_id": "1",
-                    "object_id": 1015245,
-                    "title": "",
-                    "description": "",
-                    "url": "https://media.api.hng.tech/img/big/8e6b11b8308f995bb442874a9fc9d08d.JPG",
-                    "room_id": null,
-                    "facility_id": null,
-                    "priority": "0",
-                    "created_at": "2017-05-12 11:03:23",
-                    "updated_at": "2017-05-12 11:03:23"
-                }
-            ],
-            "available_rates": [
-                {
-                    "availability": {
-                        "total": 160000,
-                        "total_buying_price": 144000,
-                        "discount": false,
-                        "total_rackprice": 160000,
-                        "rates": {
-                            "2017-10-25": {
-                                "id": "41692",
-                                "property_id": "1015245",
-                                "room_id": "36096",
-                                "rate_name": null,
-                                "rate_tag_id": "1",
-                                "rack_price": "160000.00",
-                                "buying_price": "144000.00",
-                                "buying_price_usd": null,
-                                "selling_price": "160000.00",
-                                "selling_price_usd": null,
-                                "priority": "1",
-                                "start_date": "2017-05-12 00:00:00",
-                                "end_date": "2027-05-12 00:00:00",
-                                "active_start": "2017-05-12 00:00:00",
-                                "active_end": "2027-05-12 00:00:00",
-                                "active_mon": "1",
-                                "active_tue": "1",
-                                "active_wed": "1",
-                                "active_thu": "1",
-                                "active_fri": "1",
-                                "active_sat": "1",
-                                "active_sun": "1",
-                                "deleted_at": null,
-                                "created_at": "2017-05-12 11:16:30",
-                                "updated_at": "2017-05-12 11:16:30",
-                                "tag": "general",
-                                "stay_date": "2017-10-25"
-                            }
-                        },
-                        "avg_rate": 160000,
-                        "avg_rate_rack": 160000,
-                        "avg_buying_rate": 144000
-                    },
-                    "provider": "hotelsng",
-                    "room_id": 36096
-                }
-            ]...
-        }...
-    ],
-    "status": "success"
+            "images": [],
+            "available_rates": []
+        },
+        {...}
+          ],
+    "status": "",
+    "message": "",
+    "meta": {
+        "status": {
+            "Message": "Success",
+            "code": 0
+        },
+        "timestamp": "Thu, 26 Oct 2017 13:51:13 GMT",
+        "type": "application/json",
+        "total_count": "577"
+    }
 }
     
 ```
@@ -206,19 +126,19 @@ var_dump($response);
 
 ### HTTP Request
 
-`GET https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters={}&search_type=property&property_type=hotel&query={}`
+`GET https://api.hotels.ng/search?access_token=XXXXXXXXXXXXXXX
+&search_type=property
+&query={"property_name":"eni"}
+&filters={"sort_by":"default","page":1,"per_page":10}`
 
 ### Query Parameters
 
 Parameter | Type | Description | Required
 --------- | ------- | ----------- |----------
 access_token | String | Token generated with client_id and client_credentials | True
-with_images | Boolean | Should the response include property's image url | Optional
-with_rates | Boolean | Should the response include property's rate | Optional
-filters | String | Filtering out the data not needed from the response | Optional
-search_type | String | Type of Search request | Optional
-property_type | String | Type of property to request | Optional
-query | String | The city, state and country of search | True
+filters | json string | Sorting out the data needed, from the response, in specific manner(e.g <em> `"sort_by":"default","page":1,"per_page":10`. | True
+search_type | String | Type of Search request(e.g <em>`property`,`location`<em>) | True
+query | json string | The hotel,city, state and country of search(e.g <em>`"property_name":"eni"`,</em>) | True
 
 
 ###Response Body
@@ -250,27 +170,31 @@ Attribute | Type | Description
 
 ##Search for properties nearby
 
-	Fetches all the properties nearby
+	This fetches all the properties(hotels) near a particular hotel's location 
 
 > Example request:
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search/nearby?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/search/nearby');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/xml",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXXXxxxxxxxxxxxxx',
+  'property_type' => 'hotel',
+  'property_id' => '255789'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
 ```
 > Example response:
 
@@ -368,14 +292,16 @@ var_dump($response);?>
 
 ###	HTTP Request
   
-`GET https://api.hotels.ng/search/nearby?access_token=&property_type=hotel&property_id=1006597`
+`GET https://api.hotels.ng/search/nearby?access_token=
+&property_type=
+&property_id=`
 
 ### Query Parameters
 
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token| String | Token generated with client_id and client_credentials | True
-property-type| String |Type of property to request | True
+property-type| String |Type of property to(e.g<em>`hotel`</em>) request | True
 property_id | String | Id associated to a property | True
 
 ### Response Body
@@ -388,29 +314,36 @@ Attribute | Type | Description
 
 ## Get hotel count in a location
 
-	This endpoint retrieves detailed information about a city/state in a country.The information includes;the number of hotels,brief description of the city, the city code and so forth. 
-    To fetch this information, you will be required to provide the location and your access token as query parameters in order to get a successful response. The location can be a state/city in a country or region.
+	This endpoint retrieves detailed information about a city/state in a country.The information includes;the number of properties,brief description of the city, the city code and so forth.</br> 
+    To fetch this information, you will be required to provide the location and your access token as query parameters in order to get a successful response. </br>
+    The location can be a state/city in a country or region.
     
 
 > Example request:
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search/location/count/bulk?access_token=&property_type=&location_type=&location=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/search/location/count/bulk');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/xml",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'property_type' => 'hotel',
+  'location_type' => 'city',
+  'locations' => '["uyo","calabar"]',
+  'country' => 'nigeria',
+  'access_token' => 'XXXXXXXXXXXXXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
 ```
 > Example response:
 
@@ -443,7 +376,11 @@ var_dump($response);?>
 
 ###	 HTTP Request
 
-GET `https://api.hotels.ng/search/location/count/bulk?property_type=&location_type=&locations=[]&country=&access_token=`
+GET `https://api.hotels.ng/search/location/count/bulk?property_type=hotel
+&location_type=city
+&locations=["uyo","calabar"]
+&country=nigeria
+&access_token=XXXXXXXXXXXXXX`
 
 ### Query Parameters
 
@@ -451,8 +388,8 @@ Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token | String | Token generated with client_id and client_credentials | True
 property_type | String | Type of property | True
-location_type | String | Type of place (e.g city,state)| True
-location | Array | Location of places(e.g lagos,Uyo,Akwa Ibom). Information about multiple location can be gotten using the delimiter ','| True
+location_type | String | Type of place (e.g <em>city,state</em>)| True
+location | Array | Location of places(e.g <em>lagos,Uyo,Akwa Ibom</em>). Information about multiple location can be gotten using the delimiter ','| True
 country | String | The location's country | True
 
 ###Response Body
@@ -467,6 +404,6 @@ Attribute | Type | Description
  state|string|state where the hotel is located
  city_code|string|city code of the hotel
  country_code|string|country code of the hotel
- number_properties|integer|number of counted properties
+ number_properties|integer|number of counted properties(hotels) in the location.
  location_id|integer|the id of the location when counted
  id|integer|customer web hook identifier
