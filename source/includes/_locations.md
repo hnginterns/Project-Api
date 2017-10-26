@@ -184,7 +184,7 @@ var_dump($response);?>
 
 
 ```
-This endpoint shows details of the location where a property is located.
+Returns the location details of a property.
 
 ### HTTP Request
 
