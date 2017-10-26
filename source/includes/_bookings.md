@@ -4,7 +4,7 @@ List of Scopes to be used in Authorization - bookings.read
 
 
 The bookings API is able to get details of specific bookings. Most of the features of this API are accessible only by an admin. The available to a normal user scopes is read.
-## Get details of a specific booking
+## Get details of a single booking
 
 >Example request:
 
