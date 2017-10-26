@@ -67,5 +67,9 @@ booking_id | Number | Local id assigned to that booking
 access_token | String | Generated access token from Oauth2 developer credentials
 
 
+###Response Body
 
+Attribute | Type | Description
+--------- | ------- | -----------
+| | 
 

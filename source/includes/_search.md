@@ -275,11 +275,11 @@ var_dump($response);
 Parameter | Type | Description | Required
 --------- | ------- | ----------- |----------
 access_token | String | Token generated with client_id and client_credentials | True
-with_images | Boolean | Should the response include property's image url | False
-with_rates | Boolean | Should the response include property's rate | False
-filters | String | Filtering out the data not needed from the response | False
-search_type | String | Type of Search request | False
-property_type | String | Type of property to request | False
+with_images | Boolean | Should the response include property's image url | Optional
+with_rates | Boolean | Should the response include property's rate | Optional
+filters | String | Filtering out the data not needed from the response | optional
+search_type | String | Type of Search request | Optional
+property_type | String | Type of property to request | Optional
 
 
 ###Response Body
@@ -526,8 +526,8 @@ GET `https://api.hotels.ng/search/location/count/bulk?access_token=&property_typ
 Parameter |  Type | Description | Required |
 --------- | ------- | ----------- | -----------
 access_token | String | Token generated with client_id and client_credentials | True
-property_type | String | Type of property | False
-location_type | String | Type of place | False
+property_type | String | Type of property | Optional
+location_type | String | Type of place | Optional
 location | Array | Location of places | True
 
 ###Response Body
