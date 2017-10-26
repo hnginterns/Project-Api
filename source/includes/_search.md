@@ -22,34 +22,26 @@ property_type : <br>
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters=&search_type=&property_type=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/search');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, "[
-  {
-    \"state\": \"id ullamco in\"
-  },
-  {
-    \"country\": \"elit aliquip\",
-    \"city\": \"minim commodo\",
-    \"state\": \"exercitation pariatur non cupidatat\"
-  }
-]");
-
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXXXXXXXXXXXXXX',
+  'search_type' => 'property',
+  'query' => '{"property_name":"eni"}',
+  'filters{"sort_by":"default","page":1,"per_page":10' => ''
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 
-?>
 ```
 
 > Example response:
@@ -134,7 +126,10 @@ var_dump($response);
 
 ### HTTP Request
 
-`GET https://api.hotels.ng/search?access_token=XXXXXXXXXXXXXXX&search_type=property&query={"property_name":"eni"}&filters={"sort_by":"default","page":1,"per_page":10}`
+`GET https://api.hotels.ng/search?access_token=XXXXXXXXXXXXXXX
+&search_type=property
+&query={"property_name":"eni"}
+&filters={"sort_by":"default","page":1,"per_page":10}`
 
 ### Query Parameters
 
@@ -181,21 +176,25 @@ Attribute | Type | Description
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search/nearby?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/search/nearby');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/xml",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXXXxxxxxxxxxxxxx',
+  'property_type' => 'hotel',
+  'property_id' => '255789'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
 ```
 > Example response:
 
@@ -293,7 +292,9 @@ var_dump($response);?>
 
 ###	HTTP Request
   
-`GET https://api.hotels.ng/search/nearby?access_token=&property_type=&property_id=`
+`GET https://api.hotels.ng/search/nearby?access_token=
+&property_type=
+&property_id=`
 
 ### Query Parameters
 
@@ -322,21 +323,27 @@ Attribute | Type | Description
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/search/location/count/bulk?access_token=&property_type=&location_type=&location=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/search/location/count/bulk');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/xml",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'property_type' => 'hotel',
+  'location_type' => 'city',
+  'locations' => '["uyo","calabar"]',
+  'country' => 'nigeria',
+  'access_token' => 'XXXXXXXXXXXXXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);?>
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
 ```
 > Example response:
 
@@ -369,7 +376,11 @@ var_dump($response);?>
 
 ###	 HTTP Request
 
-GET `https://api.hotels.ng/search/location/count/bulk?property_type=hotel&location_type=city&locations=["uyo","calabar"]&country=nigeria&access_token=XXXXXXXXXXXXXX`
+GET `https://api.hotels.ng/search/location/count/bulk?property_type=hotel
+&location_type=city
+&locations=["uyo","calabar"]
+&country=nigeria
+&access_token=XXXXXXXXXXXXXX`
 
 ### Query Parameters
 

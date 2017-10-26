@@ -1,31 +1,34 @@
 # Bookings
 Access to all bookings related things<br>
 The Scope used in Authentication - <em> bookings.read </em>
-
+</br>
 
 The bookings API is able to get details of specific bookings. Most of the features of this API are accessible only by an admin. The available to a normal user scopes is read.
-## Get details of a specific booking
+## Get details of a single booking
 
 >Example request:
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/bookings/booking_id?access_token");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/bookings/');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'booking_id' => '13',
+  'access_token' => 'xxxxxxxxxxxxxxxxxxxx'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
 
-var_dump($response);
-?>
+try {
+  $response = $request->send();
+
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
 ```
  >Example response:
 
@@ -133,7 +136,7 @@ This endpoint Fetches booking details for a specific booking.
 ### HTTP Request
 
   
-  `GET https://api.hotels.ng/internal/bookings/booking_id?access_token=`
+  `GET https://api.hotels.ng/bookings/booking_id?access_token=`
 
 ### Query Parameters
 
