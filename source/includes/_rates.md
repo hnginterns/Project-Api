@@ -16,7 +16,7 @@ The Rate API returns the rates at which rooms go for, rate flags, rate Ids, mult
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('http://staging.api.hng.tech/rates/25449/detail');
+$request->setUrl('http://api.hotels.ng/rates/25449/detail');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
@@ -100,7 +100,7 @@ Selling_price | Integer | Selling price
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('http://staging.api.hng.tech/rates/flags/all');
+$request->setUrl('http://api.hotels.ng/rates/flags/all');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
@@ -218,7 +218,7 @@ ID| Integer| ID of the flag
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('http://88.99.63.198:32619/rates/flags/multiple/fetch/');
+$request->setUrl('http://api.hotels.ng/rates/flags/multiple/fetch/');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
