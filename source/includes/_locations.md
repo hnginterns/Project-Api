@@ -112,7 +112,7 @@ continent_id| integer| Id of the Continent where the country is
 
 
 
-##Show list of properties around <br>a location
+##Shows the location details of a property
 
 > Example request:
 
@@ -184,7 +184,7 @@ var_dump($response);?>
 
 
 ```
-This endpoint shows a list of properties around a location
+This endpoint shows details of the location where a property is located.
 
 ### HTTP Request
 
