@@ -17,7 +17,7 @@ includes:
   - reviews
   - locations
   - rooms
-  - ratings
+  - rates
   
 search: true
 ---
@@ -28,48 +28,52 @@ Welcome to the Hotels.ng API! You can use our API to integrate within your appli
 
 # Authentication
 
-This Endpoint provides you with access Token
+This Endpoint provides you with access Token. </br>
+Hotel.ng expects for the access token to be included in all API requests to the server in the header.
 
 ##Authenticating with OAUTH
 
 > Example request:
 
 ```php
+
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/oauth/authenticate?grant_type=&client_id=&client_secret=&scope=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/oauth/authenticate');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/json",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'grant_type' => 'clixxxxxxxxxx',
+  'client_id' => 'xxxxxxxxxxx',
+  'client_secret' => 'xxxxxxxxxxx',
+  'scope' => 'query'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
 ```
 
 > Example response:
 
 ```json
-[
-  {
-    "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
-    "token_type": "Bearer",
-    "expires_in": 3600
-  }
-]
+{
+  "access_token": "LdRcatkZa2vX8RjRdIf96WrUvnUN0w0QHE2WfOrp",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}
 ```
 
 
-Hotels.ng uses Client id and Client Secret to allow access to the api.The client id and secret would provide an access token which would now grant you access to all our Hotels.ng endpoints. 
-
-The default grantType is <strong>client_credentials.</strong><br>
-The List of scopes are available at the deck of all the endpoints you are consuming. <br>
+Hotels.ng uses <strong>client_id</strong> and <strong>client_secret</strong> to allow access to our API. The Client ID and Secret will provide an Access Token which will now grant you access to all our Hotels.ng Endpoints.<br> 
+The default <strong>grant_type</strong> is <em>client_credentials.</em><br>
+The List of <strong>scopes</strong> are available at the deck of all the endpoints you are consuming. <br>
 You can make use of multiple scopes by using ',' as delimiter.<br>
 
 <aside class="notice">
@@ -84,10 +88,10 @@ Make sure you sign up for a developer key
 
 Parameter | Type | Description
 --------- | ------- | -----------
-grant_type| string|level of access the api supports 
-client_id | string |the id of the user requesting the api
-client_secret | string |Your secret key
-client_id | string |Endpoint trying to consume
+grant_type| String|Level of access the API Supports 
+client_id | String |ID of the user requesting access
+client_secret | String |Your secret key
+scope | String |Operation to perform. (<em>query, properties.read, images.read, facilities.read,...</em>)
 
 
 
@@ -97,5 +101,5 @@ Attributes | Type | Description
 --------- | ------- | -----------
 access_token| string|access token issued to the consumer
 token_type | string |type of token issued
-expires_in | integer |the time the token could last for
+expires_in | integer |the duration of time the token is valid for
 

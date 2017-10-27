@@ -10,46 +10,69 @@ The facilities API shows the facilities a hotel has, like a restaurant, as well 
 
 ```php
 <?php
-$ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.hotels.ng/hotels/{hotel_id}/facilities?access_token=");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+$request = new HttpRequest();
+$request->setUrl('https://api.hotels.ng/hotels/12345/facilities');
+$request->setMethod(HTTP_METH_GET);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  "Content-Type: application/xml",
-  "Accept: application/json"
+$request->setQueryData(array(
+  'access_token' => 'XXX-Your-Access_token-XXX'
 ));
 
-$response = curl_exec($ch);
-curl_close($ch);
+try {
+  $response = $request->send();
 
-var_dump($response);Response
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
 ```
 
 > Example response:
 
 ```json
-[
-  {
 
-    "status": "success",
-    "message": "Object facilities",
-    "data": {
-      "id": 1967,
-      "object_id": 25449,
-      "facility_type_id": 100,
-      "facility_type_count": null,
-      "object_type": "hotel",
-      "created_at": {},
-      "updated_at": null,
-      "facility_name": "Restaurant",
-      "img_url": "restaurant.png"
+{  
+  "status":"success",
+  "message":"Object facilities",
+  "data":[  
+    {  
+      "id":1967,
+      "object_id":"25449",
+      "facility_type_id":"100",
+      "facility_type_count":null,
+      "object_type":"hotel",
+      "created_at":"2017-01-22 19:54:01",
+      "updated_at":null,
+      "facility_name":"Restaurant(s) ",
+      "img_url":"restaurant.png"
+    },
+    {  
+      "id":1968,
+      "object_id":"25449",
+      "facility_type_id":"101",
+      "facility_type_count":null,
+      "object_type":"hotel",
+      "created_at":"2017-01-22 19:54:01",
+      "updated_at":null,
+      "facility_name":"Bar\/Lounge",
+      "img_url":"bar.png"
+    },
+    {  
+      "id":1969,
+      "object_id":"25449",
+      "facility_type_id":"105",
+      "facility_type_count":null,
+      "object_type":"hotel",
+      "created_at":"2017-01-22 19:54:01",
+      "updated_at":null,
+      "facility_name":"Wireless Internet",
+      "img_url":"wireless.png"
     }
+  ]
+}
 
-  }
 
-]
 ```
 
 This endpoint shows the facilities available for a specific hotel.
