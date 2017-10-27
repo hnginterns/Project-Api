@@ -12,9 +12,9 @@ The scopes used for Authentication - <em>images.read</em>
 ##Show images for a particular hotel
 
 This endpoint fetches images of a specific hotel.<br>
-The image URL is in this format https://api.hotels.ng/img/{size}/name_of_image.jpg.<br>
+The image URL is in this format `https://api.hotels.ng/img/{size}/name_of_image.jpg.`<br>
 The following sizes of images are returned:<br>
-size =<br>
+size:<br>
 1. small - A small sized image is returned.<br>
 2. the medium - A medium sized image is returned.<br>
 3. big - A big sized image is returned.
