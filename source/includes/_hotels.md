@@ -94,7 +94,7 @@ property_type|string|the type of property
 rating|string|rating of the hotel
 driving_instructions|string|directions to the place
 
-## Shows hotel information
+## Show hotel information
 
 
 > Example request:
@@ -195,7 +195,7 @@ agency|string|the agency involved
 
 
 
-## Shows hotel details
+## Show hotel details
 
 
 > Example request:
@@ -462,8 +462,7 @@ try {
                     "tags": [],
                     "comments": []
                 },
-                {..}
-}
+
                 
             
 
