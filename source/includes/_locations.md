@@ -1,10 +1,10 @@
 # Location
-Acess to all Location Related Things - List of Scopes to be used in Authorization <br>
-locations.read
+Access to all location related things <br> 
+The scopes used in authentication is <em>locations.read</em>
 
 The location API shows details about a location regarding a hotel, addresses, the latitude
 and longitude, the continent the hotel is, properties around the hotel, It can viewed by all users
-who might need location details about an hotel they want to book. The API has only the read scope peculiar to the normal user.
+who might need location details about an hotel they want to book. .
 
 ##Show list of countries
 
@@ -121,7 +121,7 @@ continent_id| integer| Id of the Continent where the country is
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://api.hotels.ng/location/propertylocations/{property_id}/property');
+$request->setUrl('https://api.hotels.ng/location/propertylocations/13455/property');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
@@ -152,9 +152,9 @@ try {
     "area_id": 163,
     "city_id": 196,
     "state_id": 25,
-    "address": "10-12 Agungi Road, Off Lekki - Ajah Expressway, Before Chevron Roundabout",
-    "longitude": 3.5166,
-    "latitude": 6.43788,
+    "address": "10-12 road before...",
+    "longitude": 0.5166,
+    "latitude": 0.43788,
     "airport_code": null,
     "postal_code": null,
     "zip_code": null,
@@ -167,7 +167,7 @@ try {
     },
     "road": null,
     "city": {
-      "id": 196,
+      "id": 19,
       "name": "Lekki",
       "country_code": "NG",
       "country": {
@@ -176,7 +176,7 @@ try {
         "code": "NG",
         "continent_id": 1,
         "continent": {
-          "id": 1,
+          "id": 0,
           "name": "Africa"
         }
       }

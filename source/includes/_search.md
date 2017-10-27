@@ -31,7 +31,9 @@ $request->setQueryData(array(
   'access_token' => 'XXXXXXXXXXXXXXX',
   'search_type' => 'property',
   'query' => '{"property_name":"eni"}',
-  'filters{"sort_by":"default","page":1,"per_page":10' => ''
+  'with_images' => '1',
+  'with_rates' => '0',
+  'filters' =>  '{"sort_by":"default","page":1,"per_page":10' 
 ));
 
 try {
@@ -41,7 +43,7 @@ try {
 } catch (HttpException $ex) {
   echo $ex;
 }
-
+<?
 ```
 
 > Example response:
@@ -58,12 +60,12 @@ try {
             "activities_id": "2,11,16",
             "min_rate_ngn": 6614,
             "property_ref_code": "19831",
-            "agency_uuid": "a7889889-c292-4263-b4de-d7894084441",
-            "likes": 170,
+            "agency_uuid": "xxxxx-c292-4263-b4de-xxxxxx",
+            "likes": 10,
             "country_code": "NG",
             "property_type": "Hotel",
-            "id": 19831,
-            "property_name": "Motel Bellisima Limited",
+            "id": 18789,
+            "property_name": "Motel Bbisima Limited",
             "city": "Bonin",
             "deal_status": 5,
             "weight": 31.240808,
@@ -74,12 +76,12 @@ try {
             "continent": "Africa",
             "state": "Edo",
             "latitude": 6.211462,
-            "city_code": "Benin",
-            "property_url": "19831-motel-bellisima-limited-edo",
+            "city_code": "Bonin",
+            "property_url": "19831-motel-bbbisima-limited-dodo",
             "status": "active",
             "max_rate_ngn": 22680,
-            "facility_type_ids": "100,101,103,108,117,119,142,143,180,205,216,233,264",
-            "description": "<p>Offering exceptional service at an affordable rate, Motel Bellisima Limited is...</p>",
+            "facility_type_ids": "100,101,103,108",
+            "description": "<p>Offering exceptional service at an affordable rate, Motel Bbbisima Limited is...</p>",
             "is_disabled": 0,
             "max_rate": 22680,
             "is_active": 1,
@@ -114,7 +116,7 @@ try {
             "Message": "Success",
             "code": 0
         },
-        "timestamp": "Thu, 26 Oct 2017 13:51:13 GMT",
+        "timestamp": "Thu, 26 Oct 1990 13:51:13 GMT",
         "type": "application/json",
         "total_count": "577"
     }
@@ -126,10 +128,7 @@ try {
 
 ### HTTP Request
 
-`GET https://api.hotels.ng/search?access_token=XXXXXXXXXXXXXXX
-&search_type=property
-&query={"property_name":"eni"}
-&filters={"sort_by":"default","page":1,"per_page":10}`
+`GET https://api.hotels.ng/search?access_token=&with_images=&with_rates=&filters={}&search_type=&property_type=&query={}`
 
 ### Query Parameters
 
@@ -137,8 +136,10 @@ Parameter | Type | Description | Required
 --------- | ------- | ----------- |----------
 access_token | String | Token generated with client_id and client_credentials | True
 filters | json string | Sorting out the data needed, from the response, in specific manner(e.g <em> `"sort_by":"default","page":1,"per_page":10`. | True
+with_images | Boolean | Should the response include property's image url | Optional
+with_rates | Boolean | Should the response include property's rate | Optional
 search_type | String | Type of Search request(e.g <em>`property`,`location`<em>) | True
-query | json string | The hotel,city, state and country of search(e.g <em>`"property_name":"eni"`,</em>) | True
+query | json string | The hotel,city, state  country of search(e.g <em>`"property_name":"eni"`,</em>) | True
 
 
 ###Response Body
@@ -210,28 +211,28 @@ try {
             "activities_id": "",
             "min_rate_ngn": 10000,
             "property_ref_code": "18456",
-            "agency_uuid": "a965ed6e-c292-4263-b4de-d01057984441",
-            "likes": 683,
+            "agency_uuid": "xxxxxe-cx12-4263-b4de-d01xxxxxx",
+            "likes": 34,
             "country_code": "NG",
             "property_type": "Hotel",
             "id": 18456,
-            "property_name": "Garden City Marriott Hotel",
+            "property_name": "People city resort",
             "city": "Port Harcourt",
             "deal_status": 5,
             "weight": 32.346737,
             "area": "",
             "facility_type_icons": "parking.png,restaurant.png,cabletv.png,refridgerator.png,bar.png,electricity.png,parking_letter.png...",
-            "agency": "Hotelsng",
+            "agency": "hng",
             "country_id": 154,
             "continent": "Africa",
             "state": "Rivers",
             "latitude": 9.066667,
             "city_code": "Port Harcourt",
-            "property_url": "18456-bay-marriot-hotel-rivers",
+            "property_url": "18456-People city resort--rita",
             "status": "active",
             "max_rate_ngn": 100000,
-            "facility_type_ids": "100,110,113,116,117,119,121,122,128,130,143,151,153,172,178,182,184,203,205,216",
-            "description": "<p><span id=\"\" style=\"font-size: 13px; font-family: arial,sans,sans-serif;\" data-sheets-value=\"{\" data-sheets-userformat=\"{\">Garden City Marriott Hotel is a top hotel located in <strong>39 Tombia Street by Le Meridien Road, GRA, Port Harcourt.</strong>...",
+            "facility_type_ids": "100,110,113,116,117,119,121,122,128,130,143",
+            "description": "<p><span id=\"\" style=\"font-size: 13px; font-family: arial,sans,sans-serif;\" data-sheets-value=\"{\" data-sheets-userformat=\"{\">people city resort is a top hotel located in <strong>39 Tommy Street by la la Road, GRA, Port Harcourt.</strong>...",
             "is_disabled": 0,
             "max_rate": 100000,
             "is_active": 1,
@@ -240,7 +241,7 @@ try {
             "currency_code": "NGN",
             "facility_type_names": "Adequate Parking,Restaurant(s) ,DSTV,Refrigerator,Bar,24 hours Electricity,Parking Garage,POS,Laundry,Security Guard,Event Hall,Restaurant(s) CCTV camera...",
             "min_rate": 10000,
-            "address": "39 Tombia Street by Le Meridien Road, GRA, Port Harcourt",
+            "address": "39 Tombia Street by La la Road, Port Harcourt",
             "review_count": 26,
             "state_code": "Rivers",
             "bookings_count": 366,
@@ -262,7 +263,7 @@ try {
                     "object_id": 18456,
                     "title": null,
                     "description": null,
-                    "url": "https://media.api.hng.tech/img/big/bay-marriot-hotel-rivers-19253.jpg",
+                    "url": "https://media.api.hng.tech/img/big/people-rivers-19253.jpg",
                     "room_id": null,
                     "facility_id": null,
                     "priority": "2",
@@ -276,7 +277,7 @@ try {
                     "object_id": 18456,
                     "title": null,
                     "description": null,
-                    "url": "https://media.api.hng.tech/img/big/bay-marriot-hotel-rivers-25971.png",
+                    "url": "https://media.api.hng.tech/img/big/bay-people-hotel-rivers-25971.png",
                     "room_id": null,
                     "facility_id": null,
                     "priority": "4",
@@ -376,11 +377,11 @@ try {
 
 ###	 HTTP Request
 
-GET `https://api.hotels.ng/search/location/count/bulk?property_type=hotel
-&location_type=city
-&locations=["uyo","calabar"]
-&country=nigeria
-&access_token=XXXXXXXXXXXXXX`
+GET `https://api.hotels.ng/search/location/count/bulk?property_type=
+&location_type=
+&locations=[]
+&country=
+&access_token=`
 
 ### Query Parameters
 
