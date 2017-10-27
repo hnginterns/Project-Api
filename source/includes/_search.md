@@ -105,7 +105,7 @@ try {
             "images": [],
             "available_rates": []
         },
-        {...}
+    
           ],
     "status": "",
     "message": "",
@@ -284,8 +284,8 @@ try {
                     "updated_at": "2017-03-07 13:56:12"
                 }
             ]
-        }...  
-    ]
+        }  
+    {
     "status": "success"
 }
 ```
