@@ -1,9 +1,10 @@
 # Hotels
-Access to all Hotel related things - List of Scopes to be used in Authorization <br>
-properties.read
+Access to all Hotel related things <br> 
+The scope used for authentication - <em>properties.read</em>
 
 
-The hotels API allows you to get the list of hotels, show details for a hotel and every thing associated to it. This API vould also return details like directons to a hotel, website of the hotel and some other basic information about the hotel the user is looking for. The scope unique to the User is read.
+
+The hotels API allows you to get the list of hotels, show details of a specific hotel and every thing associated to it. This API would also return details like directons to the hotel, website of the hotel and some other basic information about the hotel that might interest the user. 
 ## Get list of hotels
 
 
@@ -40,7 +41,7 @@ try {
       "0": {
         "id": 10000,
         "old_id": null,
-        "name": "Redeemers Cherith Guest House",
+        "name": "michael-cherith-guest-house-abuja",
         "description": "",
         "property_type_id": 1,
         "status": "active",
@@ -58,8 +59,8 @@ try {
         "rating": 0,
         "payment_type": "all",
         "meal_plan": null,
-        "driving_instructions": "From Wuse Market, Zone 4, Abuja Head west on Wuse Market Rd toward Kashim Ibrahim Way 72 m Turn right at Leilas Mobile Massage onto Kashim Ibrahim Way  Pass by Sterling Bank Abuja Main (on the right in 400 m) 1.3 km Turn right onto Ahmadu Bello Way  Drive along Eden Place Apartments (on the right for 190 m) 800 m Turn left onto Ademola Adetokunbo Cres 140 m Turn right at Hair Studio onto Cairo Cres/Cairo Street  Pass by Ecobank (on the left) 350 m Turn left onto Cairo Cres/Cairo Street/Kampala St/Kampala Cres Destination will be on the right",
-        "unique_url": "10000-redeemers-cherith-guest-house-abuja",
+        "driving_instructions": "From jane street, Zone...",
+        "unique_url": "10000-michael-cherith-guest-house-abuja",
       }
     }
   },
@@ -102,7 +103,7 @@ driving_instructions|string|directions to the place
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://api.hotels.ng/hotels/{hotel_id}');
+$request->setUrl('https://api.hotels.ng/hotels/12443');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
@@ -126,18 +127,18 @@ try {
 {
 
     "data": {
-        "name": "Jakande British Hotels",
-        "description": "<p>Jakande British Hotel is <strong>3-Star</strong>&nbsp;hotel located at <strong>No. 125 Surulere road, off Lekki-Ajah Expressway.</strong>. It is situated in a serene and tranquil environment; and provides guests with excellent rejuvenating and relaxing facilities.<br /><br />Rooms at the Jakande British Hotel fall into the following categories: Royal room, Queen, Kings, Diplomatic Suite, and Ambassador Suite. These rooms come with an array of top-notch room facilities, which include: great spacing, luxurious double and single beds, sofas and center tables, study desks and chairs, wireless internet connection, flat-screen television sets with access to a variety of local and international channels, air conditioning, refrigerator and en-suite bathrooms with complimentary toiletries.<br /><br />Jakande British Hotel also offers great services such as: regular power supply, a restaurant, bar/lounge and guaranteed security facilitated by competent security personnel.<br /><br />Other services on offer at Jakande British Hotel include: laundry services, daily newspaper supply, airport pickup plus housekeeping and room services.</p>\r\n<p><strong>Places Of Interest Near Jakande British Hotels</strong><br />The Palms Shopping Mall<br />Lekki Conservation Centre<br />Elegushi beach<br />Bespoke Event Center<br />House on the Rock main Church<br />KFA events centre.</p>\r\n<p><strong>Terms and Conditions</strong><br />Check in: from 12:00pm<br />Check out: by 12:00pm<br />Children: free stay for Babies and kids<br />Payment: Cash<br />Pets: Not allowed.</p>\r\n<p><strong>FAQs</strong><br />Q: Does Jakande British Hotel have a restaurant?<br />A: Yes, there is a restaurant with seasoned chefs and cooks to cater to guests' nutritional needs</p>\r\n<p>Q: Does Jakande British Hotel offer airport pickup services?<br />A: Yes, but at an extra cost</p>\r\n<p>Q: Does Jakande British Hotel provide guests with internet accessibility?<br />A: At Jakande British Hotel, there is a provision of high-speed wireless internet <br />facilities for guests.</p>\r\n<p>Q: Are children allowed to lodge alongside their parents at Jakande British Hotel?<br />Yes. Babies and kids are allowed to stay for free.<br /><br />Q: Is a Bar/Lounge at Jakande British Hotel?<br />A: It has a bar stocked with different drinks and wines.</p>",
+        "name": "Jambo Rambo Hotel",
+        "description": "<p>Jambo Rambo Hotel is <strong>3-Star</strong>&nbsp;hotel...</p>",
         "status": "active",
         "currency_code": "NGN",
         "website": "http://lekkioxfordhotels.com",
         "checkin_time": null,
         "checkout_time": null,
         "payment_type": "all",
-        "driving_instructions": "LANDMARK:\r\nLekki Phase 1 \r\nTake Emmanuel Abimbola Cole St and Freedom Way to Lagos-Epe Express Rd/Lekki - Epe Express Road in Lekki 7 min. Follow Lekki - Epe Express Road to Akanni Ajiran St\r\n9 min.Turn right at Philip Stores onto Akanni Ajiran St. Pass by Sterling Bank (on the right)\r\nDestination will be on the left",
+        "driving_instructions": "LANDMARK:\r\baba close \r\nTake....",
         "minrate": "8000.00000",
         "maxrate": "35000.00000",
-        "unique_url": "25449-jakande-British-hotels-lagos",
+        "unique_url": "25449-jombo-Rambo-hotels-lagos",
         "star_rating": "3",
         "policy": "<p>Check in: from 12:00pm<br />Check out: by 12:00pm<br />Children: free stay for Babies and kids<br />Payment: Cash<br />Pets: Not allowed.</p>",
         "property_type_id": "1",
@@ -147,7 +148,7 @@ try {
             {
                 "id": 3499,
                 "property_id": "25449",
-                "agent_uuid": "a965ed6e-c292-4263-b4de-d01057984441",
+                "agent_uuid": "xxxxxx-56xxx-b4de-xxxxxxxx",
                 "property_ref_code": "25449",
                 "agency": "Hotelsng"
             }
@@ -203,11 +204,11 @@ agency|string|the agency involved
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://api.hotels.ng/hotels/{hotel_id}/details');
+$request->setUrl('https://api.hotels.ng/hotels/97874/details');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData(array(
-  'access_token' => 'XXX-Your-Access_token-XXX'
+  'access_token' => 'XXXx-Your-Access_token-XXX'
 ));
 
 try {
@@ -228,13 +229,13 @@ try {
     "data": {
         "hotel": {
             "data": {
-                "id": 25449,
+                "id": 2549,
                 "old_id": null,
-                "name": "Lekki Oxford Hotels",
-                "description": "<p>Lekki Oxford Hotel is <strong>3-Star</strong>&nbsp;hotel located at <strong>No. 10-12 Agungi road, off Lekki-Ajah Expressway before Chevron Roundabout</strong>. It is situated in a serene and tranquil environment; and provides guests with excellent rejuvenating and relaxing facilities.<br /><br />Rooms at the Lekki Oxford Hotel fall into the following categories: Royal room, Queen, Kings, Diplomatic Suite, and Ambassador Suite. These rooms come with an array of top-notch room facilities, which include: great spacing, luxurious double and single beds, sofas and center tables, study desks and chairs, wireless internet connection, flat-screen television sets with access to a variety of local and international channels, air conditioning, refrigerator and en-suite bathrooms with complimentary toiletries.<br /><br />Lekki Oxford Hotel also offers great services such as: regular power supply, a restaurant, bar/lounge and guaranteed security facilitated by competent security personnel.<br /><br />Other services on offer at Lekki Oxford Hotel include: laundry services, daily newspaper supply, airport pickup plus housekeeping and room services.</p>\r\n<p><strong>Places Of Interest Near Lekki Oxford Hotels</strong><br />The Palms Shopping Mall<br />Lekki Conservation Centre<br />Elegushi beach<br />Bespoke Event Center<br />House on the Rock main Church<br />KFA events centre.</p>\r\n<p><strong>Terms and Conditions</strong><br />Check in: from 12:00pm<br />Check out: by 12:00pm<br />Children: free stay for Babies and kids<br />Payment: Cash<br />Pets: Not allowed.</p>\r\n<p><strong>FAQs</strong><br />Q: Does Lekki Oxford Hotel have a restaurant?<br />A: Yes, there is a restaurant with seasoned chefs and cooks to cater to guests' nutritional needs</p>\r\n<p>Q: Does Lekki Oxford Hotel offer airport pickup services?<br />A: Yes, but at an extra cost</p>\r\n<p>Q: Does Lekki Oxford Hotel provide guests with internet accessibility?<br />A: At Lekki Oxford Hotel, there is a provision of high-speed wireless internet <br />facilities for guests.</p>\r\n<p>Q: Are children allowed to lodge alongside their parents at Lekki Oxford Hotel?<br />Yes. Babies and kids are allowed to stay for free.<br /><br />Q: Is a Bar/Lounge at Lekki Oxford Hotel?<br />A: It has a bar stocked with different drinks and wines.</p>",
+                "name": "Hotel wanda",
+                "description": "<p>Hotel wanda Hotel is <strong>3-Star</strong>&nbsp;hotel located at <strong>No. 10-12 Drive way,Expressway before school....</p>",
                 "property_type_id": "1",
                 "status": "active",
-                "website": "http://lekkioxfordhotels.com",
+                "website": "http://hotelwanda.com",
                 "currency_code": "NGN",
                 "minrate": "8000.00000",
                 "maxrate": "35000.00000",
@@ -248,25 +249,25 @@ try {
                 "rating": "0.00",
                 "payment_type": "all",
                 "meal_plan": null,
-                "driving_instructions": "LANDMARK:\r\nLekki Phase 1 \r\nTake Emmanuel Abimbola Cole St and Freedom Way to Lagos-Epe Express Rd/Lekki - Epe Express Road in Lekki 7 min. Follow Lekki - Epe Express Road to Akanni Ajiran St\r\n9 min.Turn right at Philip Stores onto Akanni Ajiran St. Pass by Sterling Bank (on the right)\r\nDestination will be on the left",
-                "unique_url": "25449-lekki-oxford-hotels-lagos",
+                "driving_instructions": "LANDMARK:\r\nPass through, turn right",
+                "unique_url": "25449-wanda-oxford-hotels-lagos",
                 "deleted_at": null,
                 "reference": [
                     {
                         "id": 3499,
-                        "property_id": "25449",
-                        "agent_uuid": "a965ed6e-c292-4263-b4de-d01057984441",
+                        "property_id": "2549",
+                        "agent_uuid": "x5647cc-c292-4263-b4de-xfgh67889",
                         "property_ref_code": "25449",
                         "agency": {
                             "id": 1,
                             "agency": "Hotelsng",
-                            "agency_uuid": "a965ed6e-c292-4263-b4de-d01057984441"
+                            "agency_uuid": "xxxxxxe-x455x-4263-b4de-xxxxxxxx"
                         }
                     }
                 ],
                 "agreement": {
                     "id": 520,
-                    "property_id": "25449",
+                    "property_id": "2549",
                     "deal_status": "5",
                     "deal_percentage": null,
                     "vat": null,
@@ -314,12 +315,12 @@ try {
         "location": {
             "data": {
                 "id": 3499,
-                "property_id": "25449",
+                "property_id": "2549",
                 "road_id": null,
-                "area_id": "163",
+                "area_id": "160",
                 "city_id": "196",
                 "state_id": "25",
-                "address": "10-12 Agungi Road, Off Lekki - Ajah Expressway, Before Chevron Roundabout",
+                "address": "No.45hhjjx, Before Church Roundabout...",
                 "longitude": "3.5166",
                 "latitude": "6.43788",
                 "airport_code": null,
@@ -333,7 +334,7 @@ try {
                     "name": "Lekki",
                     "code": "Lekki",
                     "state_id": "25",
-                    "geotags_id": "18|32",
+                    "geotags_id": "9|32",
                     "latitude": null,
                     "longitude": null,
                     "country_code": "NG",
@@ -363,12 +364,12 @@ try {
                 "state": {
                     "id": 25,
                     "name": "Lagos",
-                    "description": "<p>Lagos State is Nigeria&rsquo;s and Africa&rsquo;s largest commercial hub. It is home to over 15 million people, making it the largest city in Africa. Being a metropolitan city, Lagos is always attracting business-minded individuals, tourists and people from various walks of life who come here for diverse reasons.<br /> <br /> There are so many luxury hotels and affordable hotels in Lagos to choose from. Need a hotel in Lagos Island or a hotel in Lagos Mainland? Be sure to go through the list of Lagos hotels on hotels.ng to make your pick. <br /> <br /> Discount hotel rates are also available for you to choose from on the site and you can view and compare hotel prices before making your booking.</p>",
+                    "description": "<p>Lagos State is Nigeria&rsquo;s and Africa&rsquo;s largest commercial hub...</p>",
                     "code": "Lagos",
                     "type": "state",
                     "province_code": null,
-                    "latitude": "6.54894",
-                    "longitude": "3.11660",
+                    "latitude": "6.000004",
+                    "longitude": "3.000660",
                     "country_code": "NG",
                     "created_at": null,
                     "updated_at": "2017-08-16 12:23:29",
@@ -401,10 +402,10 @@ try {
                 "deal_status": "5",
                 "deal_percentage": null,
                 "vat": null,
-                "commission_percentage": "10",
+                "commission_percentage": "1",
                 "deal_on": "2017-05-31 12:09:56",
                 "deal_end": null,
-                "deal_file": "https://panel.hotels.ng/media/deals/deal25449.pdf",
+                "deal_file": "https://uncle.els.ng/media/peter/deal25449.pdf",
                 "created_at": null,
                 "updated_at": null,
                 "deleted_at": null
@@ -439,17 +440,17 @@ try {
                     "booking_id": null,
                     "property_id": "25449",
                     "user_id": null,
-                    "name": "Mr. Ed Itohan",
+                    "name": "Mr. John Doe",
                     "email": "followup@hotels.ng",
-                    "title": "Very Bad Stay",
+                    "title": "jkxnnx",
                     "location_id": null,
-                    "comment": "I  didn't enjoy my stay at this hotel at all. I couldn't get water to use when I needed it and even when I got it, it was all brownish. The room was also quite dirty with cockroaches popping out of different corners in the room. Not a good one at all.",
+                    "comment": "My stay ....",
                     "overall_rating": "4.80",
                     "is_published": "1",
-                    "created_at": "2017-10-23 09:51:32",
-                    "updated_at": "2017-10-23 09:52:08",
+                    "created_at": "1990-10-23 09:51:32",
+                    "updated_at": "1990-10-23 09:52:08",
                     "deleted_at": null,
-                    "published_at": "2017-10-23 09:52:08",
+                    "published_at": "1990-10-23 09:52:08",
                     "scores": [
                         {
                             "id": 71001,
@@ -461,29 +462,8 @@ try {
                     "tags": [],
                     "comments": []
                 },
-                {
-                    "id": 14311,
-                    "booking_id": null,
-                    "property_id": "25449",
-                    "user_id": null,
-                    "name": "Mr. Mayowa",
-                    "email": "followup@hotels.ng",
-                    "title": "Horrible stay",
-                    "location_id": null,
-                    "comment": "My stay at the hotel was horrible. There was no water in the closet and they had to fetch water in a bucket for me. The power supply at the hotel was also very bad and the generator was not switched on. I had to leave the hotel for a friend's place having spent few hours there.",
-                    "overall_rating": "2.00",
-                    "is_published": "1",
-                    "created_at": "2017-07-29 11:53:13",
-                    "updated_at": "2017-09-19 14:33:50",
-                    "deleted_at": null,
-                    "published_at": "2017-09-19 14:33:50",
-                    "scores": [
-                        {
-                            "id": 68676,
-                            "review_id": "14311",
-                            "criterion_id": "1",
-                            "score": "2"
-                        },
+                {..}
+}
                 
             
 

@@ -1,10 +1,11 @@
 # Rates
 Access to all Rates Flag <br>
-List of Scopes that can be used in Authorization:<br>
-rates.read
+The scope used for authentication: <em>rates.read</em>
+
+<br>
 
 
-The Rate API returns the rates at which rooms go for, rate flags, rate Ids, multiple flag rates and it also gives the admin some certain priviledges. This API has only the read scope peculiar to the normal user.
+The Rate API returns the rates at which rooms go for, rate flags, rate Ids, multiple flag rates and it also gives the admin some certain priviledges.
 
 
 
@@ -122,15 +123,21 @@ try {
 ```json
 
 {
-  "status": "success",
-  "message": "Available Flags",
-  "data": {
-    "flag_name": "BreakFast Inclusive",
-    "id": 1
-  }
+    "status": "success",
+    "message": "Available Flags",
+    "data": [
+        [
+            {
+                "flag_name": "Vat inclusive",
+                "id": 1
+            },
+            {
+                "flag_name": "lunch inclusive",
+                "id": 2
+            },
+           ]        
+        ]
 }
-
-
 ```
 
 This Endpoint returns all the available Flags
@@ -149,7 +156,7 @@ access_token | String | Your Access Token
 
 Attribute | Type | Description
 --------- | ------- | -----------
-  flag_name| String | Name of the flag rate
+  flag_name| String | Specific attributes/features of a hotel that a fixed rate is assigned.
 
 
 
@@ -186,8 +193,8 @@ try {
   "status": "success",
   "message": "All flags with rate 29981",
   "data": {
-    "flag_name": "BreakFast Inclusive",
-    "id": 1
+    "flag_name": "Lunch Inclusive",
+    "id": 2
   }
 },
 
@@ -274,7 +281,7 @@ This Endpoint returns multiple rate flags by their ID.
 Parameter | Type | Description
 --------- | ------- | -----------
 access_token | String | Generated access token from Oauth2 developer credentials
-rate_ids | String| More than one rate_ids
+rate_ids | String| ID of rates.Multiple ids can be use , using the delimiter ','
 
 ###Response Body
 

@@ -91,4 +91,4 @@ room_id | integer | Id of the room
 name| string| Name of the room
 property_id| integer |Id of the property
 description| string | Description of the room type
-payment_type| string | type of payment given
+payment_type| string | Type of payment method
