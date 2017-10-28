@@ -1,6 +1,6 @@
 # Facilities
 Access to All reviews Related Things - List of Scopes to be used in Authorization<br>
-Facilities.read
+<em> Facilities.read</em>
 
 The facilities API shows the facilities a hotel has, like a restaurant, as well as images of the faciility. Only the admin can access other features of this API. The scopes available to the normal user is read.
 ## Show facilities for a hotel
