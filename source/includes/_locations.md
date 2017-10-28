@@ -158,9 +158,6 @@ try {
     "airport_code": null,
     "postal_code": null,
     "zip_code": null,
-    "created_at": null,
-    "updated_at": null,
-    "deleted_at": null,
     "area": {
       "id": 163,
       "name": "Phase 1"

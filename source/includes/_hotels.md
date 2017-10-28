@@ -145,7 +145,7 @@ try {
         "maxrate": "35000.00000",
         "unique_url": "25449-jombo-Rambo-hotels-lagos",
         "rating": "3",
-        "policy": " Free stay for Babies and kids ,
+        "policy": " Free stay for Babies and kids" ,
         "property_type_id": "1",
         "number_of_rooms": "3",
     },
@@ -244,7 +244,7 @@ try {
                 "policy": "No pets allowed.",
                 "rating": "7.0",
                 "payment_type": "all",
-                "driving_instructions": Pass through, turn right",
+                "driving_instructions": "Pass through, turn right",
                 "unique_url": "25449-wanda-oxand-hotels-lagos",
                 
             },

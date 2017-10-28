@@ -36,7 +36,6 @@ try {
 
 {
     "data": {
-        "total": 23,
         "bookings": [
             {
                 "id": 1172077,
@@ -52,21 +51,14 @@ try {
                     "address": "n/a",
                     "marital_status": null,
                     "guest_type": null,
-                    "corporate_id": null,
-                    "created_at": "2017-10-23 12:02:59",
-                    "updated_at": "2017-10-23 12:02:59",
                     "guest_meta": []
                 },
                    "ptype": "hotel",
-                "checkin": "2017-10-24 00:00:00",
-                "checkout": "2017-10-25 00:00:00",
                 "payment_status": null,
                 "status": "NEW",
                 "price": "16000",
                 "currency_price": "0.00",
-                "application_id": "wLV9nF9J8uo0SuaYXl7wCc9RV",
-                "created_at": "2017-10-23 12:02:59",
-                "updated_at": "2017-10-23 12:03:03",
+                "application_id": "xxxxxxxxxxxxxxxxxxxxxx",
                 "currency_code": "NGN",
                 "address": "10-12 Agungi Road, Off Lekki - Ajah Expressway, Before Chevron Roundabout",
                 "city": "Lekki",
@@ -86,13 +78,8 @@ try {
                         "value": "+2348168000001",
                         "role_id": "0",
                         "property_id": "25449",
-                        "working": "",
-                        "replied": "",
                         "notes": "Hotel Official Phone number",
                         "rating": null,
-                        "created_at": null,
-                        "updated_at": null,
-                        "deleted_at": null
                     },
                     {
               "extra_info": {
@@ -110,8 +97,6 @@ try {
                         "currency": "null",
                         "currency_s_rate": "0.00",
                         "nights": "1",
-                        "created_at": null,
-                        "updated_at": null,
                         "roomtype": {
                             "id": 388750,
                             "name": "Standard Room (With Breakfast) (Exclusive Deal Based on Availability)",
@@ -121,9 +106,6 @@ try {
                             "number_of_rooms": "0",
                             "minimum_stay_nights": "0",
                             "payment_type": "all",
-                            "created_at": "2017-08-08 19:22:42",
-                            "updated_at": "2017-08-08 19:22:42",
-                            "deleted_at": null,
                             "room_id": "388750"
                         }
                     }
@@ -145,5 +127,39 @@ booking_id | Number | Local id assigned to that booking
 access_token | String | Generated access token from Oauth2 developer credentials
 
 
+###Response Body
 
-
+Attribute | Type | Description
+--------- | ------- | -----------
+        id| integer | Customer user-supplied webhook identifier
+  bookings|array|array of booking related information
+  guest.id| integer|Id of the guest
+  guest.fname | string | First name of the guest
+  guest.lname|string|Last name of the guest
+  guest.title|string|Title of the guest
+  guest.phone|integer|phone number of the guest
+  guest.email|string|email address of the guest
+  guest.address|string|address of the guest
+  state|string|state where the hotel is located
+  currency_code|string|currency code of the the locality
+  price|integer|price of the hotel
+  city|string|city where the hotel is located
+  state|string|state where the hotel is located
+  payment_type|string|type of payment used
+  property_url|string|url of property
+  rooms|array|array of rooms related information
+  room_id|integer|Id of the rooms
+  rate_id|integer|Id of the rate
+  nights|integer|number of nights spent by the guest
+  booking_id|integer|Id peculiar to the booking
+room_type|object|details of information pertaining to room type
+property_contacts|array|array of information showing the contact details of a property
+notes|string|message showing information about the contact details
+type|string|type of device used for contact
+value|string|value for contact device destination 
+provider|string|customer service provider
+roomtype.name|string|type of room available
+roomtype.property_id|string|property Id of the room type
+roomtype.room_id|string|Id of the room type
+roomtype.payment_type|string|type of payment in use
+nights|string|number of nights to be spent

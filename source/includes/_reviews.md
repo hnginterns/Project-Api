@@ -2,7 +2,7 @@
 The Reviews API returns reviews made by users. 
 Response may include comments, ratings of hotels by user or hotel personnel.</br>
 
-## List of Scopes to be used in Authentication
+List of Scopes to be used in Authentication<br>
 
 The scope available to the user is only the read scope.
 
@@ -47,7 +47,6 @@ try {
       "comment":"I enjoyed my stay, the service was very good and the rooms were quite comfortable.",
       "overall_rating":"2.00",
       "is_published":"1",
-      "created_at":"2014-12-02 04:08:38",
       "review_score":[  
         {  
           "id":3236,
@@ -68,14 +67,12 @@ try {
           "score":"2",          
         }        
       ]
-      "review_tag":[  
-
-      ],
+     {
       "review_comments":[  
 
       ]
     }
-  ]
+  
 }
   
 

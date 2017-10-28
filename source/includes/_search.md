@@ -168,6 +168,7 @@ min_rate_ngn|integer|minimum rate in naira
  star_rating|integer|star rating of hotel
 property_url|string|url for the property searched
  likes|integer|number of likes for the hotel
+ 
 ##Search for properties nearby
 
 	This fetches all the properties(hotels) near a particular hotel's location 
