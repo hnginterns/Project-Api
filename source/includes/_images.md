@@ -1,22 +1,22 @@
 # Images
-The Images endpoint returns images for a particular hotel. Images could be small, medium or big depending on the preference of the user. <br>
+The Images endpoint returns images of a particular hotel. Images could be small, medium or big depending on the preference of the user. <br>
 
-The scopes used for Authentication - <em>images.read</em>
-
-
+The scopes used for Authentication - `images.read`
 
 
 
 
 
-##Show images for a particular hotel
+
+
+## Show images of a particular hotel
 
 This endpoint fetches images of a specific hotel.<br>
 The image URL is in this format `https://api.hotels.ng/img/{size}/name_of_image.jpg.`<br>
 The following sizes of images are returned:<br>
 size:<br>
 1. small - A small sized image is returned.<br>
-2. the medium - A medium sized image is returned.<br>
+2. medium - A medium sized image is returned.<br>
 3. big - A big sized image is returned.
 
 > Example request:
@@ -49,29 +49,19 @@ try {
   "data":[  
     {  
       "id":9191,
-      "application_id":"1",
       "object_id":25449,
-      "title":null,
-      "description":null,
+      "title":"room",
       "url":"https:\/\/media.api.hng.tech\/img\/big\/mich-hotel-ltd-lagos-899.jpg",
-      "room_id":null,
+      "room_id":4566,
       "facility_id":null,
-      "priority":"0",
-      "created_at":"2017-03-07 13:56:12",
-      "updated_at":"2017-03-07 13:56:12"
     },
     {  
       "id":9192,
-      "application_id":"1",
       "object_id":25449,
-      "title":null,
-      "description":null,
+      "title":"gym",
       "url":"https:\/\/media.api.hng.tech\/img\/big\/mich-hotel-ltd-lagos-899.jpg",
       "room_id":null,
       "facility_id":null,
-      "priority":"1",
-      "created_at":"2017-03-07 13:56:12",
-      "updated_at":"2017-03-07 13:56:12"
     }
   ],
   "status":"success"
@@ -94,10 +84,9 @@ access_token | String | Your Access Token
 
 Attribute | Type | Description
 --------- | ------- | -----------
-        id| integer | Customer user-supplied webhook identifier.
-application_id| integer | Id of the applied hotel
-object_id | integer | Id of the object supplied
-facility_type_id| integer| Id of the facility
-  object_type| string |type of object supplied
- facility_name| string | The name of the facility, if the image is a facilty.
+        id| integer | the image identification number.
+object_id | integer | Id of the hotel.
+title |  string | the title given to the image
+facility_id| string | The id of the facility, if the image is a facility
+room_id| string | The id of the room, if the image is a room
 img_url | string | link to the image of the specific hotel
