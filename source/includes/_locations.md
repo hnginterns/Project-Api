@@ -204,21 +204,14 @@ Attribute | Type | Description
 --------- | ------- | -----------
         id| integer | Customer user-supplied webhook identifier.
 property_id | integer | Id of the property supplied
-road_id| string| Id of the road to the location
 area_id| string | Id of the area to the location
  city_id| string | Id of the city to the location
  state_id| string | Id of the state to the location
  address| string | address to the location
  latitude|integer|latitude of the hotel's location
  longitude|integer|longitude of the hotel's location
- area.id|integer|Id of the area
- area.name|string|name of the area
- city.id|integer|Id of the city
- city.name|string|Name of the city
- city.country_code|string|country code of the city
- country.id|integer|Id of the country
- country.name|string|name of the country
- continent.id|integer|Id of the continent
- continent.code|integer|Id of the continent
- countinent.name|string|name of the continent
+ area|object|Details of the area where the property is located
+ city|object|Details of the city where the property is located
+ country|object|Details of the country where the property is located
+ continent|object|Details of Continent where the property is located
 
