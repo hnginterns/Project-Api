@@ -1,4 +1,6 @@
+<?php
 
+?>
 <!doctype html>
 <html>
   <head>
@@ -279,9 +281,6 @@
                     <a href="#show-bank-details-for-a-hotel" class="toc-h2 toc-link" data-title="Hotels">Show bank details for a hotel</a>
                   </li>
                   <li>
-                    <a href="#get-list-of-contacts-for-a-property" class="toc-h2 toc-link" data-title="Hotels">Get List of Contacts for a Property.</a>
-                  </li>
-                  <li>
                     <a href="#get-list-of-contacts-for-a-property-by-id" class="toc-h2 toc-link" data-title="Hotels">Get List of Contacts for a Property by id</a>
                   </li>
               </ul>
@@ -345,13 +344,13 @@
                     <a href="#get-flags-by-rate-id" class="toc-h2 toc-link" data-title="Rates">Get flags by rate Id</a>
                   </li>
                   <li>
-                    <a href="#adds-a-flags-names-to-rates" class="toc-h2 toc-link" data-title="Rates">Adds a flags names to rates.</a>
+                    <a href="#add-rates" class="toc-h2 toc-link" data-title="Rates">Add rates.</a>
                   </li>
                   <li>
                     <a href="#fetch-multiple-flag-rates-by-id" class="toc-h2 toc-link" data-title="Rates">Fetch multiple flag rates by Id</a>
                   </li>
                   <li>
-                    <a href="#get-company-rates" class="toc-h2 toc-link" data-title="Rates">Get company rates</a>
+                    <a href="#get-corporate-rates" class="toc-h2 toc-link" data-title="Rates">Get corporate rates</a>
                   </li>
               </ul>
           </li>
@@ -376,13 +375,13 @@
             <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#the-end-point-shows-list-of-users-of-an-application-br" class="toc-h2 toc-link" data-title="Users">The end Point shows list of users of an application</a>
+                    <a href="#show-list-of-users-of-an-application-br" class="toc-h2 toc-link" data-title="Users">Show list of users of an application</a>
                   </li>
                   <li>
-                    <a href="#the-end-point-will-authenticate-users-br" class="toc-h2 toc-link" data-title="Users">The end point will authenticate users</a>
+                    <a href="#authenticate-users-br" class="toc-h2 toc-link" data-title="Users">Authenticate users</a>
                   </li>
                   <li>
-                    <a href="#the-end-point-will-log-in-users-br" class="toc-h2 toc-link" data-title="Users">The end point will log in users</a>
+                    <a href="#log-in-users-br" class="toc-h2 toc-link" data-title="Users">Log in users</a>
                   </li>
               </ul>
           </li>
@@ -499,7 +498,7 @@ You are logged in.
 </tr>
 </tbody></table>
 <h1 id='search'>Search</h1>
-<p>With this endpoint, you can search for hotels based on some specific criteria of your choice. These criteria can be based on the type of property, locations, name of a hotel and so forth.</p>
+<p>With this endpoint, you can search for hotels based on some specific criteria of your choice. These criteria can be based on the type of property, locations, name of a hotel and so forth.<br></p>
 
 <p>Search for Hotels with parameters <br>
 Scope to be used in Authentication - <em>query</em> <br>
@@ -1105,8 +1104,9 @@ property_type : <br>
 </tr>
 </tbody></table>
 <h1 id='bookings'>Bookings</h1>
-<p>Access to all bookings related things - List of Scopes to be used in Authorization<br> 
-Bookings.read,<br>
+<p>Access to all bookings related things - List of Scopes to be used in Authorization:<br> </p>
+
+<p>Bookings.read,<br>
 Bookings.create,<br>
 Bookings.update.<br>
 Bookings.delete<br></p>
@@ -1119,7 +1119,7 @@ Bookings.delete<br></p>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
 <span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/bookings'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/internal/bookings'</span><span class="p">);</span>
 <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
 
 <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
@@ -1394,7 +1394,7 @@ Bookings.delete<br></p>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
 <span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/bookings/1162843'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/internal/bookings/1162843'</span><span class="p">);</span>
 <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
 
 <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
@@ -1968,96 +1968,117 @@ Bookings.delete<br></p>
 </tbody></table>
 <h2 id='create-a-new-booking-for-a-specific-hotel'>Create a new booking for a specific hotel</h2>
 <blockquote>
-<p>JSON schema:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">[</span><span class="w">
- </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"amg_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"hotel_settled"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"company_settled"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"is_invoiced"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"is_processed"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"guest_stayed"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"bills"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-
-</span></code></pre>
-<blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
-<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'https://api.hotels.ng/internal/bookings/create'</span><span class="p">);</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client\Request</span><span class="p">;</span>
 
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'</span>
-<span class="p">));</span>
+<span class="nv">$body</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Message\Body</span><span class="p">;</span>
+<span class="nv">$body</span><span class="o">-&gt;</span><span class="na">addForm</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+  <span class="s1">'checkin'</span> <span class="o">=&gt;</span> <span class="s1">'2017-11-03'</span><span class="p">,</span>
+  <span class="s1">'checkout'</span> <span class="o">=&gt;</span> <span class="s1">'2017-11-04'</span><span class="p">,</span>
+  <span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Miss.'</span><span class="p">,</span>
+  <span class="s1">'fname'</span> <span class="o">=&gt;</span> <span class="s1">'Ebi'</span><span class="p">,</span>
+  <span class="s1">'lname'</span> <span class="o">=&gt;</span> <span class="s1">'Ojeikere'</span><span class="p">,</span>
+  <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'ebi.ojeikere@fcmb.com'</span><span class="p">,</span>
+  <span class="s1">'phone'</span> <span class="o">=&gt;</span> <span class="s1">'09123456789'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][room_id]'</span> <span class="o">=&gt;</span> <span class="s1">'15660'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][rate_id]'</span> <span class="o">=&gt;</span> <span class="s1">'12335'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][s_rate]'</span> <span class="o">=&gt;</span> <span class="s1">'12000'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][b_rate]'</span> <span class="o">=&gt;</span> <span class="s1">'10800'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][currency]'</span> <span class="o">=&gt;</span> <span class="s1">'NGN'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][currency_s_rate]'</span> <span class="o">=&gt;</span> <span class="s1">'8000'</span><span class="p">,</span>
+  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'iy53WWxmaBBEAvRwhUhVhKkZZaTPiF4z3uO8qAvN'</span><span class="p">,</span>
+  <span class="s1">'country'</span> <span class="o">=&gt;</span> <span class="s1">'154'</span><span class="p">,</span>
+  <span class="s1">'currency_code'</span> <span class="o">=&gt;</span> <span class="s1">'NGN'</span><span class="p">,</span>
+  <span class="s1">'ip_address'</span> <span class="o">=&gt;</span> <span class="s1">'172.22.0.1'</span><span class="p">,</span>
+  <span class="s1">'address'</span> <span class="o">=&gt;</span> <span class="s1">'n/a'</span><span class="p">,</span>
+  <span class="s1">'ptype'</span> <span class="o">=&gt;</span> <span class="s1">'hotel'</span><span class="p">,</span>
+  <span class="s1">'property'</span> <span class="o">=&gt;</span> <span class="s1">'16334'</span><span class="p">,</span>
+  <span class="s1">'additional_info'</span> <span class="o">=&gt;</span> <span class="s1">'I would like to make a booking reservation'</span><span class="p">,</span>
+  <span class="s1">'payment_type'</span> <span class="o">=&gt;</span> <span class="s1">'post-payment'</span><span class="p">,</span>
+  <span class="s1">'on_behalf_of_fname'</span> <span class="o">=&gt;</span> <span class="s1">''''</span><span class="p">,</span>
+  <span class="s1">'on_behalf_of_lname'</span> <span class="o">=&gt;</span> <span class="s1">''''</span><span class="p">,</span>
+  <span class="s1">'ga_client_id'</span> <span class="o">=&gt;</span> <span class="s1">'231265846.1507051119'</span><span class="p">,</span>
+  <span class="s1">'provider'</span> <span class="o">=&gt;</span> <span class="s1">'hotelsng'</span><span class="p">,</span>
+  <span class="s1">'coupon_code'</span> <span class="o">=&gt;</span> <span class="s1">''''</span><span class="p">,</span>
+  <span class="s1">'utmTags'</span> <span class="o">=&gt;</span> <span class="s1">'{"utm_medium":"gclid","utm_source":"eaiaiqobchmit4c2z_en1wivvymych2hmwtueaayaiaaegk5ovd_bwe","utm_campaign":"eaiaiqobchmit4c2z_en1wivvymych2hmwtueaayaiaaegk5ovd_bwe","p":null,"client_id":"59d3c66c58245","page_link":"\\/hotels-in-ondo\\/owo","page_title":"Hotels in Owo | Ondo |  Hotels.ng","visited_at":1509008760}'</span>
+<span class="p">),</span> <span class="k">NULL</span><span class="p">);</span>
 
-<span class="k">try</span> <span class="p">{</span>
-  <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/internal/bookings/create'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s1">'POST'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setBody</span><span class="p">(</span><span class="nv">$body</span><span class="p">);</span>
 
-  <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
-<span class="p">}</span>
+
+<span class="nv">$client</span><span class="o">-&gt;</span><span class="na">enqueue</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getResponse</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
 </code></pre>
 <blockquote>
 <p>Example response:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1162116</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"154"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"guest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1162116</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ebi"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ojeikere"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09123456789"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ebi.ojeikere@fcmb.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n/a"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"guest_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"corporate_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-27 22:59:55"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-27 22:59:55"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"guest_meta"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16334"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ptype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-04 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NEW"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8000.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"application_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wLV9nF9J8uo0SuaYXl7wCc9RV"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-27 22:59:56"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-27 22:59:57"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NGN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">442289</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1162116"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15660"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"rate_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12335"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"b_rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10800"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"s_rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12000"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NGN"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"currency_s_rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8000.00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"nights"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"extra_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"additional_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I would like to make a booking reservation"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotelsng"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"post-payment"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"on_behalf_of_fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"''"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"on_behalf_of_lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"''"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"coupon_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"''"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"affiliate_request"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint creates a new booking for a specific hotel</p>
 <h3 id='http-request-4'>HTTP Request</h3>
@@ -2071,143 +2092,180 @@ Bookings.delete<br></p>
 </tr>
 </thead><tbody>
 <tr>
-<td>booking_id</td>
-<td>Number</td>
-<td>Local id assigned to that booking</td>
-</tr>
-<tr>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
+<tr>
+<td>checkin</td>
+<td>string date</td>
+<td>date of check in</td>
+</tr>
+<tr>
+<td>checkout</td>
+<td>string date</td>
+<td>date of check out</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>title of guest</td>
+</tr>
+<tr>
+<td>fname</td>
+<td>string</td>
+<td>first name of guest</td>
+</tr>
+<tr>
+<td>lname</td>
+<td>string</td>
+<td>last name of guest</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>email address of guest</td>
+</tr>
+<tr>
+<td>additional_info</td>
+<td>string</td>
+<td>additional information about guest</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>integer</td>
+<td>phoone number of guest</td>
+</tr>
+<tr>
+<td>rooms</td>
+<td>array</td>
+<td>array of items pertaining to rooms</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>currency code pertaining to the guest</td>
+</tr>
+<tr>
+<td>ip_address</td>
+<td>string</td>
+<td>ip address of guest</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>address of the guest</td>
+</tr>
+<tr>
+<td>ptype</td>
+<td>string</td>
+<td>the type of property</td>
+</tr>
+<tr>
+<td>property</td>
+<td>integer</td>
+<td>id of property</td>
+</tr>
+<tr>
+<td>additional_info</td>
+<td>string</td>
+<td>additional info that the guest may provide</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment in use</td>
+</tr>
+<tr>
+<td>ga_client_id</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>provider</td>
+<td>string</td>
+<td>provider of the services</td>
+</tr>
+<tr>
+<td>utmTags</td>
+<td>string</td>
+<td></td>
+</tr>
 </tbody></table>
-<h3 id='request'>Request</h3>
-<table><thead>
-<tr>
-<th>Attributes</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>booking_id</td>
-<td>number</td>
-</tr>
-<tr>
-<td>user_id</td>
-<td>number</td>
-</tr>
-<tr>
-<td>amg_id</td>
-<td>number</td>
-</tr>
-<tr>
-<td>company_id</td>
-<td>number</td>
-</tr>
-<tr>
-<td>hotel_settled</td>
-<td>boolean</td>
-</tr>
-<tr>
-<td>company_settled</td>
-<td>boolean</td>
-</tr>
-<tr>
-<td>is_invoiced</td>
-<td>boolean</td>
-</tr>
-<tr>
-<td>is_processed</td>
-<td>boolean</td>
-</tr>
-<tr>
-<td>guest_stayed</td>
-<td>boolean</td>
-</tr>
-<tr>
-<td>bills</td>
-<td>String</td>
-</tr>
-<tr>
-<td>vat</td>
-<td>boolean</td>
-</tr>
-</tbody></table>
+<h3 id='example-response'>Example Response</h3>
+<p>checkin|string date|date of check in
+checkout|string date|date of check out
+title|string|title of guest
+fname|string|first name of guest
+lname|string|last name of guest
+email|string|email address of guest
+additional_info|string|additional information about guest
+phone|integer|phoone number of guest
+rooms|array|array of items pertaining to rooms
+currency_code|string|currency code pertaining to the guest
+ip_address|string|ip address of guest
+address|string|address of the guest
+ptype|string|the type of property
+property|integer|id of property
+additional_info|string|additional info that the guest may provide
+payment_type|string|type of payment in use
+ga_client_id|integer
+provider|string|provider of the services</p>
 <h2 id='edit-bookings'>Edit bookings</h2>
-<blockquote>
-<p>JSON schema:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">[</span><span class="w">
- </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"amg_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"hotel_settled"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"company_settled"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"is_invoiced"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"is_processed"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"guest_stayed"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"bills"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"vat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-
-</span></code></pre>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
-<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'https://api.hotels.ng/internal/bookings/%7Bbooking_id%7D/edit'</span><span class="p">);</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client\Request</span><span class="p">;</span>
 
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'vLfT0bsoWlcJ79cUmtKHCy2mEohqMXz4tAxpVdWZ'</span>
-<span class="p">));</span>
+<span class="nv">$body</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Message\Body</span><span class="p">;</span>
+<span class="nv">$body</span><span class="o">-&gt;</span><span class="na">addForm</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+  <span class="s1">'checkin'</span> <span class="o">=&gt;</span> <span class="s1">'2017-09-16'</span><span class="p">,</span>
+  <span class="s1">'checkout'</span> <span class="o">=&gt;</span> <span class="s1">'2017-09-17'</span><span class="p">,</span>
+  <span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Mr'</span><span class="p">,</span>
+  <span class="s1">'fname'</span> <span class="o">=&gt;</span> <span class="s1">'David'</span><span class="p">,</span>
+  <span class="s1">'lname'</span> <span class="o">=&gt;</span> <span class="s1">'Dagunduro'</span><span class="p">,</span>
+  <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'doc@hotels.ng'</span><span class="p">,</span>
+  <span class="s1">'additional_info'</span> <span class="o">=&gt;</span> <span class="s1">'I will like to confirm if I can get a discount for staying for 8 nights.'</span><span class="p">,</span>
+  <span class="s1">'phone'</span> <span class="o">=&gt;</span> <span class="s1">'091234567890'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][room_id]'</span> <span class="o">=&gt;</span> <span class="s1">'19260'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][name]'</span> <span class="o">=&gt;</span> <span class="s1">'Standard room'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][s_rate]'</span> <span class="o">=&gt;</span> <span class="s1">'8000'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][b_rate]'</span> <span class="o">=&gt;</span> <span class="s1">'6800'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][rate_id]'</span> <span class="o">=&gt;</span> <span class="s1">'33717'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][currency]'</span> <span class="o">=&gt;</span> <span class="s1">'NGN'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][currency_s_rate]'</span> <span class="o">=&gt;</span> <span class="s1">'8000'</span><span class="p">,</span>
+  <span class="s1">'rooms[0][payment_type]'</span> <span class="o">=&gt;</span> <span class="s1">'all'</span><span class="p">,</span>
+  <span class="s1">'token'</span> <span class="o">=&gt;</span> <span class="s1">'QYiJWYhhDOygTM5YWOiBDZjMHbh5WZrNyZu5ycsVGdvhGQsVmbhB3KlRmbphWZrNCZhhjNhljMwETNxAjZygTZ$%abbaa882819f9b0d'</span><span class="p">,</span>
+  <span class="s1">'__'</span> <span class="o">=&gt;</span> <span class="s1">'1'</span><span class="p">,</span>
+  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'kvaHd5MFFrUtDeMTkTjZihc2qZCEcvEbgPRcsiRs'</span>
+<span class="p">),</span> <span class="k">NULL</span><span class="p">);</span>
 
-<span class="k">try</span> <span class="p">{</span>
-  <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/internal/bookings/1153200/edit'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s1">'POST'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setBody</span><span class="p">(</span><span class="nv">$body</span><span class="p">);</span>
 
-  <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="nv">$client</span><span class="o">-&gt;</span><span class="na">enqueue</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getResponse</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
 </code></pre>
 <blockquote>
 <p>Example response:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="mi">405</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span><span class="w">
+
+    </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Access to booking 1153200 denied"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint edits a booking details</p>
 <h3 id='http-request-5'>HTTP Request</h3>
@@ -2225,63 +2283,88 @@ Bookings.delete<br></p>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
-</tbody></table>
-<h3 id='request-2'>Request</h3>
-<table><thead>
 <tr>
-<th>Attributes</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>booking_id</td>
-<td>number</td>
+<td>checkin</td>
+<td>string date</td>
+<td>date of check in</td>
 </tr>
 <tr>
-<td>user_id</td>
-<td>number</td>
+<td>checkout</td>
+<td>string date</td>
+<td>date of check out</td>
 </tr>
 <tr>
-<td>amg_id</td>
-<td>number</td>
+<td>title</td>
+<td>string</td>
+<td>title of guest</td>
 </tr>
 <tr>
-<td>company_id</td>
-<td>number</td>
+<td>fname</td>
+<td>string</td>
+<td>first name of guest</td>
 </tr>
 <tr>
-<td>hotel_settled</td>
-<td>boolean</td>
+<td>lname</td>
+<td>string</td>
+<td>last name of guest</td>
 </tr>
 <tr>
-<td>company_settled</td>
-<td>boolean</td>
+<td>email</td>
+<td>string</td>
+<td>email address of guest</td>
 </tr>
 <tr>
-<td>is_invoiced</td>
-<td>boolean</td>
+<td>additional_info</td>
+<td>string</td>
+<td>additional information about guest</td>
 </tr>
 <tr>
-<td>is_processed</td>
-<td>boolean</td>
+<td>phone</td>
+<td>integer</td>
+<td>phoone number of guest</td>
 </tr>
 <tr>
-<td>guest_stayed</td>
-<td>boolean</td>
+<td>rooms</td>
+<td>array</td>
+<td>array of items pertaining to rooms</td>
 </tr>
 <tr>
-<td>bills</td>
-<td>String</td>
-</tr>
-<tr>
-<td>vat</td>
-<td>boolean</td>
+<td>token</td>
+<td>string</td>
+<td>token issued by agency to guest</td>
 </tr>
 </tbody></table>
 <h3 id='response-body-4'>Response Body</h3>
-<p>405</p>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td>Integer</td>
+<td>code value</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>the status of the request</td>
+</tr>
+<tr>
+<td>errors</td>
+<td>Array</td>
+<td>list of errors</td>
+</tr>
+<tr>
+<td>message</td>
+<td>String</td>
+<td>request message</td>
+</tr>
+</tbody></table>
 <h1 id='hotels'>Hotels</h1>
-<p>Access to all Hotel related things - List of Scopes to be used in Authorization <br>
+<p>Access to all Hotel related things - List of Scopes to be used in Authorization: <br>
 properties.read,<br>
 properties.create,<br>
 properties.delete ,<br>
@@ -3086,105 +3169,6 @@ properties.update<br></p>
 <td>name of the bank</td>
 </tr>
 </tbody></table>
-<h2 id='get-list-of-contacts-for-a-property'>Get List of Contacts for a Property.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-
-<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'http://88.99.63.198:32619/finance/property/contacts'</span><span class="p">);</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
-
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'</span>
-<span class="p">));</span>
-
-
-<span class="k">try</span> <span class="p">{</span>
-  <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
-
-  <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"state_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotel_star"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sub_area"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"addhoteldate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_modified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"airport_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"hotelagreement"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hotel_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_percentage"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_on"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deal_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"contacts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"statename"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint shows the list of contacts for a property.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://api.hotels.ng/internal/finance/property/contacts?access_token=</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>access_token</td>
-<td>String</td>
-<td>Generated access token from Oauth2 developer credentials</td>
-</tr>
-</tbody></table>
 <h2 id='get-list-of-contacts-for-a-property-by-id'>Get List of Contacts for a Property by id</h2>
 <blockquote>
 <p>Example request:</p>
@@ -3290,9 +3274,9 @@ properties.update<br></p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint shows the list of contacts for a property by Id.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
+<h3 id='http-request-5'>HTTP Request</h3>
 <p><code>GET https://api.hotels.ng/internal/finance/property/id/contacts?access_token=</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3301,20 +3285,20 @@ properties.update<br></p>
 </tr>
 </thead><tbody>
 <tr>
-<td>id</td>
-<td>String</td>
-<td>Id of the property owner</td>
-</tr>
-<tr>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 </tbody></table>
 <h3 id='response-body-5'>Response Body</h3>
-<p>message|string|status of the API call</p>
+<p>id | String | Id of the property owner
+type|string|means of contact with the property owner
+notes|string|body of notes left by the owner
+rating_plus|integer|
+rating_minus|integer
+role_name|string|role of the property</p>
 <h1 id='images'>Images</h1>
-<p>Acess to all Reports Related Things - List of Scopes to be used in Authorization<br>
+<p>Access to all Reports Related Things - List of Scopes to be used in Authorization:<br>
 Images.read,<br>
 Images.create,<br>
 Images.delete,<br>
@@ -3323,9 +3307,9 @@ Images.update<br></p>
 <p>The Images endpoint returns images for a particular hotel. Images could be small, medium or big depending on the preference of the user. The scopes available to be the admin are the read, create, delete and update scopes.</p>
 <h2 id='show-images-for-a-particular-hotel'>Show images for a particular hotel</h2>
 <p>This endpoint fetches images for a specific hotel.<br>
-Image URL is in this format https://media.api.hng.tech/img/size/name_of_image.jpg.<br>
+Image URL is in this format <code>https://media.api.hng.tech/img/size/name_of_image.jpg.</code><br>
 The following sizes of images are returned:<br>
-size =<br>
+size:<br>
 1. small - A small sized image is returned.<br>
 2. the medium - A medium sized image is returned.<br>
 3. big - A big sized image is returned.</p>
@@ -3451,7 +3435,7 @@ size =<br>
 </tr>
 </tbody></table>
 <h1 id='facilities'>Facilities</h1>
-<p>Access to All reviews Related Things - List of Scopes to be used in Authorization<br>
+<p>Access to All reviews Related Things - List of Scopes to be used in Authorization:<br>
     Facilities.read,<br>
     Facilities.create,<br>
     Facilities.delete, <br>
@@ -3590,7 +3574,7 @@ Only the admin can access the bank details of this API. The scopes available are
 </tr>
 </tbody></table>
 <h1 id='reviews'>Reviews</h1>
-<p>Acess to all Reviews Related Things - List of Scopes to be used in Authorization <br>
+<p>Acess to all Reviews Related Things - List of Scopes to be used in Authorization: <br>
 Reviews.read,<br>
 Reviews.create,<br>
 Reviews.delete,<br>
@@ -3770,80 +3754,66 @@ Reviews.update,<br></p>
 </tbody></table>
 <h2 id='adds-a-review-for-a-specific-hotel'>Adds a review for a specific hotel.</h2>
 <blockquote>
-<p>JSON schema:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"location_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"overall_rating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre>
-<blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
-<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'https://api.hotels.ng/internal/hotels/reviews/add'</span><span class="p">);</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client\Request</span><span class="p">;</span>
 
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-  <span class="s1">'hotel_id'</span> <span class="o">=&gt;</span> <span class="s1">'998818'</span><span class="p">,</span>
-  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'XXX-Your-Access_token-XXX'</span>
-<span class="p">));</span>
+<span class="nv">$body</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Message\Body</span><span class="p">;</span>
+<span class="nv">$body</span><span class="o">-&gt;</span><span class="na">addForm</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+  <span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'No free wifi'</span><span class="p">,</span>
+  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'kbOSN0IwHAvwKgUZ4rGsUTM2NtNo87MlXU6el7wG'</span><span class="p">,</span>
+  <span class="s1">'property_id'</span> <span class="o">=&gt;</span> <span class="s1">'59629'</span><span class="p">,</span>
+  <span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s1">'Sir Louis'</span><span class="p">,</span>
+  <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'doc@hotels.ng'</span><span class="p">,</span>
+  <span class="s1">'comment'</span> <span class="o">=&gt;</span> <span class="s1">'hotel has no free wifi as they claimed'</span><span class="p">,</span>
+  <span class="s1">'rating[6]'</span> <span class="o">=&gt;</span> <span class="s1">'4'</span><span class="p">,</span>
+  <span class="s1">'overall_rating'</span> <span class="o">=&gt;</span> <span class="s1">'6.4'</span><span class="p">,</span>
+  <span class="s1">'is_published'</span> <span class="o">=&gt;</span> <span class="s1">'no'</span><span class="p">,</span>
+<span class="p">),</span> <span class="k">NULL</span><span class="p">);</span>
 
-<span class="k">try</span> <span class="p">{</span>
-  <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/internal/hotels/reviews/add'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s1">'POST'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setBody</span><span class="p">(</span><span class="nv">$body</span><span class="p">);</span>
 
-  <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="nv">$client</span><span class="o">-&gt;</span><span class="na">enqueue</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getResponse</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
+<span class="cp">?&gt;</span>
 </code></pre>
 <blockquote>
 <p>Example response:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="mi">405</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">14783</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59629"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sir Louis"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"doc@hotels.ng"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No free wifi"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"location_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel has no free wifi as they claimed"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"overall_rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.40"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_published"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-27 22:17:53"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-27 22:17:53"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"review_score"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"review_tag"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"review_comments"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint adds a review for a specific hotel.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://api.hotels.ng/internal/hotels/reviews/add?hotel_id=&amp;access_token=</code></p>
+<p><code>POST https://api.hotels.ng/internal/hotels/reviews/add?</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -3853,62 +3823,122 @@ Reviews.update,<br></p>
 </tr>
 </thead><tbody>
 <tr>
-<td>hotel_id</td>
+<td>property_id</td>
 <td>Number</td>
-<td>Local id assigned to that hotel</td>
+<td>Local id assigned to that property</td>
 </tr>
 <tr>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
 </tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>Subject of the comment</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Client&#39;s name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>Client&#39;s email</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Text</td>
+<td>Body of comment</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>Number</td>
+<td>Rating giving to property by client</td>
+</tr>
+<tr>
+<td>overall_rating</td>
+<td>Number</td>
+<td>average rating</td>
+</tr>
+<tr>
+<td>is_published</td>
+<td>Number</td>
+<td>Publish status</td>
+</tr>
 </tbody></table>
-<h3 id='request'>Request</h3>
+<h3 id='example-response'>Example Response</h3>
 <table><thead>
 <tr>
 <th>Attributes</th>
 <th>Type</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>id</td>
-<td>number</td>
+<td>Number</td>
+<td>web hook customer Identifier</td>
 </tr>
 <tr>
 <td>booking_id</td>
-<td>number</td>
+<td>Number</td>
+<td>booking id of the client</td>
 </tr>
 <tr>
 <td>property_id</td>
-<td>number</td>
+<td>Number</td>
+<td>property id of the client</td>
 </tr>
 <tr>
 <td>user_id</td>
-<td>number</td>
+<td>Number</td>
+<td>Id of the user</td>
 </tr>
 <tr>
 <td>name</td>
-<td>string</td>
+<td>String</td>
+<td>name of the client</td>
 </tr>
 <tr>
 <td>email</td>
-<td>string</td>
+<td>String</td>
+<td>email of the client</td>
 </tr>
 <tr>
 <td>title</td>
-<td>string</td>
+<td>String</td>
+<td>title of the client</td>
 </tr>
 <tr>
 <td>location_id</td>
-<td>number</td>
+<td>Number</td>
+<td>location Id of the hotel</td>
 </tr>
 <tr>
 <td>overall_rating</td>
+<td>Number</td>
+<td>average rating</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>string date</td>
+<td>date at when the review was created</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>string date</td>
+<td>date at when the review was updated</td>
+</tr>
+<tr>
+<td>comment</td>
 <td>string</td>
+<td>body of comment</td>
 </tr>
 </tbody></table>
 <h1 id='location'>Location</h1>
-<p>Acess to all Location Related Things - List of Scopes to be used in Authorization <br>
+<p>Access to all Location Related Things - List of Scopes to be used in Authorization: <br>
 locations.read,<br>
 locations.create,<br>
 locations.delete,<br>
@@ -4236,7 +4266,7 @@ create and delete scopes peculiar to the admin user.</p>
 </tr>
 </tbody></table>
 <h1 id='rooms'>Rooms</h1>
-<p>Access to all Rooms related things - List of Scopes to be used in Authorization 
+<p>Access to all Rooms related things - List of Scopes to be used in Authorization: <br>
 Rooms.read,</br>
 Rooms.delete, </br>
 Rooms.update</br></p>
@@ -4362,8 +4392,7 @@ Rooms.update</br></p>
 </tr>
 </tbody></table>
 <h1 id='rates'>Rates</h1>
-<p>Access to all Rates Flag <br>
-List of Scopes that can be used in Authorization:<br>
+<p>Access to all Rates Flag - List of Scopes that can be used in Authorization:<br>
 rates.read<br>
 rates.create<br>
 rates.delete<br>
@@ -4647,123 +4676,89 @@ rates.update<br></p>
 <td>Id of the flag</td>
 </tr>
 </tbody></table>
-<h2 id='adds-a-flags-names-to-rates'>Adds a flags names to rates.</h2>
-<blockquote>
-<p>JSON schema:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"booking_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"location_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int64"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"overall_rating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}{</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"message"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"data"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"xml"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Andy"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"All flags with rate add"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">[]</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre>
+<h2 id='add-rates'>Add rates.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_URL</span><span class="p">,</span> <span class="s2">"https://api.hotels.ng/internal/rates/flags/add?flag_names=&amp;access_token="</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client\Request</span><span class="p">;</span>
 
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_POST</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
+<span class="nv">$body</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Message\Body</span><span class="p">;</span>
+<span class="nv">$body</span><span class="o">-&gt;</span><span class="na">addForm</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+  <span class="s1">'property_id'</span> <span class="o">=&gt;</span> <span class="s1">'98894'</span><span class="p">,</span>
+  <span class="s1">'room_id'</span> <span class="o">=&gt;</span> <span class="s1">'4702'</span><span class="p">,</span>
+  <span class="s1">'rate_tag_id'</span> <span class="o">=&gt;</span> <span class="s1">'1'</span><span class="p">,</span>
+  <span class="s1">'rack_price'</span> <span class="o">=&gt;</span> <span class="s1">'9000'</span><span class="p">,</span>
+  <span class="s1">'buying_price'</span> <span class="o">=&gt;</span> <span class="s1">'5100'</span><span class="p">,</span>
+  <span class="s1">'buying_price_usd'</span> <span class="o">=&gt;</span> <span class="s1">''''</span><span class="p">,</span>
+  <span class="s1">'selling_price'</span> <span class="o">=&gt;</span> <span class="s1">'6000'</span><span class="p">,</span>
+  <span class="s1">'selling_price_usd'</span> <span class="o">=&gt;</span> <span class="s1">''''</span><span class="p">,</span>
+  <span class="s1">'priority'</span> <span class="o">=&gt;</span> <span class="s1">'2'</span><span class="p">,</span>
+  <span class="s1">'start_date'</span> <span class="o">=&gt;</span> <span class="s1">'2017-10-26'</span><span class="p">,</span>
+  <span class="s1">'end_date'</span> <span class="o">=&gt;</span> <span class="s1">'2027-10-26'</span><span class="p">,</span>
+  <span class="s1">'active_start'</span> <span class="o">=&gt;</span> <span class="s1">'2017-10-26'</span><span class="p">,</span>
+  <span class="s1">'active_end'</span> <span class="o">=&gt;</span> <span class="s1">'2027-10-26'</span><span class="p">,</span>
+  <span class="s1">'active_mon'</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">,</span>
+  <span class="s1">'active_tue'</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">,</span>
+  <span class="s1">'active_wed'</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">,</span>
+  <span class="s1">'active_thu'</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">,</span>
+  <span class="s1">'active_fri'</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">,</span>
+  <span class="s1">'active_sat'</span> <span class="o">=&gt;</span> <span class="s1">'1'</span><span class="p">,</span>
+  <span class="s1">'active_sun'</span> <span class="o">=&gt;</span> <span class="s1">'1'</span><span class="p">,</span>
+  <span class="s1">'user_id'</span> <span class="o">=&gt;</span> <span class="s1">'24856'</span><span class="p">,</span>
+  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'XXX-Your Access token-XXX'</span>
+<span class="p">),</span> <span class="k">NULL</span><span class="p">);</span>
 
-<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"Content-Type: application/json"</span><span class="p">,</span>
-  <span class="s2">"Accept: application/json"</span>
-<span class="p">));</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/internal/rates/add'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s1">'POST'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setBody</span><span class="p">(</span><span class="nv">$body</span><span class="p">);</span>
 
-<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
-<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+<span class="nv">$client</span><span class="o">-&gt;</span><span class="na">enqueue</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getResponse</span><span class="p">();</span>
 
-<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
 </code></pre>
 <blockquote>
 <p>Example response:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"All flags with rate add"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">[]</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate added"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">54215</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98894"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4702"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rate_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rate_tag_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rack_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9000.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"buying_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5100.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"buying_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"selling_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6000.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"selling_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-26 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-10-26 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-26 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-10-26 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_mon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_tue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_wed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_thu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_fri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_sat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_sun"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rate_tag"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint adds a flags names to rates.</p>
+<p>This endpoint adds a rate.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://api.hotels.ng/internal/rates/flags/add?flag_names=&amp;access_token=</code></p>
+<p><code>POST https://api.hotels.ng/internal/rates/add?</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -4773,14 +4768,69 @@ rates.update<br></p>
 </tr>
 </thead><tbody>
 <tr>
-<td>flag_names</td>
-<td>String</td>
-<td>flag names</td>
-</tr>
-<tr>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of a particular room</td>
+</tr>
+<tr>
+<td>rate_tag_id</td>
+<td>integer</td>
+<td>Id of the tag rate</td>
+</tr>
+<tr>
+<td>rack_price</td>
+<td>integer</td>
+<td>Price of the rack</td>
+</tr>
+<tr>
+<td>buying_price</td>
+<td>integer</td>
+<td>Buying price</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>string date</td>
+<td>date at when the rates start</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>string</td>
+<td>date at when the rates end</td>
+</tr>
+<tr>
+<td>buying_price_usd</td>
+<td>integer</td>
+<td>Buying price in us dollars</td>
+</tr>
+<tr>
+<td>Selling_price</td>
+<td>integer</td>
+<td>Selling price</td>
+</tr>
+<tr>
+<td>Selling_price_usd</td>
+<td>integer</td>
+<td>Selling price in us dollars</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>priority of the rate flag</td>
 </tr>
 </tbody></table>
 <h3 id='response-body-4'>Response Body</h3>
@@ -4792,9 +4842,44 @@ rates.update<br></p>
 </tr>
 </thead><tbody>
 <tr>
-<td>message</td>
-<td>string</td>
-<td>status message on the API call</td>
+<td>id</td>
+<td>integer</td>
+<td>Customer user-supplied webhook identifier.</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>integer</td>
+<td>Id of the property supplied</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id of a particular room</td>
+</tr>
+<tr>
+<td>rate_tag_id</td>
+<td>integer</td>
+<td>Id of the tag rate</td>
+</tr>
+<tr>
+<td>rack_price</td>
+<td>integer</td>
+<td>Price of the rack</td>
+</tr>
+<tr>
+<td>buying_price</td>
+<td>integer</td>
+<td>Buying price</td>
+</tr>
+<tr>
+<td>Selling_price</td>
+<td>integer</td>
+<td>Selling price</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>priority of the rate flag</td>
 </tr>
 </tbody></table>
 <h2 id='fetch-multiple-flag-rates-by-id'>Fetch multiple flag rates by Id</h2>
@@ -4914,68 +4999,187 @@ rates.update<br></p>
 <td>priority of the rate flag</td>
 </tr>
 </tbody></table>
-<h2 id='get-company-rates'>Get company rates</h2>
+<h2 id='get-corporate-rates'>Get corporate rates</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
-<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'https://api.hotels.ng/internal/rates2/properties'</span><span class="p">);</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">http\Client\Request</span><span class="p">;</span>
 
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'xxxxxxxxx'</span><span class="p">,</span>
-  <span class="s1">'company_rates'</span> <span class="o">=&gt;</span> <span class="s1">' xxxxxxxxx,xxxxxxxxx,xxxxxxxxx'</span>
-<span class="p">));</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/internal/rates2/properties/1012309/valid'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQuery</span><span class="p">(</span><span class="k">new</span> <span class="nx">http\QueryString</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+  <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'RV8kXZ0ctGvcr6nRYlg2loK2ZVGHtqhoxM4ZTLSo'</span><span class="p">,</span>
+  <span class="s1">'tags[0]'</span> <span class="o">=&gt;</span> <span class="s1">'General'</span><span class="p">,</span>
+  <span class="s1">'tags[1]'</span> <span class="o">=&gt;</span> <span class="s1">'corporate'</span><span class="p">,</span>
+  <span class="s1">'tags[2]'</span> <span class="o">=&gt;</span> <span class="s1">'solinagroupng'</span>
+<span class="p">)));</span>
 
 
-<span class="k">try</span> <span class="p">{</span>
-  <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$client</span><span class="o">-&gt;</span><span class="na">enqueue</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getResponse</span><span class="p">();</span>
 
-  <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
 </code></pre>
 <blockquote>
 <p>Example response:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rate"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Property 1012309 valid room rates"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">98319</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rate_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rate_tag_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rack_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">55000</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"buying_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">49500</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"buying_price_usd</span><span class="se">\"</span><span class="s2">"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"selling_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">55000</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"selling_price_usd</span><span class="se">\"</span><span class="s2">"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"active_start"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"active_end"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"active_mon"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_tue"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_wed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_thu"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_fri"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_sat"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"active_sun"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="s2">"30963"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"General"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"32405"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32405"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1012309"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30963"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_tag_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rack_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13800.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13800.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13800.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_mon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_tue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_wed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_thu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_fri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sun"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-21 09:30:05"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-10 11:23:08"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"corporate"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"solinagroupng"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"30964"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"General"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"corporate"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"solinagroupng"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"30965"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"General"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"46720"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46720"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1012309"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30965"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_tag_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rack_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31500.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24840.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27600.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_mon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_tue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_wed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_thu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_fri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sun"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 13:25:22"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 13:25:22"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"30968"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"General"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"46721"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46721"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1012309"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30968"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_tag_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rack_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35650.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32085.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35650.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_mon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_tue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_wed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_thu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_fri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sun"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 13:29:25"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 13:29:25"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"corporate"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"solinagroupng"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"31575"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"General"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"corporate"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"solinagroupng"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"50436"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"General"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"46719"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46719"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1012309"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50436"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rate_tag_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rack_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16100.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14490.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"buying_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16100.00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"selling_price_usd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-06-21 00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_mon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_tue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_wed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_thu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_fri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"active_sun"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 13:17:05"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-06-21 13:17:05"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"corporate"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"solinagroupng"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
 </span></code></pre>
 <p>This Endpoint returns company&#39;s rates</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET https://api.hotels.ng/internal/rates2/properties?company_rates=</code></p>
+<p><code>GET http://api.hotels.ng/internal/rates2/properties/1012309/valid</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -4985,14 +5189,14 @@ rates.update<br></p>
 </tr>
 </thead><tbody>
 <tr>
-<td>company_rates</td>
-<td>string</td>
-<td>returns company rates</td>
+<td>access_token</td>
+<td>String</td>
+<td>Generated access token from Oauth2 developer credentials</td>
 </tr>
 <tr>
-<td>rate_ids</td>
-<td>integers</td>
-<td></td>
+<td>tags</td>
+<td>array</td>
+<td>array of corporate related details</td>
 </tr>
 </tbody></table>
 <h3 id='response-body-6'>Response Body</h3>
@@ -5045,7 +5249,7 @@ rates.update<br></p>
 </tr>
 </tbody></table>
 <h1 id='reports'>Reports</h1>
-<p>Access to All Reports Related Things - List of Scopes to be used in Authorization<br>
+<p>Access to all reports related things - List of Scopes to be used in Authorization:<br>
 Facilities.read,<br>
 Reports.create,<br>
 Reports.delete,<br> 
@@ -5540,10 +5744,11 @@ reports.</p>
 </tr>
 </tbody></table>
 <h1 id='users'>Users</h1>
-<p>The Users API allows you to view the list of users, and also gives you admin privileges like
-authenticating the user. It also shows details of the user. The API cannot be viewed by ordinary
-users, only the admins.</p>
-<h2 id='the-end-point-shows-list-of-users-of-an-application-br'>The end Point shows list of users of an application</br></h2>
+<p>The Users endpoints allows you to view the list of registered users in the organisation, authenticate users and also shows details of the user. </br>
+The endpoint can  only be accessed by the admins.
+</br>
+The scopes to be used for authentication -  <em>bookings.read, bookings.create</em></p>
+<h2 id='show-list-of-users-of-an-application-br'>Show list of users of an application</br></h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
@@ -5712,25 +5917,23 @@ users, only the admins.</p>
 <td>does the admin have permission to update?</td>
 </tr>
 </tbody></table>
-<h2 id='the-end-point-will-authenticate-users-br'>The end point will authenticate users</br></h2>
+<h2 id='authenticate-users-br'>Authenticate users</br></h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-
 <span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
 <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">'http://api.hotels.ng/auth/users/authenticate'</span><span class="p">);</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
-
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_POST</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setBody</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
   <span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="s1">'XXX-Your-Access_token-XXX'</span><span class="p">,</span>
+  <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'Doe@hotels.ng'</span><span class="p">,</span>
+  <span class="s1">'token'</span> <span class="o">=&gt;</span> <span class="s1">'ftduyhicvbhcncbxxxxxxxxxxxxxxx'</span><span class="p">,</span>
+  <span class="s1">'do_jwt_reauth'</span> <span class="o">=&gt;</span> <span class="s1">'1'</span><span class="p">,</span>
   <span class="s1">'application'</span> <span class="o">=&gt;</span> <span class="s1">'hms'</span>
 <span class="p">));</span>
-
-
 <span class="k">try</span> <span class="p">{</span>
   <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
-
   <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
@@ -5739,11 +5942,16 @@ users, only the admins.</p>
 <blockquote>
 <p>Example response:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Not a valid user"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe@hotels.ng"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://url-to-images/"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint helps authenticate the users.</p>
@@ -5758,14 +5966,24 @@ users, only the admins.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>user_id</td>
-<td>Number</td>
+<td>token</td>
+<td>String</td>
 <td>Local id assigned to that user</td>
 </tr>
 <tr>
 <td>access_token</td>
 <td>String</td>
 <td>Generated access token from Oauth2 developer credentials</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>The user&#39;s email address as provided by the organisation</td>
+</tr>
+<tr>
+<td>token</td>
+<td>String</td>
+<td>The name of application been logged into.</td>
 </tr>
 </tbody></table>
 <h3 id='response-body-2'>Response Body</h3>
@@ -5777,12 +5995,32 @@ users, only the admins.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>message</td>
+<td>id</td>
 <td>string</td>
-<td>message showing the result of the API call</td>
+<td>user-supplied webhook identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The user&#39;s full name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>The user&#39;s email address as provided by the organisation</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>String</td>
+<td>The user&#39;s mobile number</td>
+</tr>
+<tr>
+<td>picture</td>
+<td>String</td>
+<td>The image of the user</td>
 </tr>
 </tbody></table>
-<h2 id='the-end-point-will-log-in-users-br'>The end point will log in users</br></h2>
+<h2 id='log-in-users-br'>Log in users</br></h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
