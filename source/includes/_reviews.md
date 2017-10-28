@@ -1,12 +1,12 @@
 # Reviews
-Access to all reviews related things 
+The Reviews API returns reviews made by users. 
+Response may include comments, ratings of hotels by user or hotel personnel.</br>
 
-List of Scopes to be used in Authentication <br>
+## List of Scopes to be used in Authentication
+
+The scope available to the user is only the read scope.
 
 <em>properties.read</em>
-
-The Reviews API returns all reviews made by users that must have patronized a hotel, comments, ratings by the user of the hotels as well as ratings of the hotel.  The admin has  certain privileges.</br>
-The scope available to the user is only the read read scope.
 
 ## Show reviews for a specific hotel
 
