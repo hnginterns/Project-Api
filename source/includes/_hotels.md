@@ -378,7 +378,6 @@ try {
                     "location_id": null,
                     "comment": "My stay ....",
                     "overall_rating": "4.80",
-                    "created_at": "1990-10-23 09:51:32",
                     "scores": [
                         {
                             "id": 71001,

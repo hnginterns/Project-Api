@@ -81,7 +81,6 @@ try {
             "max_rate_ngn": 22680,
             "facility_type_ids": "100,101,103,108",
             "description": "<p>Offering exceptional service at an affordable rate, Motel Bbbisima Limited is...</p>",
-            "is_disabled": 0,
             "max_rate": 22680,
             "road_id": 0,
             "agency_id": "1",
@@ -108,7 +107,6 @@ try {
             "Message": "Success",
             "code": 0
         },
-        "timestamp": "Thu, 26 Oct 1990 13:51:13 GMT",
         "type": "application/json",
     }
 }
@@ -168,7 +166,7 @@ min_rate_ngn|integer|minimum rate in naira
  star_rating|integer|star rating of hotel
 property_url|string|url for the property searched
  likes|integer|number of likes for the hotel
- 
+
 ##Search for properties nearby
 
 	This fetches all the properties(hotels) near a particular hotel's location 
@@ -233,7 +231,6 @@ try {
             "facility_type_ids": "100,110,113,116,117,119,121,122,128,130,143",
             "description": "<p><span id=\"\" style=\"font-size: 13px; font-family: arial,sans,sans-serif;\" data-sheets-value=\"{\" data-sheets-userformat=\"{\">people city resort is a top hotel located in <strong>39 Tommy Street by la la Road, GRA, Port Harcourt.</strong>...",
             "max_rate": 100000,
-            "is_active": 1,
             "road_id": 0,
             "agency_id": "1",
             "currency_code": "NGN",
@@ -244,7 +241,6 @@ try {
             "state_code": "Rivers",
             "bookings_count": 366,
             "star_rating": 0,
-            "is_deleted": 0,
             "continent_id": 1,
             "country": "Nigeria",
             "longitude": 7.483333,
