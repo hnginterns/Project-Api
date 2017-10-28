@@ -1,7 +1,8 @@
 # Rates
 Access to all Rates Flag <br>
 The scope used for authentication: <em>rates.read</em><br>
-The Rate API returns the rates at which rooms go for, rate flags, rate Ids, multiple flag rates and it also gives the admin some certain priviledges.
+The Rate API returns the rates at which rooms go for. Also, rate flags, rate Ids, multiple flag rates. <br>
+The admin some certain priviledges.
 
 
 
@@ -39,18 +40,11 @@ try {
     "id": 1,
     "property_id": 98319,
     "room_id": 10,
-    "rate_name": null,
     "rate_tag_id": 1,
     "rack_price": 55000,
     "buying_price": 49500,
-    "buying_price_usd\"": null,
     "selling_price": 55000,
-    "selling_price_usd\"": null,
     "priority": 1,
-    "start_date": {},
-    "end_date": {},
-    "active_start": {},
-    "active_end": {},
     "active_mon": 1,
     "active_tue": 1,
     "active_wed": 1,
@@ -206,14 +200,14 @@ This Endpoint returns all the Flags by rate id
 Parameter | Type | Description
 --------- | ------- | -----------
 access_token | String | Generated access token from Oauth2 developer credentials
-ID | Number| ID to return all flag ratings
+id | Interger | Id to return all flag ratings
 
 ###Response Body
 
 Attribute | Type | Description
 --------- | ------- | -----------
 flag_name| String | Name of the flag rate
-ID| Integer| ID of the flag
+Id| Integer| Id of the flag
 
 
 ##Fetch multiple flag rates by ID
@@ -283,14 +277,14 @@ rate_ids | String| ID of rates.Multiple ids can be use , using the delimiter ','
 
 Attribute | Type | Description
 --------- | ------- | -----------
-ID| Integer | Customer user-supplied webhook identifier.
-property_id | Integer | ID of the Property supplied
-room_id| integer| ID of a particular room
-  rate_tag_id| Integer | ID of the tag rate
+Id| Integer | Customer user-supplied webhook identifier.
+property_id | Integer | Id of the Property supplied
+room_id| Integer| Id of a particular room
+  rate_tag_id| Integer | Id of the tag rate
  rack_price| Integer | Price of the rack
 buying_price | Integer | Buying price
 Selling_price | Integer | Selling price
-priority| Integer|priority of the rate flag
+priority| Integer| Priority of the rate flag
 
 
 
