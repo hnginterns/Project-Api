@@ -60,7 +60,6 @@ try {
             "activities_id": "2,11,16",
             "min_rate_ngn": 6614,
             "property_ref_code": "19831",
-            "agency_uuid": "xxxxx-c292-4263-b4de-xxxxxx",
             "likes": 10,
             "country_code": "NG",
             "property_type": "Hotel",
@@ -84,28 +83,21 @@ try {
             "description": "<p>Offering exceptional service at an affordable rate, Motel Bbbisima Limited is...</p>",
             "is_disabled": 0,
             "max_rate": 22680,
-            "is_active": 1,
             "road_id": 0,
             "agency_id": "1",
             "currency_code": "NGN",
             "facility_type_names": "Swimming Pool,Restaurant(s) ,Bar/Lounge,24 Electricity,Wi-fi Internet",
             "min_rate": 6614,
             "address": "1 hdybb street, Off mus Road",
-            "review_count": 3,
             "state_code": "Edo",
-            "bookings_count": 90,
             "star_rating": 0,
-            "is_deleted": 0,
             "continent_id": 1,
             "country": "Nigeria",
             "longitude": 5.635554,
             "meal_plan_ids": "",
             "location_tags_ids": "",
             "state_id": 13,
-            "is_bookable": 1,
             "road": "",
-            "images": [],
-            "available_rates": []
         },
     
           ],
@@ -118,7 +110,6 @@ try {
         },
         "timestamp": "Thu, 26 Oct 1990 13:51:13 GMT",
         "type": "application/json",
-        "total_count": "577"
     }
 }
     
@@ -145,30 +136,38 @@ query | json string | The hotel,city, state  country of search(e.g <em>`"propert
 ###Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
+area_id|integer|area Id of hotels searched for
+city_id|integer|city Id of hotels searched for
+city_master_id|integer|city master Id of hotels searched for
+property_type_id|integer|Id of the property type
+activities_id|string|activities Id of the hotlel
+min_rate_ngn|integer|minimum rate in naira
  country | string| name of country
  continent|string|The continent the hotel is in
- longitude|integer|Longitude of the hotel
- latitude|integer|Latitude of the hotel
+ continent_id|string|Id of the continent the hotel is located in
+ longitude|float|Longitude of the hotel
+ latitude|float|Latitude of the hotel
  location_type|string|Type of location
  state|string|state where the hotel is located
  city_code|string|city code of the hotel
  country_code|string|country code of the hotel
  number_properties|integer|number of counted properties
  location_id|integer|the id of the location when counted
+ deal_status|integer|status of hotel deal
  id|integer|customer web hook identifier
- discount|boolean|is there a discount?
  state_code|string|the identifying code of the state
  facility_type_names|string|names of the facility types available
  property_ref_code|integer|the ref code unique to the property
  provider|string|provider of the hotel finder services
  room_id|integer|Id unique to the room
- stay_date|string date|date at when the customer started staying
+ facility_type_ids|integer string|Ids peculiar to the facility type
+ facility_type_icons|string|Icons relating to the type of facilities available
  rating|integer|rating of the hotel
  city|string|city the hotel is situated
-
-
-
-
+ description|string|description of hotel
+ star_rating|integer|star rating of hotel
+property_url|string|url for the property searched
+ likes|integer|number of likes for the hotel
 ##Search for properties nearby
 
 	This fetches all the properties(hotels) near a particular hotel's location 
@@ -211,7 +210,6 @@ try {
             "activities_id": "",
             "min_rate_ngn": 10000,
             "property_ref_code": "18456",
-            "agency_uuid": "xxxxxe-cx12-4263-b4de-d01xxxxxx",
             "likes": 34,
             "country_code": "NG",
             "property_type": "Hotel",
@@ -233,7 +231,6 @@ try {
             "max_rate_ngn": 100000,
             "facility_type_ids": "100,110,113,116,117,119,121,122,128,130,143",
             "description": "<p><span id=\"\" style=\"font-size: 13px; font-family: arial,sans,sans-serif;\" data-sheets-value=\"{\" data-sheets-userformat=\"{\">people city resort is a top hotel located in <strong>39 Tommy Street by la la Road, GRA, Port Harcourt.</strong>...",
-            "is_disabled": 0,
             "max_rate": 100000,
             "is_active": 1,
             "road_id": 0,
@@ -253,7 +250,6 @@ try {
             "meal_plan_ids": "",
             "location_tags_ids": "",
             "state_id": 33,
-            "is_bookable": 1,
             "road": "",
             "images": [
               
@@ -266,9 +262,6 @@ try {
                     "url": "https://media.api.hng.tech/img/big/people-rivers-19253.jpg",
                     "room_id": null,
                     "facility_id": null,
-                    "priority": "2",
-                    "created_at": "2017-03-07 13:56:12",
-                    "updated_at": "2017-03-07 13:56:12"
                 },
                
                 {
@@ -281,8 +274,6 @@ try {
                     "room_id": null,
                     "facility_id": null,
                     "priority": "4",
-                    "created_at": "2017-03-07 13:56:12",
-                    "updated_at": "2017-03-07 13:56:12"
                 }
             ]
         }  
@@ -305,13 +296,47 @@ access_token| String | Token generated with client_id and client_credentials | T
 property-type| String |Type of property to(e.g<em>`hotel`</em>) request | True
 property_id | String | Id associated to a property | True
 
-### Response Body
+
+###Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
- Properties| String| Properties around the locale
- Message | String |Message about property
- Name | String | Name of owner
-
+area_id|integer|area Id of hotels searched for
+city_id|integer|city Id of hotels searched for
+city_master_id|integer|city master Id of hotels searched for
+property_type_id|integer|Id of the property type
+activities_id|string|activities Id of the hotlel
+min_rate_ngn|integer|minimum rate in naira
+ country | string| name of country
+ continent|string|The continent the hotel is in
+ continent_id|string|Id of the continent the hotel is located in
+ longitude|float|Longitude of the hotel
+ latitude|float|Latitude of the hotel
+ location_type|string|Type of location
+ state|string|state where the hotel is located
+ city_code|string|city code of the hotel
+ likes|integer|number of likes for the hotel
+ country_code|string|country code of the hotel
+ number_properties|integer|number of counted properties
+ location_id|integer|the id of the location where for hotels searched
+ id|integer|customer web hook identifier
+ images|array|array of images related details for the hotel
+ object_id|integer|Id of the image
+ application_id|string|application Id of the image 
+ url|string|url to image of the hotel searched
+ state_code|string|the identifying code of the state
+ facility_type_names|string|names of the facility types available
+ property_ref_code|integer|the ref code unique to the property
+ provider|string|provider of the hotel finder services
+ room_id|integer|Id unique to the room
+ facility_type_ids|integer string|Ids peculiar to the facility type
+ facility_type_icons|string|Icons relating to the type of facilities available
+ rating|integer|rating of the hotel
+ city|string|city the hotel is situated
+ description|string|description of hotel
+ star_rating|integer|star rating of hotel
+ priority|integer|priority of the image for the hotel   
+ status|string|status of the hotel
+ property_url|string|url for the property searched
 
 ## Get hotel count in a location
 
@@ -399,8 +424,8 @@ Attribute | Type | Description
 --------- | ------- | -----------
  country | string| name of country
  continent|string|the continent the hotel is in
- longitude|integer|longitude of the hotel
- latitude|integer|latitude of the hotel
+ longitude|float|longitude of the hotel
+ latitude|float|latitude of the hotel
  location_type|string|type of location
  state|string|state where the hotel is located
  city_code|string|city code of the hotel

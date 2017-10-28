@@ -5,6 +5,7 @@ The scope used for authentication - <em>properties.read</em>
 
 
 The hotels API allows you to get the list of hotels, show details of a specific hotel and every thing associated to it. This API would also return details like directons to the hotel, website of the hotel and some other basic information about the hotel that might interest the user. 
+
 ## Get list of hotels
 
 
@@ -89,10 +90,12 @@ name | string | name of the hotel
 currency_code| string| code peculiar to the type of currency
 minrate| integer |the minimum rate
 maxrate| integer | the maximum rate
-is_bookable|integer|the number of booking available
+is_bookable|integer|if the hotel
 property_type|string|the type of property
 rating|string|rating of the hotel
 driving_instructions|string|directions to the place
+min_rate|integer|minimum rate of hotel
+max_rate|integer|maximum rate of hotel
 
 ## Show hotel information
 

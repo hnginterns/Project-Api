@@ -94,6 +94,7 @@ try {
                         "updated_at": null,
                         "deleted_at": null
                     },
+                    {
               "extra_info": {
                     "provider": "hotelsng",
                     "payment_type": "post-payment"
@@ -126,9 +127,7 @@ try {
                             "room_id": "388750"
                         }
                     }
-                ],
-                "utm_info": null
-            }...
+                
 
 ```
 This endpoint Fetches booking details for a specific booking.
