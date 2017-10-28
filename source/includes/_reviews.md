@@ -42,14 +42,12 @@ try {
     {  
       "id":3555,
       "property_id":"43864",
-      "name":"bimbo",
+      "name":"John Doe",
       "title":"okay",
       "comment":"I enjoyed my stay, the service was very good and the rooms were quite comfortable.",
       "overall_rating":"2.00",
       "is_published":"1",
       "created_at":"2014-12-02 04:08:38",
-      "updated_at":"2016-04-07 11:24:16",
-      "published_at":"2014-12-02 04:08:38",
       "review_score":[  
         {  
           "id":3236,
@@ -68,20 +66,8 @@ try {
           "review_id":"3555",
           "criterion_id":"2",
           "score":"2",          
-        },
-        {  
-          "id":36497,
-          "review_id":"3555",
-          "criterion_id":"3",
-          "score":"2",
-        },
-        {  
-          "id":47584,
-          "review_id":"3555",
-          "criterion_id":"4",
-          "score":"2",
-        }
-      ],
+        }        
+      ]
       "review_tag":[  
 
       ],
