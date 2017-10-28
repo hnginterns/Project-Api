@@ -1,8 +1,11 @@
 # Facilities
-Access to All reviews Related Things - List of Scopes to be used in Authorization<br>
+The facilities API shows the facilities a hotel has, like a restaurant, as well as images of the faciility.
+
+
+List of Scopes to be used in Authorization<br>
 <em> Facilities.read</em>
 
-The facilities API shows the facilities a hotel has, like a restaurant, as well as images of the faciility. Only the admin can access other features of this API. The scopes available to the normal user is read.
+
 ## Show facilities for a hotel
 
 
@@ -37,10 +40,9 @@ try {
   "message":"Object facilities",
   "data":[  
     {  
-      "id":1967,
+      "id":,
       "object_id":"25449",
       "facility_type_id":"100",
-      "facility_type_count":null,
       "object_type":"hotel",
       "created_at":"2017-01-22 19:54:01",
       "updated_at":null,
@@ -48,10 +50,9 @@ try {
       "img_url":"restaurant.png"
     },
     {  
-      "id":1968,
+      "id":,
       "object_id":"25449",
       "facility_type_id":"101",
-      "facility_type_count":null,
       "object_type":"hotel",
       "created_at":"2017-01-22 19:54:01",
       "updated_at":null,
@@ -62,7 +63,6 @@ try {
       "id":1969,
       "object_id":"25449",
       "facility_type_id":"105",
-      "facility_type_count":null,
       "object_type":"hotel",
       "created_at":"2017-01-22 19:54:01",
       "updated_at":null,
@@ -86,7 +86,7 @@ This endpoint shows the facilities available for a specific hotel.
 Parameter | Type | Description
 --------- | ------- | -----------
 hotel_id | Number | id of the Hotel
-access_token | String | Your access token
+access_token | String | Your generated access token
 
 
 
@@ -94,10 +94,10 @@ access_token | String | Your access token
 
 Attribute | Type | Description
 --------- | ------- | -----------
-        id| integer | Customer user-supplied webhook identifier.
+        id| integer | Customer user-supplied webhook identifier
 object_id | integer | Id of the object supplied
 facility_type_id| integer| Id of the facility
-  object_type| string |type of object supplied
- facility_name| string | name of facility supplied
+object_type| string | Type of object supplied
+facility_name| string | name of facility supplied
 img_url | string | link to the image of facility
 

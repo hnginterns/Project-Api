@@ -1,10 +1,6 @@
 # Rates
 Access to all Rates Flag <br>
-The scope used for authentication: <em>rates.read</em>
-
-<br>
-
-
+The scope used for authentication: <em>rates.read</em><br>
 The Rate API returns the rates at which rooms go for, rate flags, rate Ids, multiple flag rates and it also gives the admin some certain priviledges.
 
 
