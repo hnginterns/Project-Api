@@ -3,10 +3,6 @@ Access to all Hotel related information <br>
 The scope used for authentication - <em>`properties.read`</em>
 
 
-
-The hotels API allows you to get the list of hotels, show details of a specific hotel and every thing associated to it. This API would also return details like directons to the hotel, website of the hotel and some other basic information about the hotel that might interest the user. 
-
-
 The hotels endpoints allows you to get the list of hotels, show details of a specific hotel and every thing associated to it. This endpoint would also return details like; directions to the hotel, website of the hotel and some other basic information about the hotel that might interest the user. 
 
 ## Get list of hotels
@@ -60,6 +56,24 @@ try {
         "driving_instructions": "From jane street, Zone...",
      
     },
+    {
+        "id": 22200,
+        "name": "Tom-guest-house-abuja",
+        "description": "TOm guest house consist...",
+        "property_type_id": 1,
+        "website": null,
+        "currency_code": "NGN",
+        "minrate": 0,
+        "maxrate": 0,
+        "is_bookable": 1,
+        "property_type": "hotel",
+        "number_of_rooms": 10,
+        "policy": null,
+        "rating": 3,
+        "payment_type": "all",
+        "driving_instructions": "From market street, Zone...",
+     
+    }
    ]
   }
 
@@ -86,17 +100,11 @@ Attribute | Type | Description
 name | string | name of the hotel
 description | String | The information about the hotel, terms and conditions , and FAQ.
 currency_code| string| code peculiar to the type of currency
-minrate| integer |the minimum rate
-maxrate| integer | the maximum rate
-is_bookable|integer|if the hotel
-property_type|string|the type of property
-rating|string|rating of the hotel
-driving_instructions|string|directions to the place
 min_rate|integer|minimum rate of hotel
 max_rate|integer|maximum rate of hotel
 is_bookable|boolean| the value return `1`, if there is any available room for booking.
 property_type|string|the type of property(e.g `hotel`)
-rating| string |the average rating of the property by guests, the maximum value is 10.
+rating | string |the average rating of the property by guests, the maximum value is 10.
 payment_type | string | The available payment option.
 driving_instructions | string | directions to the place
 
@@ -428,7 +436,7 @@ object_id | integer | Id of the object supplied
 facilities |  object | Detailed information about the facilities in the hotel.
 facility_type_id| integer| Id of the facility
 object_type| string | Type of object supplied
-reviews | object | All reviews made by guests about the hotel. it encomprises  guests name, comments, overall rating and email address of commenter. 
+reviews | object | All reviews made by guests about the hotel. it encomprises  guests name, comments, overall rating and email address of guest. 
 comment| string | comment of the reviewer
 overall_rating | integer | The overall rating of the hotel by the guest.
 review_id | integer | Id of the review

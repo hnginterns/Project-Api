@@ -87,8 +87,8 @@ access_token | String | Generated access token from Oauth2 developer credentials
 
 Attribute | Type | Description
 --------- | ------- | -----------
-room_id | integer | Id of the room
-name| string| Name of the room
-property_id| integer |Id of the property
+room_id | integer | Id of the room in a particular hotel
+name| string| Name of the room in a particular hotel
+property_id| integer |Id of the hotel
 description| string | Description of the room type
 payment_type| string | Type of payment method
