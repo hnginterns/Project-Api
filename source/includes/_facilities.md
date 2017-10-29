@@ -44,8 +44,6 @@ try {
       "object_id":"25449",
       "facility_type_id":"100",
       "object_type":"hotel",
-      "created_at":"2017-01-22 19:54:01",
-      "updated_at":null,
       "facility_name":"Restaurant(s) ",
       "img_url":"restaurant.png"
     },
@@ -54,8 +52,6 @@ try {
       "object_id":"25449",
       "facility_type_id":"101",
       "object_type":"hotel",
-      "created_at":"2017-01-22 19:54:01",
-      "updated_at":null,
       "facility_name":"Bar\/Lounge",
       "img_url":"bar.png"
     },
@@ -64,8 +60,6 @@ try {
       "object_id":"25449",
       "facility_type_id":"105",
       "object_type":"hotel",
-      "created_at":"2017-01-22 19:54:01",
-      "updated_at":null,
       "facility_name":"Wireless Internet",
       "img_url":"wireless.png"
     }

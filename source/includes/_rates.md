@@ -77,7 +77,7 @@ Attribute | Type | Description
 --------- | ------- | -----------
 id| integer | Customer user-supplied webhook identifier.
 property_id | integer | Id of the property supplied
-room_id| Integer| ID of a particular room
+room_id| Integer| Id of a particular room
   rate_tag_id| Integer | ID of the tag rate
  rack_price| Integer | Price of the rack
 buying_price | Integer | Buying price
@@ -207,7 +207,7 @@ id | Interger | Id to return all flag ratings
 Attribute | Type | Description
 --------- | ------- | -----------
 flag_name| String | Name of the flag rate
-Id| Integer| Id of the flag
+id| Integer| Id of the flag
 
 
 ##Fetch multiple flag rates by ID
@@ -277,13 +277,13 @@ rate_ids | String| ID of rates.Multiple ids can be use , using the delimiter ','
 
 Attribute | Type | Description
 --------- | ------- | -----------
-Id| Integer | Customer user-supplied webhook identifier.
+id| Integer | Customer user-supplied webhook identifier.
 property_id | Integer | Id of the Property supplied
 room_id| Integer| Id of a particular room
   rate_tag_id| Integer | Id of the tag rate
  rack_price| Integer | Price of the rack
 buying_price | Integer | Buying price
-Selling_price | Integer | Selling price
+selling_price | Integer | Selling price
 priority| Integer| Priority of the rate flag
 
 
