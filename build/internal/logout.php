@@ -9,7 +9,7 @@ session_destroy();
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Error</title>
+  <title>Logged out</title>
   <?php include 'stylesheets/css.html'; ?>
 </head>
 
