@@ -59,14 +59,12 @@ try {
             "property_type_id": 1,
             "activities_id": "2,11,16",
             "min_rate_ngn": 6614,
-            "property_ref_code": "19831",
             "likes": 10,
             "country_code": "NG",
             "property_type": "Hotel",
             "id": 18789,
             "property_name": "Motel Bbisima Limited",
             "city": "Bonin",
-            "deal_status": 5,
             "weight": 31.240808,
             "area": "",
             "facility_type_icons": "swimming.png,restaurant.png,bar.png,electricity.png,wireless.png,laundry.png,cabletv.png,security.png,,Wardrobe,desk.png,plasma.png,star.png",
@@ -83,7 +81,6 @@ try {
             "description": "<p>Offering exceptional service at an affordable rate, Motel Bbbisima Limited is...</p>",
             "max_rate": 22680,
             "road_id": 0,
-            "agency_id": "1",
             "currency_code": "NGN",
             "facility_type_names": "Swimming Pool,Restaurant(s) ,Bar/Lounge,24 Electricity,Wi-fi Internet",
             "min_rate": 6614,
@@ -136,26 +133,23 @@ Attribute | Type | Description
 --------- | ------- | -----------
 area_id|integer|area Id of hotels searched for
 city_id|integer|city Id of hotels searched for
-city_master_id|integer|city master Id of hotels searched for
+city_master_id|integer|Id of the hotel in the city master plan.
 property_type_id|integer|Id of the property type
-activities_id|string|activities Id of the hotlel
+activities_id|string|activities Id of the hotel
 min_rate_ngn|integer|minimum rate in naira
  country | string| name of country
  continent|string|The continent the hotel is in
  continent_id|string|Id of the continent the hotel is located in
  longitude|float|Longitude of the hotel
  latitude|float|Latitude of the hotel
- location_type|string|Type of location
  state|string|state where the hotel is located
  city_code|string|city code of the hotel
  country_code|string|country code of the hotel
  number_properties|integer|number of counted properties
  location_id|integer|the id of the location when counted
- deal_status|integer|status of hotel deal
  id|integer|customer web hook identifier
  state_code|string|the identifying code of the state
  facility_type_names|string|names of the facility types available
- property_ref_code|integer|the ref code unique to the property
  provider|string|provider of the hotel finder services
  room_id|integer|Id unique to the room
  facility_type_ids|integer string|Ids peculiar to the facility type
@@ -208,18 +202,15 @@ try {
             "property_type_id": 1,
             "activities_id": "",
             "min_rate_ngn": 10000,
-            "property_ref_code": "18456",
             "likes": 34,
             "country_code": "NG",
             "property_type": "Hotel",
             "id": 18456,
             "property_name": "People city resort",
             "city": "Port Harcourt",
-            "deal_status": 5,
             "weight": 32.346737,
             "area": "",
             "facility_type_icons": "parking.png,restaurant.png,cabletv.png,refridgerator.png,bar.png,electricity.png,parking_letter.png...",
-            "agency": "hng",
             "country_id": 154,
             "continent": "Africa",
             "state": "Rivers",
@@ -232,14 +223,12 @@ try {
             "description": "<p><span id=\"\" style=\"font-size: 13px; font-family: arial,sans,sans-serif;\" data-sheets-value=\"{\" data-sheets-userformat=\"{\">people city resort is a top hotel located in <strong>39 Tommy Street by la la Road, GRA, Port Harcourt.</strong>...",
             "max_rate": 100000,
             "road_id": 0,
-            "agency_id": "1",
             "currency_code": "NGN",
             "facility_type_names": "Adequate Parking,Restaurant(s) ,DSTV,Refrigerator,Bar,24 hours Electricity,Parking Garage,POS,Laundry,Security Guard,Event Hall,Restaurant(s) CCTV camera...",
             "min_rate": 10000,
             "address": "39 Tombia Street by La la Road, Port Harcourt",
             "review_count": 26,
             "state_code": "Rivers",
-            "bookings_count": 366,
             "star_rating": 0,
             "continent_id": 1,
             "country": "Nigeria",
@@ -299,7 +288,7 @@ Attribute | Type | Description
 --------- | ------- | -----------
 area_id|integer|area Id of hotels searched for
 city_id|integer|city Id of hotels searched for
-city_master_id|integer|city master Id of hotels searched for
+city_master_id|integer|Id of the hotel in the city master plan.
 property_type_id|integer|Id of the property type
 activities_id|string|activities Id of the hotlel
 min_rate_ngn|integer|minimum rate in naira
@@ -308,7 +297,6 @@ min_rate_ngn|integer|minimum rate in naira
  continent_id|string|Id of the continent the hotel is located in
  longitude|float|Longitude of the hotel
  latitude|float|Latitude of the hotel
- location_type|string|Type of location
  state|string|state where the hotel is located
  city_code|string|city code of the hotel
  likes|integer|number of likes for the hotel
@@ -322,7 +310,6 @@ min_rate_ngn|integer|minimum rate in naira
  url|string|url to image of the hotel searched
  state_code|string|the identifying code of the state
  facility_type_names|string|names of the facility types available
- property_ref_code|integer|the ref code unique to the property
  provider|string|provider of the hotel finder services
  room_id|integer|Id unique to the room
  facility_type_ids|integer string|Ids peculiar to the facility type

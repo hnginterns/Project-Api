@@ -103,3 +103,4 @@ comment| string | comment of the reviewer
 overall_rating | integer | General rating of the hotel
 review_id | integer | Id of the review
 score | integer | Score of the review
+is_published|string|if the review is published

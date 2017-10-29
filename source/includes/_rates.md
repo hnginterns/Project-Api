@@ -45,13 +45,6 @@ try {
     "buying_price": 49500,
     "selling_price": 55000,
     "priority": 1,
-    "active_mon": 1,
-    "active_tue": 1,
-    "active_wed": 1,
-    "active_thu": 1,
-    "active_fri": 1,
-    "active_sat": 1,
-    "active_sun": 1
     }
 }
 
@@ -150,7 +143,7 @@ Attribute | Type | Description
 
 
 
-##Get flags by rate Id
+##Get flags by rate ID
 
 > Example request:
 

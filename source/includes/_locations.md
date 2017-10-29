@@ -1,4 +1,4 @@
-# Location
+# Locations
 Access to all location related things <br> 
 The scopes used in authentication is <em>locations.read</em>
 

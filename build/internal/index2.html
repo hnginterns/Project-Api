@@ -1,6 +1,4 @@
-<?php
 
-?>
 <!doctype html>
 <html>
   <head>
@@ -313,13 +311,13 @@
               </ul>
           </li>
           <li>
-            <a href="#location" class="toc-h1 toc-link" data-title="Location">Location</a>
+            <a href="#locations" class="toc-h1 toc-link" data-title="Locations">Locations</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#show-list-of-countries" class="toc-h2 toc-link" data-title="Location">Show list of countries</a>
+                    <a href="#show-list-of-countries" class="toc-h2 toc-link" data-title="Locations">Show list of countries</a>
                   </li>
                   <li>
-                    <a href="#show-list-of-properties-around-br-a-location" class="toc-h2 toc-link" data-title="Location">Show list of properties around <br>a location</a>
+                    <a href="#show-list-of-properties-around-br-a-location" class="toc-h2 toc-link" data-title="Locations">Show list of properties around <br>a location</a>
                   </li>
               </ul>
           </li>
@@ -358,7 +356,7 @@
             <a href="#reports" class="toc-h1 toc-link" data-title="Reports">Reports</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-bookings-that-have-been-reviewed-for-a-particular" class="toc-h2 toc-link" data-title="Reports">Get Bookings that have Been Reviewed for a particular</a>
+                    <a href="#get-bookings-that-have-been-reviewed-for-a-particular-period" class="toc-h2 toc-link" data-title="Reports">Get Bookings that have Been Reviewed for a particular period</a>
                   </li>
                   <li>
                     <a href="#count-the-number-of-bookings" class="toc-h2 toc-link" data-title="Reports">Count the Number of Bookings</a>
@@ -899,7 +897,7 @@ property_type : <br>
 <td>True</td>
 </tr>
 <tr>
-<td>property-type</td>
+<td>property_type</td>
 <td>String</td>
 <td>Type of property to(e.g<em><code>hotel</code></em>) request</td>
 <td>True</td>
@@ -920,19 +918,189 @@ property_type : <br>
 </tr>
 </thead><tbody>
 <tr>
-<td>Properties</td>
-<td>String</td>
-<td>Properties around the locale</td>
+<td>area_id</td>
+<td>integer</td>
+<td>area Id of hotels searched for</td>
 </tr>
 <tr>
-<td>Message</td>
-<td>String</td>
-<td>Message about property</td>
+<td>city_id</td>
+<td>integer</td>
+<td>city Id of hotels searched for</td>
 </tr>
 <tr>
-<td>Name</td>
-<td>String</td>
-<td>Name of owner</td>
+<td>city_master_id</td>
+<td>integer</td>
+<td>city master Id of hotels searched for</td>
+</tr>
+<tr>
+<td>property_type_id</td>
+<td>integer</td>
+<td>Id of the property type</td>
+</tr>
+<tr>
+<td>activities_id</td>
+<td>string</td>
+<td>activities Id of the hotlel</td>
+</tr>
+<tr>
+<td>min_rate_ngn</td>
+<td>integer</td>
+<td>minimum rate in naira</td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>name of country</td>
+</tr>
+<tr>
+<td>continent</td>
+<td>string</td>
+<td>The continent the hotel is in</td>
+</tr>
+<tr>
+<td>continent_id</td>
+<td>string</td>
+<td>Id of the continent the hotel is located in</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>float</td>
+<td>Longitude of the hotel</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>float</td>
+<td>Latitude of the hotel</td>
+</tr>
+<tr>
+<td>location_type</td>
+<td>string</td>
+<td>Type of location</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td>state where the hotel is located</td>
+</tr>
+<tr>
+<td>city_code</td>
+<td>string</td>
+<td>city code of the hotel</td>
+</tr>
+<tr>
+<td>likes</td>
+<td>integer</td>
+<td>number of likes for the hotel</td>
+</tr>
+<tr>
+<td>country_code</td>
+<td>string</td>
+<td>country code of the hotel</td>
+</tr>
+<tr>
+<td>number_properties</td>
+<td>integer</td>
+<td>number of counted properties</td>
+</tr>
+<tr>
+<td>location_id</td>
+<td>integer</td>
+<td>the id of the location where for hotels searched</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>customer web hook identifier</td>
+</tr>
+<tr>
+<td>images</td>
+<td>array</td>
+<td>array of images related details for the hotel</td>
+</tr>
+<tr>
+<td>object_id</td>
+<td>integer</td>
+<td>Id of the image</td>
+</tr>
+<tr>
+<td>application_id</td>
+<td>string</td>
+<td>application Id of the image</td>
+</tr>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>url to image of the hotel searched</td>
+</tr>
+<tr>
+<td>state_code</td>
+<td>string</td>
+<td>the identifying code of the state</td>
+</tr>
+<tr>
+<td>facility_type_names</td>
+<td>string</td>
+<td>names of the facility types available</td>
+</tr>
+<tr>
+<td>property_ref_code</td>
+<td>integer</td>
+<td>the ref code unique to the property</td>
+</tr>
+<tr>
+<td>provider</td>
+<td>string</td>
+<td>provider of the hotel finder services</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>integer</td>
+<td>Id unique to the room</td>
+</tr>
+<tr>
+<td>facility_type_ids</td>
+<td>integer string</td>
+<td>Ids peculiar to the facility type</td>
+</tr>
+<tr>
+<td>facility_type_icons</td>
+<td>string</td>
+<td>Icons relating to the type of facilities available</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>integer</td>
+<td>rating of the hotel</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td>city the hotel is situated</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>description of hotel</td>
+</tr>
+<tr>
+<td>star_rating</td>
+<td>integer</td>
+<td>star rating of hotel</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>priority of the image for the hotel</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>status of the hotel</td>
+</tr>
+<tr>
+<td>property_url</td>
+<td>string</td>
+<td>url for the property searched</td>
 </tr>
 </tbody></table>
 <h2 id='get-hotel-count-in-a-location'>Get hotel count in a location</h2>
@@ -1104,12 +1272,11 @@ property_type : <br>
 </tr>
 </tbody></table>
 <h1 id='bookings'>Bookings</h1>
-<p>Access to all bookings related things - List of Scopes to be used in Authorization:<br> </p>
-
-<p>Bookings.read,<br>
-Bookings.create,<br>
-Bookings.update.<br>
-Bookings.delete<br></p>
+<p>Access to all bookings related things - List of Scopes to be used in Authorization:<br> 
+<em>Bookings.read</em><br>
+<em>Bookings.create</em><br>
+<em>Bookings.update</em><br>
+<em>Bookings.delete</em><br></p>
 
 <p>The booking API is able to get all bookings, details of specific bookings, total bookings made, create a new booking for a specific hotel. Most of the features of this API are accessible only by an admin. The available scopes are read, create, update and delete.</p>
 <h2 id='get-all-bookings'>Get all Bookings</h2>
@@ -1385,6 +1552,11 @@ Bookings.delete<br></p>
 <td>booking_id</td>
 <td>integer</td>
 <td>Id peculiar to the booking</td>
+</tr>
+<tr>
+<td>property_contacts</td>
+<td>array</td>
+<td>array of contacts relating to a booking</td>
 </tr>
 </tbody></table>
 <h2 id='get-booking-details-of-a-specific-booking'>Get Booking Details of a Specific Booking</h2>
@@ -2192,25 +2364,105 @@ Bookings.delete<br></p>
 <td></td>
 </tr>
 </tbody></table>
-<h3 id='example-response'>Example Response</h3>
-<p>checkin|string date|date of check in
-checkout|string date|date of check out
-title|string|title of guest
-fname|string|first name of guest
-lname|string|last name of guest
-email|string|email address of guest
-additional_info|string|additional information about guest
-phone|integer|phoone number of guest
-rooms|array|array of items pertaining to rooms
-currency_code|string|currency code pertaining to the guest
-ip_address|string|ip address of guest
-address|string|address of the guest
-ptype|string|the type of property
-property|integer|id of property
-additional_info|string|additional info that the guest may provide
-payment_type|string|type of payment in use
-ga_client_id|integer
-provider|string|provider of the services</p>
+<h3 id='response-body-4'>Response Body</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>checkin</td>
+<td>string date</td>
+<td>date of check in</td>
+</tr>
+<tr>
+<td>checkout</td>
+<td>string date</td>
+<td>date of check out</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>title of guest</td>
+</tr>
+<tr>
+<td>fname</td>
+<td>string</td>
+<td>first name of guest</td>
+</tr>
+<tr>
+<td>lname</td>
+<td>string</td>
+<td>last name of guest</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>email address of guest</td>
+</tr>
+<tr>
+<td>additional_info</td>
+<td>string</td>
+<td>additional information about guest</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>integer</td>
+<td>phoone number of guest</td>
+</tr>
+<tr>
+<td>rooms</td>
+<td>array</td>
+<td>array of items pertaining to rooms</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>string</td>
+<td>currency code pertaining to the guest</td>
+</tr>
+<tr>
+<td>ip_address</td>
+<td>string</td>
+<td>ip address of guest</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>address of the guest</td>
+</tr>
+<tr>
+<td>ptype</td>
+<td>string</td>
+<td>the type of property</td>
+</tr>
+<tr>
+<td>property</td>
+<td>integer</td>
+<td>id of property</td>
+</tr>
+<tr>
+<td>additional_info</td>
+<td>string</td>
+<td>additional info that the guest may provide</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>string</td>
+<td>type of payment in use</td>
+</tr>
+<tr>
+<td>ga_client_id</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>provider</td>
+<td>string</td>
+<td>provider of the services</td>
+</tr>
+</tbody></table>
 <h2 id='edit-bookings'>Edit bookings</h2>
 <blockquote>
 <p>Example request:</p>
@@ -2334,7 +2586,7 @@ provider|string|provider of the services</p>
 <td>token issued by agency to guest</td>
 </tr>
 </tbody></table>
-<h3 id='response-body-4'>Response Body</h3>
+<h3 id='response-body-5'>Response Body</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -2365,10 +2617,10 @@ provider|string|provider of the services</p>
 </tbody></table>
 <h1 id='hotels'>Hotels</h1>
 <p>Access to all Hotel related things - List of Scopes to be used in Authorization: <br>
-properties.read,<br>
-properties.create,<br>
-properties.delete ,<br>
-properties.update<br></p>
+<em>properties.read</em><br>
+<em>properties.create</em><br>
+<em>properties.delete</em><br>
+<em>properties.update</em><br></p>
 
 <p>The hotels API allows you to get the list of hotels, show details for a hotel and every thing associated to it. This API vould also return details like directons to a hotel, website of the hotel and some other basic information about the hotel the user is looking for. The scopes unique to the Admin are create, delete, read and update.</p>
 <h2 id='get-list-of-hotels'>Get list of hotels</h2>
@@ -2414,7 +2666,6 @@ properties.update<br></p>
         </span><span class="s2">"maxrate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"property_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"number_of_rooms"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"star_rating"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2423,13 +2674,7 @@ properties.update<br></p>
         </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"meal_plan"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"From Wuse Market, Zone 4, Abuja Head west on Wuse Market Rd toward Kashim Ibrahim Way 72 m Turn right at Leilas Mobile Massage onto Kashim Ibrahim Way  Pass by Sterling Bank Abuja Main (on the right in 400 m) 1.3 km Turn right onto Ahmadu Bello Way  Drive along Eden Place Apartments (on the right for 190 m) 800 m Turn left onto Ademola Adetokunbo Cres 140 m Turn right at Hair Studio onto Cairo Cres/Cairo Street  Pass by Ecobank (on the left) 350 m Turn left onto Cairo Cres/Cairo Street/Kampala St/Kampala Cres Destination will be on the right"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000-redeemers-cherith-guest-house-abuja"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"is_priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"boost"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-        </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -2488,7 +2733,7 @@ properties.update<br></p>
 <tr>
 <td>is_bookable</td>
 <td>integer</td>
-<td>the number of booking available</td>
+<td>the value returns <code>1</code>, if there is any available room for booking</td>
 </tr>
 <tr>
 <td>property_type</td>
@@ -2541,8 +2786,6 @@ properties.update<br></p>
         </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://lekkioxfordhotels.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"added_by_admin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"payment_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LANDMARK:</span><span class="se">\r\n</span><span class="s2">Lekki Phase 1 </span><span class="se">\r\n</span><span class="s2">Take Emmanuel Abimbola Cole St and Freedom Way to Lagos-Epe Express Rd/Lekki - Epe Express Road in Lekki 7 min. Follow Lekki - Epe Express Road to Akanni Ajiran St</span><span class="se">\r\n</span><span class="s2">9 min.Turn right at Philip Stores onto Akanni Ajiran St. Pass by Sterling Bank (on the right)</span><span class="se">\r\n</span><span class="s2">Destination will be on the left"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"minrate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8000.00000"</span><span class="p">,</span><span class="w">
@@ -2714,7 +2957,6 @@ properties.update<br></p>
                 </span><span class="s2">"maxrate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35000.00000"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"checkin_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"checkout_time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"is_bookable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"property_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"number_of_rooms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"star_rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
@@ -2724,17 +2966,14 @@ properties.update<br></p>
                 </span><span class="s2">"meal_plan"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"driving_instructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LANDMARK:</span><span class="se">\r\n</span><span class="s2">Lekki Phase 1 </span><span class="se">\r\n</span><span class="s2">Take Emmanuel Abimbola Cole St and Freedom Way to Lagos-Epe Express Rd/Lekki - Epe Express Road in Lekki 7 min. Follow Lekki - Epe Express Road to Akanni Ajiran St</span><span class="se">\r\n</span><span class="s2">9 min.Turn right at Philip Stores onto Akanni Ajiran St. Pass by Sterling Bank (on the right)</span><span class="se">\r\n</span><span class="s2">Destination will be on the left"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"unique_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449-lekki-oxford-hotels-lagos"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"reference"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="p">{</span><span class="w">
                         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3499</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"property_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"agent_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a965ed6e-c292-4263-b4de-d01057984441"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"property_ref_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25449"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"agency"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
                             </span><span class="s2">"agency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotelsng"</span><span class="p">,</span><span class="w">
-                            </span><span class="s2">"agency_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a965ed6e-c292-4263-b4de-d01057984441"</span><span class="w">
                         </span><span class="p">}</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                 </span><span class="p">],</span><span class="w">
@@ -2748,9 +2987,6 @@ properties.update<br></p>
                     </span><span class="s2">"deal_on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-31 12:09:56"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"deal_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"deal_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://panel.hotels.ng/media/deals/deal25449.pdf"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
@@ -2799,9 +3035,6 @@ properties.update<br></p>
                 </span><span class="s2">"airport_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">196</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lekki"</span><span class="p">,</span><span class="w">
@@ -2811,10 +3044,6 @@ properties.update<br></p>
                     </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NG"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"is_orphan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">154</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nigeria"</span><span class="p">,</span><span class="w">
@@ -2822,15 +3051,11 @@ properties.update<br></p>
                         </span><span class="s2">"continent_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00000"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00000"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"continent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
                             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Africa"</span><span class="p">,</span><span class="w">
                             </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
                             </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
-                            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
                         </span><span class="p">}</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                 </span><span class="p">},</span><span class="w">
@@ -2844,9 +3069,7 @@ properties.update<br></p>
                     </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.54894"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.11660"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NG"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-16 12:23:29"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">""</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">154</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nigeria"</span><span class="p">,</span><span class="w">
@@ -2854,15 +3077,11 @@ properties.update<br></p>
                         </span><span class="s2">"continent_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00000"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00000"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"continent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
                             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Africa"</span><span class="p">,</span><span class="w">
                             </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
                             </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
-                            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
                         </span><span class="p">}</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                 </span><span class="p">}</span><span class="w">
@@ -2879,9 +3098,6 @@ properties.update<br></p>
                 </span><span class="s2">"deal_on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-31 12:09:56"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"deal_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"deal_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://panel.hotels.ng/media/deals/deal25449.pdf"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"facilities"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2892,15 +3108,12 @@ properties.update<br></p>
                     </span><span class="s2">"facility_type_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"facility_type_count"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hotel"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-22 20:54:01"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"facility_type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"facility_category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Restaurant(s) "</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"img_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"restaurant.png"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-04 15:48:12"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">}</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                   </span><span class="p">]</span><span class="w">
                 </span><span class="p">},</span><span class="w">
@@ -2919,11 +3132,6 @@ properties.update<br></p>
                     </span><span class="s2">"location_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I  didn't enjoy my stay at this hotel at all. I couldn't get water to use when I needed it and even when I got it, it was all brownish. The room was also quite dirty with cockroaches popping out of different corners in the room. Not a good one at all."</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"overall_rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.80"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"is_published"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-23 09:51:32"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-23 09:52:08"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"published_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-23 09:52:08"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"scores"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                         </span><span class="p">{</span><span class="w">
                             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">71001</span><span class="p">,</span><span class="w">
@@ -2947,9 +3155,6 @@ properties.update<br></p>
                     </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My stay at the hotel was horrible. There was no water in the closet and they had to fetch water in a bucket for me. The power supply at the hotel was also very bad and the generator was not switched on. I had to leave the hotel for a friend's place having spent few hours there."</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"overall_rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.00"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"is_published"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-29 11:53:13"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-19 14:33:50"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"published_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-19 14:33:50"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"scores"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                         </span><span class="p">{</span><span class="w">
@@ -3242,33 +3447,6 @@ properties.update<br></p>
       </span><span class="s2">"rating_minus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"role_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reservation"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42266</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08072091861"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rating_plus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rating_minus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"role_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reservation"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42271</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08083411223"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rating_plus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rating_minus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"role_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reservation"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42276</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08100392514"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rating_plus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"rating_minus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"role_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reservation"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -3291,18 +3469,50 @@ properties.update<br></p>
 </tr>
 </tbody></table>
 <h3 id='response-body-5'>Response Body</h3>
-<p>id | String | Id of the property owner
-type|string|means of contact with the property owner
-notes|string|body of notes left by the owner
-rating_plus|integer|
-rating_minus|integer
-role_name|string|role of the property</p>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Id of the property owner</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>means of contact with the property owner</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>string</td>
+<td>body of notes left by the owner</td>
+</tr>
+<tr>
+<td>rating_plus</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>rating_minus</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>role_name</td>
+<td>string</td>
+<td>role of the property</td>
+</tr>
+</tbody></table>
 <h1 id='images'>Images</h1>
 <p>Access to all Reports Related Things - List of Scopes to be used in Authorization:<br>
-Images.read,<br>
-Images.create,<br>
-Images.delete,<br>
-Images.update<br></p>
+<em>Images.read</em><br>
+<em>Images.create</em><br>
+<em>Images.delete</em><br>
+<em>Images.update</em><br></p>
 
 <p>The Images endpoint returns images for a particular hotel. Images could be small, medium or big depending on the preference of the user. The scopes available to be the admin are the read, create, delete and update scopes.</p>
 <h2 id='show-images-for-a-particular-hotel'>Show images for a particular hotel</h2>
@@ -3436,10 +3646,10 @@ size:<br>
 </tbody></table>
 <h1 id='facilities'>Facilities</h1>
 <p>Access to All reviews Related Things - List of Scopes to be used in Authorization:<br>
-    Facilities.read,<br>
-    Facilities.create,<br>
-    Facilities.delete, <br>
-    Facilities.update<br></p>
+    <em>Facilities.read</em><br>
+    <em>Facilities.create</em><br>
+    <em>Facilities.delete</em><br>
+    <em>Facilities.update</em><br></p>
 
 <p>The facilities API shows the facilities a hotel has like restaurant, as well as images of the faciilty, the API could also get bank details of a specific hotel like bank, name account name and account number.<br>
 Only the admin can access the bank details of this API. The scopes available are read, create, delete and update.</p>
@@ -3574,11 +3784,11 @@ Only the admin can access the bank details of this API. The scopes available are
 </tr>
 </tbody></table>
 <h1 id='reviews'>Reviews</h1>
-<p>Acess to all Reviews Related Things - List of Scopes to be used in Authorization: <br>
-Reviews.read,<br>
-Reviews.create,<br>
-Reviews.delete,<br>
-Reviews.update,<br></p>
+<p>Access to all Reviews Related Things - List of Scopes to be used in Authorization: <br>
+<em>Reviews.read</em><br>
+<em>Reviews.create</em><br>
+<em>Reviews.delete</em><br>
+<em>Reviews.update</em><br></p>
 
 <p>The Reviews API returns all reviews made by users that must have patronized a hotel, comments, ratings by the user of the hotels as well as ratings of the hotel.  The admin has privileges of adding a review for a specific hotel. The scopes available to the admin are read, create, delete, update.</p>
 <h2 id='show-reviews-for-a-specific-hotel'>Show reviews for a specific hotel</h2>
@@ -3937,12 +4147,12 @@ Reviews.update,<br></p>
 <td>body of comment</td>
 </tr>
 </tbody></table>
-<h1 id='location'>Location</h1>
+<h1 id='locations'>Locations</h1>
 <p>Access to all Location Related Things - List of Scopes to be used in Authorization: <br>
-locations.read,<br>
-locations.create,<br>
-locations.delete,<br>
-locations.update,<br></p>
+<em>locations.read</em><br>
+<em>locations.create</em><br>
+<em>locations.delete</em><br>
+<em>locations.update</em><br></p>
 
 <p>The location API shows details about a location regarding a hotel, addresses, the latitude
 and longitude, the continent the hotel is, properties around the hotel, It can viewed by all users
@@ -4267,9 +4477,10 @@ create and delete scopes peculiar to the admin user.</p>
 </tbody></table>
 <h1 id='rooms'>Rooms</h1>
 <p>Access to all Rooms related things - List of Scopes to be used in Authorization: <br>
-Rooms.read,</br>
-Rooms.delete, </br>
-Rooms.update</br></p>
+<em>Rooms.read</em></br>
+<em>Rooms.create</em></br>
+<em>Rooms.delete</em></br>
+<em>Rooms.update</em></br></p>
 
 <p>The Rooms Api gives details about the rooms in a hotel, It could get rooms by Id, and also show the name of the rooms as well as the Id of the property as well as other information pertaining to rooms. The scopes available to the Admin are read, delete, update and create.</p>
 <h2 id='get-rooms-for-a-particular-hotel-based-on-hotel-id'>Get Rooms for a Particular Hotel Based on Hotel id</h2>
@@ -4390,13 +4601,18 @@ Rooms.update</br></p>
 <td>string</td>
 <td>type of payment given</td>
 </tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>a concise description of the room</td>
+</tr>
 </tbody></table>
 <h1 id='rates'>Rates</h1>
 <p>Access to all Rates Flag - List of Scopes that can be used in Authorization:<br>
-rates.read<br>
-rates.create<br>
-rates.delete<br>
-rates.update<br></p>
+<em>rates.read</em><br>
+<em>rates.create</em><br>
+<em>rates.delete</em><br>
+<em>rates.update</em><br></p>
 
 <p>The Ratings API returns the rates of at which rooms go for, rate flags, rate Ids, multiple flag rates and it also gives the admin priviledges like adding a custom rate, and getting corporate rates. This API has read,create,delete and update scopes.</p>
 <h2 id='get-details-about-a-single-rate-br-by-id'>Get details about a single rate<br>by Id</h2>
@@ -5250,16 +5466,16 @@ rates.update<br></p>
 </tbody></table>
 <h1 id='reports'>Reports</h1>
 <p>Access to all reports related things - List of Scopes to be used in Authorization:<br>
-Facilities.read,<br>
-Reports.create,<br>
-Reports.delete,<br> 
-Reports.update</p>
+<em>Facilities.read</em><br>
+<em>Reports.create</em><br>
+<em>Reports.delete</em><br> 
+<em>Reports.update</em><br></p>
 
 <p>The Reports API allows you to view the log concerning bookings that have been reviewed, count the number of
 bookings, get multiple bookings by Id with the total count as well as the range of days
 in a month in which bookings can be made. The API also allows you to create, read, delete and update
 reports.</p>
-<h2 id='get-bookings-that-have-been-reviewed-for-a-particular'>Get Bookings that have Been Reviewed for a particular</h2>
+<h2 id='get-bookings-that-have-been-reviewed-for-a-particular-period'>Get Bookings that have Been Reviewed for a particular period</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
@@ -6062,10 +6278,10 @@ The scopes to be used for authentication -  <em>bookings.read, bookings.create</
                     </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.crm.hotels.ng/media/users/12345.jpg"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxxxxYYYYYYZZZZZZZ"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"can_create"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="err">//custom</span><span class="w"> </span><span class="err">permissions</span><span class="w"> </span><span class="err">(to</span><span class="w"> </span><span class="err">add</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">role)</span><span class="w">
-                    </span><span class="s2">"can_read"</span><span class="p">:</span><span class="w">   </span><span class="kc">true</span><span class="p">,</span><span class="w">  </span><span class="err">//custom</span><span class="w"> </span><span class="err">permissions</span><span class="w"> </span><span class="err">(to</span><span class="w"> </span><span class="err">add</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">role)</span><span class="w">
-                    </span><span class="s2">"can_update"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="err">//custom</span><span class="w"> </span><span class="err">permissions</span><span class="w"> </span><span class="err">(to</span><span class="w"> </span><span class="err">add</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">role)</span><span class="w">
-                    </span><span class="s2">"can_delete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">  </span><span class="err">//custom</span><span class="w"> </span><span class="err">permissions</span><span class="w"> </span><span class="err">(to</span><span class="w"> </span><span class="err">add</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">role)</span><span class="w">
+                    </span><span class="s2">"can_create"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+                    </span><span class="s2">"can_read"</span><span class="p">:</span><span class="w">   </span><span class="kc">true</span><span class="p">,</span><span class="w">  
+                    </span><span class="s2">"can_update"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+                    </span><span class="s2">"can_delete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">  
                 </span><span class="p">},</span><span class="w">
                 </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
             </span><span class="p">}</span><span class="w">

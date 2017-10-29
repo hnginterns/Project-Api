@@ -183,7 +183,7 @@ name | string | name of the hotel
 description | String | The information about the hotel, terms and conditions , and FAQ
 status|string| the availability of the hotel
 currency_code| string| code peculiar to the type of currency
-is_bookable|integer|the value return `1`, if there is any available room for booking
+is_bookable|integer|the value returns `1`, if there is any available room for booking
 payment_type|string| the available payment option
 driving_instructions|string|directions to the place
 minrate| integer |the minimum rate
@@ -424,6 +424,13 @@ policy | string | the policy proposed by the property management
 property_type_id|integer|Id of the type of property
 property_id|integer|Id of property
 number_of_rooms | interger | the number of available rooms in the property
+review_summary|object|object of details relating to the review summary
+hotel|object|of details relating to the hotel
+website|string|website of the hotel
+location|object|of details relating to the hotel's location
+state|object|of details relating to state where the hotel is located
+facilities|object|of details relating to the facilities of the hotel
+reviews|object|of details relating to the reviews of the hotel
 avg_score | string | the average score the hotel has for a specific criterion
 avg_overall_rating | string | the overall guest score
 criterion_name | string | the name of the review criterion (e.g `cleanliness`)

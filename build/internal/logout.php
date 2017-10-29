@@ -3,13 +3,12 @@
 session_start();
 session_unset();
 session_destroy(); 
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Logged out</title>
+  <title>Error</title>
   <?php include 'stylesheets/css.html'; ?>
 </head>
 
