@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: #ffffff; /* #c1bdba */
+  background:  #373941;
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -186,7 +186,7 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #1ab188;
+  background: #1C86EE;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
