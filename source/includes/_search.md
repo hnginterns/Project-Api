@@ -141,7 +141,8 @@ search_type | String | Type of Search request(e.g <em>`property`,`location`<em>)
 query | json string | The hotel,city, state and country of search(e.g <em>`"property_name":"eni"`,</em>) | True
 
 
-###Response Body
+### Response Body
+
 Attribute | Type | Description
 --------- | ------- | -----------
 rating|float|rating of the hotel by previous guess, the maximum value is 10
@@ -156,23 +157,23 @@ country_code|string|country code of the hotel
 id|integer|customer web hook identifier
 property_name|string|the name of the property
 city|string|city the hotel is situated
- country | string| name of country
- continent|string|The continent the hotel is in
- longitude|integer|Longitude of the hotel
- latitude|integer|Latitude of the hotel
- city_code|string|city code of the hotel
- property_url|string|url unique to the hotel
- location_type|string|Type of location
- state|string|state where the hotel is located
- location_id|integer|the id of the location when counted
- state_code|string|the identifying code of the state
- facility_type_names|string|names of the facility types available
+country | string| name of country
+continent|string|The continent the hotel is in
+longitude|integer|Longitude of the hotel
+latitude|integer|Latitude of the hotel
+city_code|string|city code of the hotel
+property_url|string|url unique to the hotel
+location_type|string|Type of location
+state|string|state where the hotel is located
+location_id|integer|the id of the location when counted
+state_code|string|the identifying code of the state
+facility_type_names|string|names of the facility types available
 
 
 
 
 
-##Search for properties nearby
+## Search for properties nearby
 
 	This fetches all the properties(hotels) near a particular hotel's location 
 
