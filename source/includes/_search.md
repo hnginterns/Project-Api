@@ -126,10 +126,10 @@ try {
 
 ### HTTP Request
 
-`GET https://api.hotels.ng/search?access_token=XXXXXXXXXXXXXXX
+`GET https://api.hotels.ng/search?access_token=
 &search_type=property
-&query={"property_name":"eni"}
-&filters={"sort_by":"default","page":1,"per_page":10}`
+&query={}
+&filters={}`
 
 ### Query Parameters
 
@@ -144,26 +144,30 @@ query | json string | The hotel,city, state and country of search(e.g <em>`"prop
 ###Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
+rating|float|rating of the hotel by previous guess, the maximum value is 10
+area_id|integer|area Id of hotels searched for
+city_id|integer|city Id of hotels searched for
+city_master_id|integer|Id of the hotel in the city master plan.
+property_type_id|integer|Id of the property type
+activities_id|string|activities Id of the hotel
+min_rate_ngn|integer|minimum rate in naira
+property_ref_code|integer|the ref code unique to the property
+country_code|string|country code of the hotel
+id|integer|customer web hook identifier
+property_name|string|the name of the property
+city|string|city the hotel is situated
  country | string| name of country
  continent|string|The continent the hotel is in
  longitude|integer|Longitude of the hotel
  latitude|integer|Latitude of the hotel
+ city_code|string|city code of the hotel
+ property_url|string|url unique to the hotel
  location_type|string|Type of location
  state|string|state where the hotel is located
- city_code|string|city code of the hotel
- country_code|string|country code of the hotel
- number_properties|integer|number of counted properties
  location_id|integer|the id of the location when counted
- id|integer|customer web hook identifier
- discount|boolean|is there a discount?
  state_code|string|the identifying code of the state
  facility_type_names|string|names of the facility types available
- property_ref_code|integer|the ref code unique to the property
- provider|string|provider of the hotel finder services
- room_id|integer|Id unique to the room
- stay_date|string date|date at when the customer started staying
- rating|integer|rating of the hotel
- city|string|city the hotel is situated
+
 
 
 
@@ -306,10 +310,33 @@ property_id | String | Id associated to a property | True
 ### Response Body
 Attribute | Type | Description
 --------- | ------- | -----------
- Properties| String| Properties around the locale
- Message | String |Message about property
- Name | String | Name of owner
-
+rating|float|rating of the hotel by previous guess, the maximum value is 10
+area_id|integer|area Id of hotels searched for
+city_id|integer|city Id of hotels searched for
+city_master_id|integer|Id of the hotel in the city master plan.
+property_type_id|integer|Id of the property type
+activities_id|string|activities Id of the hotel
+min_rate_ngn|integer|minimum rate in naira
+property_ref_code|integer|the ref code unique to the property
+country_code|string|country code of the hotel
+id|integer|customer web hook identifier
+property_name|string|the name of the property
+city|string|city the hotel is situated
+ country | string| name of country
+ continent|string|The continent the hotel is in
+ longitude|integer|Longitude of the hotel
+ latitude|integer|Latitude of the hotel
+ city_code|string|city code of the hotel
+ property_url|string|url unique to the hotel
+ location_type|string|Type of location
+ state|string|state where the hotel is located
+ location_id|integer|the id of the location when counted
+ state_code|string|the identifying code of the state
+ facility_type_names|string|names of the facility types available
+ images.id| integer| the id of the image associated with the hotel
+ images.url|string| the url of the hotels image
+ images.created_at|string| the date the image was created
+ 
 
 ## Get hotel count in a location
 
@@ -375,11 +402,11 @@ try {
 
 ###	 HTTP Request
 
-GET `https://api.hotels.ng/search/location/count/bulk?property_type=hotel
-&location_type=city
-&locations=["uyo","calabar"]
-&country=nigeria
-&access_token=XXXXXXXXXXXXXX`
+GET `https://api.hotels.ng/search/location/count/bulk?property_type=
+&location_type=
+&locations=[]
+&country=
+&access_token=`
 
 ### Query Parameters
 
@@ -391,18 +418,20 @@ location_type | String | Type of place (e.g <em>city,state</em>)| True
 location | Array | Location of places(e.g <em>lagos,Uyo,Akwa Ibom</em>). Information about multiple location can be gotten using the delimiter ','| True
 country | String | The location's country | True
 
-###Response Body
+### Response Body
 
 Attribute | Type | Description
 --------- | ------- | -----------
- country | string| name of country
+city | string|  city of the location 
+description | String | The information about the hotel, terms and conditions , and FAQ
+country | string| name of country
  continent|string|the continent the hotel is in
  longitude|integer|longitude of the hotel
  latitude|integer|latitude of the hotel
  location_type|string|type of location
- state|string|state where the hotel is located
+ state|string|state where the city is located
  city_code|string|city code of the hotel
- country_code|string|country code of the hotel
+ country_code|string|country code of the city
  number_properties|integer|number of counted properties(hotels) in the location.
  location_id|integer|the id of the location when counted
  id|integer|customer web hook identifier
