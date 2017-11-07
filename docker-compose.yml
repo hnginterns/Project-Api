@@ -2,7 +2,6 @@ version: '2'
 
 services:
   web: 
-    restart: always
     build:
       context: ./
       dockerfile: Dockerfile
