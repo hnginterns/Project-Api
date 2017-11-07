@@ -7,6 +7,6 @@ ENV LC_ALL en_US.UTF-8
 ENV HOME /root
 
 
-WORKDIR /var/www/Project-Api/build
+WORKDIR /var/www/Project-Api/
 
 COPY . /var/www/Project-Api/
