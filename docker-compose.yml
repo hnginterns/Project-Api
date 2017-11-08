@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - ./:/var/www/Project-Api
+      - ./:/var/www/Project-Api/
     ports: 
       - "8059:80"
 
