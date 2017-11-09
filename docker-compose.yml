@@ -1,15 +1,4 @@
 version: '2'
-
 services:
   web: 
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    volumes:
-      - ./:/var/www/Project-Api/
-    ports: 
-      - "8059:80"
-
-  
-
-   
+    restart: always
