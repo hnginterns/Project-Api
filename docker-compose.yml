@@ -10,14 +10,13 @@ services:
     ports: 
       - "2988:80"
    
-
-  app:
+  app:    
     build:
       context: ./
       dockerfile: app.docker
     volumes:
       - ./:/var/www
-   ports: 
+    ports: 
       - "2999:80"
 
 
