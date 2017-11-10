@@ -5,6 +5,21 @@ services:
     build:
       context: ./
       dockerfile: web.docker
+    volumes:
+      - ./:/var/www
+    ports: 
+      - "2988:80"
+   
+
+  app:
+    build:
+      context: ./
+      dockerfile: app.docker
+    volumes:
+      - ./:/var/www
+   ports: 
+      - "2999:80"
+
 
 
         
