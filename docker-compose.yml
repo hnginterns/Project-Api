@@ -1,4 +1,5 @@
 version: '2'
+
 services:
   web: 
     restart: always
@@ -9,16 +10,55 @@ services:
       - ./:/var/www
     ports: 
       - "2988:80"
-   
-  app:    
+    links:
+      - app
+    depends_on:
+      - app
+      - db
+      - cache
+    networks: 
+      base:
+        ipv4_address: 174.30.1.2
+
+  app:
     build:
       context: ./
       dockerfile: app.docker
     volumes:
       - ./:/var/www
-    ports: 
-      - "2999:80"
+    links:
+      - db
+    environment:
+      - "DB_HOST=3306"
+      - "DB_HOST=db"
+    networks: 
+      base:
+        ipv4_address: 174.30.1.3
+  
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./:/var/www
+    environment:
+      - "MYSQL_ROOT_PASSWORD=I03!7v]KxS"
+      - "MYSQL_DATABASE=test"
+    ports:
+      - "33027:3306"
+    networks: 
+      base:
+        ipv4_address: 174.30.1.4 
 
+  cache:
+    image: redis:latest
+    networks: 
+      base:
+        ipv4_address: 174.30.1.5 
 
-
-        
+networks:
+    base:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+            - subnet: 174.30.1.0/16
+              gateway: 174.30.1.1
